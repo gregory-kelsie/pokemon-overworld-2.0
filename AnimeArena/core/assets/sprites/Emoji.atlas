@@ -1,0 +1,160 @@
+
+Emoji.png
+size: 512,32
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+emoji-angry1
+  rotate: false
+  xy: 172, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-angry2
+  rotate: false
+  xy: 189, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-dots1
+  rotate: false
+  xy: 223, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-dots2
+  rotate: false
+  xy: 240, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-exclam1
+  rotate: false
+  xy: 325, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-exclam2
+  rotate: false
+  xy: 308, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-happy1
+  rotate: false
+  xy: 342, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-happy2
+  rotate: false
+  xy: 359, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-heart1
+  rotate: false
+  xy: 121, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-heart2
+  rotate: false
+  xy: 291, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-joy1
+  rotate: false
+  xy: 104, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-joy2
+  rotate: false
+  xy: 206, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-music1
+  rotate: false
+  xy: 138, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-music2
+  rotate: false
+  xy: 155, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-no1
+  rotate: false
+  xy: 70, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-no2
+  rotate: false
+  xy: 87, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-poison1
+  rotate: false
+  xy: 257, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-poison2
+  rotate: false
+  xy: 274, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-question1
+  rotate: false
+  xy: 36, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-question2
+  rotate: false
+  xy: 53, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-sad1
+  rotate: false
+  xy: 2, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1
+emoji-sad2
+  rotate: false
+  xy: 19, 2
+  size: 15, 16
+  orig: 15, 16
+  offset: 0, 0
+  index: -1

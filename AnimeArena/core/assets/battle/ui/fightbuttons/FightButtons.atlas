@@ -1,0 +1,62 @@
+
+FightButtons.png
+size: 2048,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bag
+  rotate: false
+  xy: 130, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1
+bag-selected
+  rotate: false
+  xy: 2, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1
+fight
+  rotate: false
+  xy: 386, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1
+fight-selected
+  rotate: false
+  xy: 898, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1
+pokemon
+  rotate: false
+  xy: 514, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1
+pokemon-selected
+  rotate: false
+  xy: 642, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1
+run
+  rotate: false
+  xy: 258, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1
+run-selected
+  rotate: false
+  xy: 770, 2
+  size: 126, 42
+  orig: 126, 42
+  offset: 0, 0
+  index: -1

@@ -1,0 +1,76 @@
+
+Weather.png
+size: 128,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+fog
+  rotate: false
+  xy: 2, 2
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+hail
+  rotate: false
+  xy: 62, 138
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+harshsun
+  rotate: false
+  xy: 2, 70
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+heavyrain
+  rotate: false
+  xy: 2, 104
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+none
+  rotate: false
+  xy: 62, 70
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+rain
+  rotate: false
+  xy: 2, 138
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+sandstorm
+  rotate: false
+  xy: 62, 104
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+shadowsky
+  rotate: false
+  xy: 2, 172
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+strongwinds
+  rotate: false
+  xy: 2, 36
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+sunny
+  rotate: false
+  xy: 62, 172
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1

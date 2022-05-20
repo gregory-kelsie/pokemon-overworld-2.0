@@ -1,0 +1,167 @@
+
+StageBanner.png
+size: 128,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+accuracy
+  rotate: false
+  xy: 48, 74
+  size: 44, 16
+  orig: 44, 16
+  offset: 0, 0
+  index: -1
+atk
+  rotate: false
+  xy: 2, 74
+  size: 44, 16
+  orig: 44, 16
+  offset: 0, 0
+  index: -1
+def
+  rotate: false
+  xy: 2, 110
+  size: 44, 16
+  orig: 44, 16
+  offset: 0, 0
+  index: -1
+evasion
+  rotate: false
+  xy: 2, 92
+  size: 44, 16
+  orig: 44, 16
+  offset: 0, 0
+  index: -1
+fifthStage
+  rotate: false
+  xy: 2, 38
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+fifthStage-n
+  rotate: false
+  xy: 22, 20
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+firstStage
+  rotate: false
+  xy: 88, 56
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+firstStage-n
+  rotate: false
+  xy: 2, 2
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+fourthStage
+  rotate: false
+  xy: 94, 110
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+fourthStage-n
+  rotate: false
+  xy: 94, 74
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+negative
+  rotate: false
+  xy: 42, 20
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+negative-f
+  rotate: false
+  xy: 2, 20
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+positive
+  rotate: false
+  xy: 108, 56
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+positive-f
+  rotate: false
+  xy: 22, 38
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+secondStage
+  rotate: false
+  xy: 42, 38
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+secondStage-n
+  rotate: false
+  xy: 94, 92
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+sixthStage
+  rotate: false
+  xy: 48, 56
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+sixthStage-n
+  rotate: false
+  xy: 22, 2
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+spatk
+  rotate: false
+  xy: 48, 92
+  size: 44, 16
+  orig: 44, 16
+  offset: 0, 0
+  index: -1
+spdef
+  rotate: false
+  xy: 48, 110
+  size: 44, 16
+  orig: 44, 16
+  offset: 0, 0
+  index: -1
+speed
+  rotate: false
+  xy: 2, 56
+  size: 44, 16
+  orig: 44, 16
+  offset: 0, 0
+  index: -1
+thirdStage
+  rotate: false
+  xy: 68, 56
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1
+thirdStage-n
+  rotate: false
+  xy: 42, 2
+  size: 18, 16
+  orig: 18, 16
+  offset: 0, 0
+  index: -1

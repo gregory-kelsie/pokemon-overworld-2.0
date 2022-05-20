@@ -1,0 +1,56 @@
+MOVESCRIPT
+0
+LOOK_RIGHT
+ENDMOVESCRIPT
+EMOJI_SWITCHES
+5
+END_EMOJI_SWITCHES
+INTERACT
+IF
+5
+THEN
+TEXTBOX
+Each Pokemon has their own set of stats.
+ENDTEXTBOX
+TEXTBOX
+Stats can be broken down into EVs and IVs.
+ENDTEXTBOX
+TEXTBOX
+EVs and IVs have a stat in every category.
+ENDTEXTBOX
+TEXTBOX
+Health, Attack, Defense, Special Attack, Special Defense and Speed.
+ENDTEXTBOX
+TEXTBOX
+EVs are Effort Values. They can be increased by Vitamins, Berries or by battling other Pokemon.
+ENDTEXTBOX
+TEXTBOX
+Each Pokemon you battle will give you an EV stat.
+ENDTEXTBOX
+TEXTBOX
+Stronger Pokemon will give you more EVs.
+ENDTEXTBOX
+TEXTBOX
+The highest base stat of the Pokemon usually determines what type of EV it will give.
+ENDTEXTBOX
+TEXTBOX
+In total, a Pokemon can only have a maximum of 510 EVs.
+ENDTEXTBOX
+TEXTBOX
+Train your Pokemon wisely as it is more difficult to reduce EVs.
+ENDTEXTBOX
+TEXTBOX
+IVs are stats that are unchangeable.
+ENDTEXTBOX
+TEXTBOX
+IVs range from 1-31. When you have Pokemon with high IVs, they're keepers! 
+ENDTEXTBOX
+SET_SWITCH_FALSE
+5
+END_SET_SWITCH_FALSE
+ELSE
+TEXTBOX
+I love working here in the lab. I learn a lot every day working with Oak.
+ENDTEXTBOX
+END_IF
+ENDINTERACT

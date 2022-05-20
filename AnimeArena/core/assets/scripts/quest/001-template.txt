@@ -1,0 +1,16 @@
+Joey's Dad
+Joey's dad has been missing for months. Help out Younger Joey and find his father. Rumour has it he's North of the Lake.
+POKEMON_LIST
+POKEMON_ID,AMOUNT
+POKEMON_ID,AMOUNT
+END_POKEMON_LIST
+TYPE_LIST
+FIRE,AMOUNT
+WATER,AMOUNT
+GRASS,AMOUNT
+END_TYPE_LIST
+SWITCH_LIST
+002
+Find Joey's father
+END_SWITCH_LIST
+

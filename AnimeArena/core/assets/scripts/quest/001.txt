@@ -1,0 +1,7 @@
+Joey's Dad
+Joey's dad has been missing for months. Help out Younger Joey and find his father. Rumour has it he's North of the Lake.
+SWITCH_LIST
+2
+Find Joey's father
+END_SWITCH_LIST
+

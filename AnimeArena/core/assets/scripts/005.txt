@@ -1,0 +1,53 @@
+MOVESCRIPT
+0
+LOOK_DOWN
+ENDMOVESCRIPT
+INTERACT
+QUEST_SWITCH_EVENT
+1
+QUEST_SWITCH_COMPLETE_EVENT
+TEXTBOX
+Thank you so much for finding my father
+ENDTEXTBOX
+END_QUEST_SWITCH_COMPLETE_EVENT
+QUEST_SWITCH_IN_PROGRESS_EVENT
+TEXTBOX
+Please keep looking for him. I know dad's out there somewhere...
+ENDTEXTBOX
+END_QUEST_SWITCH_IN_PROGRESS_EVENT
+QUEST_SWITCH_FINISHED_EVENT
+TEXTBOX
+Oh he's out there fishing still?
+ENDTEXTBOX
+TEXTBOX
+Phew...I thought the wild Dreadnaw took him out!
+ENDTEXTBOX
+TEXTBOX
+You don't know about the wild Dreadnaw roaming around the test region?
+ENDTEXTBOX
+TEXTBOX
+I've heard the locals talking about how a strong Dreadnaw lives around the lake.
+ENDTEXTBOX
+TEXTBOX
+Anyways...Thank you so much for finding my dad!
+ENDTEXTBOX
+TOGGLE_SWITCH_EVENT
+6
+END_TOGGLE_SWITCH_EVENT
+COMPLETE_QUEST_EVENT
+1
+END_COMPLETE_QUEST_EVENT
+END_QUEST_SWITCH_FINISHED_EVENT
+QUEST_NOT_TAKEN_EVENT
+TEXTBOX
+Sob...Sob...Sob...
+ENDTEXTBOX
+TEXTBOX
+My dad is missing. Please help me find him. I'm scared that he might be hurt somewhere.
+ENDTEXTBOX
+START_QUEST_EVENT
+001
+END_START_QUEST_EVENT
+END_QUEST_NOT_TAKEN_EVENT
+END_QUEST_SWITCH_EVENT
+ENDINTERACT

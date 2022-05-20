@@ -1,0 +1,35 @@
+Youngster //GET SPRITE
+Joey //Name
+5000 // MONEY
+SPRITE.PNG // BATTLE SPRITE
+ENCOUNTER_THEME.OGG
+BATTLE_THEME.OGG
+1,1,1,1 //TILES THEY CAN SEE TOP, RIGHT, BOTTOM, LEFT
+MOVESCRIPT
+2 //PLAY ONCE, LOOPING, LOOPING REVERSE
+RIGHT,RIGHT,RIGHT,RIGHT
+ENDMOVESCRIPT
+POKEMON_TEAM //Up to 6 pokemon in a team
+19,25 //Pokemon ID and Level
+31,31,31,31,31,31 //IVs
+0,0,0,0,0,0 //EVs - Options are: All stats defined, LOW (<50 each but random), MEDIUM_LOW (<150), HIGH (<252
+0,0,0,0 //Move IDs
+END_POKEMON_TEAM
+START_TEXT_BEFORE //Should just be textboxes and when it's done battle
+TEXTBOX
+HELLO WORLD
+ENDTEXTBOX
+TEXTBOX
+LETS BATTLE!
+ENDTEXTBOX
+END_TEXT_BEFORE
+BATTLE_AFTER_DEFEAT //The text that shows up after defeating the trainer before the money text shows up
+Wow...I can't believe I lost...
+END_BATTLE_AFTER_DEFEAT
+AFTER_DEFEAT //Could be any event when the player interacts with the trainer after defeat.
+TEXTBOX
+Get outta here scram noob.
+ENDTEXTBOX
+END_AFTER_DEFEAT
+
+

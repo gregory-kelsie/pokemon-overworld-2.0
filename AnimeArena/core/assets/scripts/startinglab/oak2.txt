@@ -1,0 +1,43 @@
+MOVESCRIPT
+0
+LOOK_DOWN
+ENDMOVESCRIPT
+EMOJI_SWITCHES
+1
+END_EMOJI_SWITCHES
+INTERACT
+TEXTBOX
+Hello, my name is Professor Oak.
+ENDTEXTBOX
+TEXTBOX
+I recently changed work locations from the Kanto region.
+ENDTEXTBOX
+TEXTBOX
+My job here is to help new trainers get started on their Pokemon journey.
+ENDTEXTBOX
+TEXTBOX
+Please select a starter Pokemon.
+ENDTEXTBOX
+SELECT_STARTER
+TEXTBOX
+Now you have a companion that will always be by your side. You are almost ready to begin your journey.
+ENDTEXTBOX
+TEXTBOX
+I have one more thing to give you before you go.
+ENDTEXTBOX
+TEXTBOX
+You received a Pokedex!
+ENDTEXTBOX
+TEXTBOX
+The Pokedex records Pokemon data from the Pokemon you come across.
+ENDTEXTBOX
+TEXTBOX
+Please try to fill out the Pokedex. I may have a few rare items I can give you as a reward...
+ENDTEXTBOX
+TEXTBOX
+On a side note,. please talk to my assistants in the lab. They can give you some pointers.
+ENDTEXTBOX
+TEXTBOX
+Good luck and do your best out there!
+ENDTEXTBOX
+ENDINTERACT

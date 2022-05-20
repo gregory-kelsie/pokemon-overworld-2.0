@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="48" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="10" nextobjectid="3">
+ <properties>
+  <property name="dayPokemonChances" value="-19,0.5;16,0.45;25,0.04;133,0.01"/>
+  <property name="dayPokemonLevels" value="2-4;2-5;3-5;5-5"/>
+  <property name="isCave" value="false"/>
+  <property name="mapBGM" value="Route1.ogg"/>
+  <property name="mapName" value="Route 1"/>
+  <property name="nightPokemonChances" value="Rattata,50;Hoothoot,50;"/>
+  <property name="nightPokemonLevels" value="2-5;2-4;"/>
+  <property name="pvp" value="disabled"/>
+  <property name="waterPokemonChances" value=""/>
+  <property name="waterPokemonLevels" value=""/>
+  <property name="wildProbability" value="10"/>
+  <property name="xOffsetModifier" value="0"/>
+  <property name="yOffsetModifier" value="-2912"/>
+ </properties>
+ <tileset firstgid="1" source="Path0.tsx"/>
+ <tileset firstgid="297" source="normal2.tsx"/>
+ <tileset firstgid="1321" source="Buildings7.tsx"/>
+ <tileset firstgid="1673" source="Cliffs01.tsx"/>
+ <tileset firstgid="1903" source="collision.tsx"/>
+ <layer id="1" name="Walkable" width="48" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2X3Q6CMAyFa7hVrvy7QNz7P6VcsGTBretc13YgyQlGGX6UnrUF+D5ODLouuq26F6zjOI7CPyQ+5/ixdZL8sf+P8T8XXRCNivwpTYteiN4Qfz9W+Eueb+6QX9u/w+bcGz/Vx9b5e44/to9L8XPGrjd+LObhb2doV79a8YfytdhBvJbV7P/c7LHvp5V/JtxXin8P+b8HfooHvH9HwrXS/CFfSg9IzzG1/T8Hf9jrO0j3zN6/nPMLN3/JrKidPz52JbOWpfrllZu1Ws5fHPGP5fGvOSfJ38Izf/5j8vea/zFuyrNo8+d6hpx8T6HFH8avVhr8lJoV1iiHXKcxf9V4FJMkf86nW36Kr6X4a/YYC/ylHsFm9zAWFvgHoNczC/MLZ95Z58/paPwfR3SbbgAeAAA=
+  </data>
+ </layer>
+ <layer id="2" name="Grass" width="48" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2YMQ6AIAxFvY4yoZN6/3sJgwu2iAMpNe8lf6PJDyn9pNMEAPAv5qSlUcHIY42YtDZqM/JYA/+2ePe/Jx2NOo08gj+kXBhx/mtI73rE96vh3b80l5g/AABPyFtb8G8L/wWAcdH2hLWMKmss80yaj28zJn4424v7DqV9VGuNZQ5o+6nyLrPnoNR4yIHcK57ytsS7/9wzPfvkArKcrH0AHgAA
+  </data>
+ </layer>
+ <layer id="3" name="LedgesDown" width="48" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3WOwqAMBAE0K2SI66e1hzNVvyQ2CjiezBVSDnDRgB/kzVi2mWu4+8ASzmmlf4/+wJ6AF+Um57mjRv6LPoOPOlqswB6evsxevvYH4B3rBQ+LAYAHgAA
+  </data>
+ </layer>
+ <layer id="4" name="Collisions" width="48" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2WQQqAIBBF3diROkDt6rzdr0SkiBbOn9EU/wNxpYxvvqhzN8cUR2Dxzq0en9+g6yQ869+uvXaPz2/QdWj9JT19Udu/Na34Rz224h/1SP+Rnv0H6L+u/5T55wj06j/Ri3+r/40WdF+r/40W+pfNufc499y1/efe49zcMf9j5d8a+qd/DfQ/ln/rc/71/lrljPkfK//W0D/9J2ZFHVLo3wb6p38Ntf1L+1Sqr6h/aZ9K9fUELI7CGAAeAAA=
+  </data>
+ </layer>
+ <layer id="5" name="Collisions" width="48" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3VOwqAMBAA0TTxQNpp5aHj+bRQUHAJ+wlEnAGJVdw8RMuQUjmvq+1233tFmH/OKS1ZXqOz7ivNPx57TVleo7Pui/8zq2OE/3UGj7/VMcL/Pj/+uvD/pv9bX/r+15x7//7XnPHXzaHtj/4r/uIc2nj/Y8Iff0/44++J/+9//Hn/5Tm04R8T/vh7wh9/T/i3WbXPsZ671ap9jrYdv8Br2gAeAAA=
+  </data>
+ </layer>
+ <layer id="6" name="Walkable" width="48" height="40">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu3YsQ0AIAwDsC59CFZG/r+JM6pS+4IMkSIlAgCotjJiZ3UKfnead+w2zw/ATPYXAGAufx9VHsPxfgcAHgAA
+  </data>
+ </layer>
+ <layer id="7" name="WalkBehind" width="48" height="40">
+  <properties>
+   <property name="layerType" type="int" value="1"/>
+  </properties>
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2Wyw6DIBBF3fA7XbSrPjam/P831S4MBIGZK9TB5p7EmOgI5DAyM01bZpd5COKjMXqMh3BXzPfquCbNfAgaX74Qc12e38D19N6fvf6/3z2W6+mw/RnFf/xdaX/2zofQ4r/2vmU+BPqn/xbO5H89r+Nz++z+NYxcfzUgfiUs/Et9QpqXtfij/Ut9Qvw+vefij/Yfr0P6j1Ny8cx/HJ4/AfrHof8A/eOU6qum3qZY1l/prskzy/pb4+10ecb8x+H5E6B/nH/2fwHXQ/84zP8A/eN4sH+rxVn4R/o3Tb83Kt7Ab898XP3/ig+mEY4jAB4AAA==
+  </data>
+ </layer>
+ <layer id="8" name="Collision" width="48" height="40" visible="0">
+  <data encoding="base64" compression="gzip">
+   H4sIAAAAAAAACu2Y0Q6AIAhFe/Nz25rz+3tyuRqBDeVitN0XJTgRGpnTtmVlFWKsXiVd0o4t5eOkcc9Ifg8+/8j/tRZm8x+ECjOPws/lf+9U8Ad/8M/j5/YfdH4PPoP/KZT64b6zVI+Jxi+xQeT3Xj8efK7M3/bDVI9MrW1qvUf+gx/Jp0Ysar+05pdqVX4v+w9q/r3yjzqrDH7bWNb/79w8Sv9zr5+3MwXKh2X/752/PoMWd+sTkb8dQ+KX2nLvxIq/t/+R2M7i79Ho9XkC2mFUCwAeAAA=
+  </data>
+ </layer>
+ <objectgroup id="9" name="O2">
+  <object id="1" gid="1947" x="384" y="640" width="16" height="16">
+   <properties>
+    <property name="mapName" value="test.tmx"/>
+    <property name="objectType" type="int" value="5"/>
+    <property name="x" type="int" value="0"/>
+    <property name="y" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="2" gid="1947" x="400" y="640" width="16" height="16">
+   <properties>
+    <property name="mapName" value="test.tmx"/>
+    <property name="objectType" type="int" value="5"/>
+    <property name="x" type="int" value="0"/>
+    <property name="y" type="int" value="0"/>
+   </properties>
+  </object>
+ </objectgroup>
+</map>

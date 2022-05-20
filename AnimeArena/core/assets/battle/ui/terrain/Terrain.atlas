@@ -1,0 +1,41 @@
+
+Terrain.png
+size: 64,256
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+electric
+  rotate: false
+  xy: 2, 36
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+grassy
+  rotate: false
+  xy: 2, 138
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+misty
+  rotate: false
+  xy: 2, 70
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+none
+  rotate: false
+  xy: 2, 2
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1
+psychic
+  rotate: false
+  xy: 2, 104
+  size: 58, 32
+  orig: 58, 32
+  offset: 0, 0
+  index: -1

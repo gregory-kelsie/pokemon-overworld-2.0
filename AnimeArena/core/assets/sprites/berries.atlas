@@ -1,0 +1,76 @@
+
+berries.png
+size: 512,64
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+aspear
+  rotate: false
+  xy: 324, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+cheri
+  rotate: false
+  xy: 278, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+chesto
+  rotate: false
+  xy: 186, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+leppa
+  rotate: false
+  xy: 94, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+lum
+  rotate: false
+  xy: 2, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+oran
+  rotate: false
+  xy: 232, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+pecha
+  rotate: false
+  xy: 48, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+persim
+  rotate: false
+  xy: 370, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+rawst
+  rotate: false
+  xy: 140, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1
+sitrus
+  rotate: false
+  xy: 416, 2
+  size: 44, 34
+  orig: 44, 34
+  offset: 0, 0
+  index: -1

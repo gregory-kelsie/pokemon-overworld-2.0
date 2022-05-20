@@ -1,0 +1,26 @@
+MOVESCRIPT
+0
+LOOK_DOWN
+ENDMOVESCRIPT
+Team Rocket Grunt
+Joey
+5000
+SPRITE.PNG
+HGSS 134 Encounter Team Rocket.ogg
+HGSS 135 Battle! (Team Rocket).ogg
+Wow...I can't believe I lost...
+1,1,3,1
+POKEMON_TEAM
+START_TEXT_BEFORE
+TEXTBOX
+Shut up and take my money!!!!
+ENDTEXTBOX
+TEXTBOX
+Uhh I mean shut up and give me your money!!!!
+ENDTEXTBOX
+END_TEXT_BEFORE
+AFTER_DEFEAT
+TEXTBOX
+Get outta here scram noob.
+ENDTEXTBOX
+END_AFTER_DEFEAT

@@ -1,0 +1,1084 @@
+
+PlayableCharacters.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+aaron
+  rotate: false
+  xy: 1178, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acebikerf
+  rotate: false
+  xy: 100, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acebikerm
+  rotate: false
+  xy: 100, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acetrainerf
+  rotate: false
+  xy: 688, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acetrainerf2
+  rotate: false
+  xy: 296, 2
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acetrainerf3
+  rotate: false
+  xy: 198, 2
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acetrainerm
+  rotate: false
+  xy: 1374, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acetrainerm2
+  rotate: false
+  xy: 492, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+acetrainerm3
+  rotate: false
+  xy: 982, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+agatha
+  rotate: false
+  xy: 786, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+aquam
+  rotate: false
+  xy: 2, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+archer
+  rotate: false
+  xy: 982, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+ariana
+  rotate: false
+  xy: 786, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+artist
+  rotate: false
+  xy: 590, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+bald
+  rotate: false
+  xy: 1472, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+barry
+  rotate: false
+  xy: 2, 132
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+beauty
+  rotate: false
+  xy: 492, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+beauty2
+  rotate: false
+  xy: 394, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+bertha
+  rotate: false
+  xy: 884, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+biker
+  rotate: false
+  xy: 100, 132
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+birch
+  rotate: false
+  xy: 2, 2
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+birdcatcher
+  rotate: false
+  xy: 296, 262
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+blaine
+  rotate: false
+  xy: 394, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+blue
+  rotate: false
+  xy: 394, 522
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+brawly
+  rotate: false
+  xy: 884, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+breederf
+  rotate: false
+  xy: 198, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+breederm
+  rotate: false
+  xy: 688, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+brendan
+  rotate: false
+  xy: 1570, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+brock
+  rotate: false
+  xy: 1080, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+bruno
+  rotate: false
+  xy: 394, 132
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+bugcatcher
+  rotate: false
+  xy: 296, 392
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+bugsy
+  rotate: false
+  xy: 1276, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+burglar
+  rotate: false
+  xy: 884, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+byron
+  rotate: false
+  xy: 492, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+candice
+  rotate: false
+  xy: 394, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+chuck
+  rotate: false
+  xy: 2, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+claire
+  rotate: false
+  xy: 394, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+cowgirl
+  rotate: false
+  xy: 884, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+crasherwake
+  rotate: false
+  xy: 590, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+crystal
+  rotate: false
+  xy: 100, 2
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+cueball
+  rotate: false
+  xy: 296, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+cynthia
+  rotate: false
+  xy: 1374, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+cyrus
+  rotate: false
+  xy: 198, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+dawn
+  rotate: false
+  xy: 296, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+devon
+  rotate: false
+  xy: 100, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+dragontamer
+  rotate: false
+  xy: 100, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+elm
+  rotate: false
+  xy: 786, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+engineer
+  rotate: false
+  xy: 1080, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+erika
+  rotate: false
+  xy: 198, 262
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+ethan
+  rotate: false
+  xy: 2, 262
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+falkner
+  rotate: false
+  xy: 296, 132
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+fantina
+  rotate: false
+  xy: 688, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+fat1
+  rotate: false
+  xy: 590, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+fat2
+  rotate: false
+  xy: 688, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+female1
+  rotate: false
+  xy: 492, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+firebreather
+  rotate: false
+  xy: 296, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+fisherman
+  rotate: false
+  xy: 296, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+flannery
+  rotate: false
+  xy: 688, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+flint
+  rotate: false
+  xy: 394, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+galacticf
+  rotate: false
+  xy: 590, 522
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+galacticm
+  rotate: false
+  xy: 198, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+gambler
+  rotate: false
+  xy: 1276, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+gardenia
+  rotate: false
+  xy: 198, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+gentleman
+  rotate: false
+  xy: 198, 392
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+giovanni
+  rotate: false
+  xy: 982, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+hiker
+  rotate: false
+  xy: 296, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+janine
+  rotate: false
+  xy: 492, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+jasmine
+  rotate: false
+  xy: 786, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+jester
+  rotate: false
+  xy: 198, 522
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+juan
+  rotate: false
+  xy: 590, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+juggler
+  rotate: false
+  xy: 198, 132
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+jupiter
+  rotate: false
+  xy: 394, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+karatef
+  rotate: false
+  xy: 1178, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+karatem
+  rotate: false
+  xy: 1276, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+karen
+  rotate: false
+  xy: 1080, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+kidf
+  rotate: false
+  xy: 2, 522
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+kidm
+  rotate: false
+  xy: 394, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+koga
+  rotate: false
+  xy: 100, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lady
+  rotate: false
+  xy: 100, 522
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lance
+  rotate: false
+  xy: 688, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lass
+  rotate: false
+  xy: 1178, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lass2
+  rotate: false
+  xy: 2, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+leaf
+  rotate: false
+  xy: 884, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+liza
+  rotate: false
+  xy: 100, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lorelei
+  rotate: false
+  xy: 688, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lucas
+  rotate: false
+  xy: 100, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lucian
+  rotate: false
+  xy: 296, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+lyra
+  rotate: false
+  xy: 198, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+magmam
+  rotate: false
+  xy: 2, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+male1
+  rotate: false
+  xy: 884, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+mars
+  rotate: false
+  xy: 786, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+martm
+  rotate: false
+  xy: 492, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+may
+  rotate: false
+  xy: 786, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+maylene
+  rotate: false
+  xy: 394, 392
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+medium
+  rotate: false
+  xy: 198, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+misty
+  rotate: false
+  xy: 1472, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+morty
+  rotate: false
+  xy: 1080, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+nerd
+  rotate: false
+  xy: 492, 262
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+norman
+  rotate: false
+  xy: 688, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+oak
+  rotate: false
+  xy: 1178, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+officer
+  rotate: false
+  xy: 590, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+oldm
+  rotate: false
+  xy: 2, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+oldman
+  rotate: false
+  xy: 590, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+oldwoman
+  rotate: false
+  xy: 296, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+oldwoman2
+  rotate: false
+  xy: 982, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+parasol
+  rotate: false
+  xy: 786, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+petrel
+  rotate: false
+  xy: 198, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+picnickerf
+  rotate: false
+  xy: 786, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+picnickerm
+  rotate: false
+  xy: 198, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+proton
+  rotate: false
+  xy: 2, 392
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+pryce
+  rotate: false
+  xy: 296, 782
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+psychicm
+  rotate: false
+  xy: 492, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+rancher
+  rotate: false
+  xy: 394, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+red
+  rotate: false
+  xy: 688, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+richboy
+  rotate: false
+  xy: 884, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+roark
+  rotate: false
+  xy: 2, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+rocketf
+  rotate: false
+  xy: 100, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+rocketm
+  rotate: false
+  xy: 100, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+roxanne
+  rotate: false
+  xy: 590, 392
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+runemaniac
+  rotate: false
+  xy: 590, 1302
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+sabrina
+  rotate: false
+  xy: 2, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+sage
+  rotate: false
+  xy: 100, 262
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+sailor
+  rotate: false
+  xy: 982, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+saturn
+  rotate: false
+  xy: 1374, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+schoolboy
+  rotate: false
+  xy: 492, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+schoolgirl
+  rotate: false
+  xy: 2, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+scientistf
+  rotate: false
+  xy: 2, 652
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+scientistm
+  rotate: false
+  xy: 394, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+sidney
+  rotate: false
+  xy: 1080, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+silver
+  rotate: false
+  xy: 198, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+skierf
+  rotate: false
+  xy: 492, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+skierm
+  rotate: false
+  xy: 1276, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+snowboarder
+  rotate: false
+  xy: 590, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+snowf
+  rotate: false
+  xy: 982, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+snowm
+  rotate: false
+  xy: 688, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+socialite
+  rotate: false
+  xy: 2, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+steven
+  rotate: false
+  xy: 884, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+supernerd
+  rotate: false
+  xy: 394, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+surge
+  rotate: false
+  xy: 492, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+swimmerf
+  rotate: false
+  xy: 296, 1042
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+swimmerm
+  rotate: false
+  xy: 786, 1692
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+tate
+  rotate: false
+  xy: 296, 522
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+tuberf
+  rotate: false
+  xy: 198, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+tuberm
+  rotate: false
+  xy: 296, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+volkner
+  rotate: false
+  xy: 590, 912
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+waiter
+  rotate: false
+  xy: 394, 262
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+waitress
+  rotate: false
+  xy: 1178, 1562
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+wallace
+  rotate: false
+  xy: 590, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+wally
+  rotate: false
+  xy: 1080, 1172
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+wattson
+  rotate: false
+  xy: 100, 392
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+whitney
+  rotate: false
+  xy: 982, 1432
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+will
+  rotate: false
+  xy: 492, 522
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+winona
+  rotate: false
+  xy: 100, 1822
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1
+youngster
+  rotate: false
+  xy: 492, 392
+  size: 96, 128
+  orig: 96, 128
+  offset: 0, 0
+  index: -1

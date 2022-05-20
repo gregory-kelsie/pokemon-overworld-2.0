@@ -1,0 +1,49 @@
+MOVESCRIPT
+0
+LOOK_UP
+ENDMOVESCRIPT
+EMOJI_SWITCHES
+4
+END_EMOJI_SWITCHES
+INTERACT
+IF
+4
+THEN
+TEXTBOX
+Items are very important for your Pokemon.
+ENDTEXTBOX
+TEXTBOX
+Usable items are items that can be used manually on your Pokemon.
+ENDTEXTBOX
+TEXTBOX
+Hold items are items that give your Pokemon passive special effects in battle.
+ENDTEXTBOX
+TEXTBOX
+Berries can be used manually or they can be activated if a Pokemon is holding it during battle.
+ENDTEXTBOX
+TEXTBOX
+Other items like repels can only be used outside of battle.
+ENDTEXTBOX
+TEXTBOX
+The professor told me to give you some potions for your journey.
+ENDTEXTBOX
+TEXTBOX_JINGLE
+audio/SE/itemget.wav
+You received 5 potions!
+ENDTEXTBOX
+GIVE_ITEM
+1
+5
+END_GIVE_ITEM
+TEXTBOX
+Use the potions to recover your Pokemon's health when they are hurt.
+ENDTEXTBOX
+SET_SWITCH_FALSE
+4
+END_SET_SWITCH_FALSE
+ELSE
+TEXTBOX
+I'm studying the different types of Potions and their effects.
+ENDTEXTBOX
+END_IF
+ENDINTERACT

@@ -1,0 +1,2792 @@
+
+NPC.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+NPC
+  rotate: false
+  xy: 1034, 526
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 105
+NPC 100
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 102
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 103
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 104
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 106
+  rotate: false
+  xy: 518, 1300
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 107
+  rotate: false
+  xy: 518, 1042
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 108
+  rotate: false
+  xy: 776, 1300
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 110
+  rotate: false
+  xy: 1292, 784
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 111
+  rotate: false
+  xy: 1550, 1042
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 112
+  rotate: false
+  xy: 1550, 526
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 113
+  rotate: false
+  xy: 1034, 268
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 115
+  rotate: false
+  xy: 1550, 784
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 116
+  rotate: false
+  xy: 1034, 10
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 117
+  rotate: false
+  xy: 1292, 268
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 119
+  rotate: false
+  xy: 1292, 10
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 143
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+NPC_014_Bug_Catcher
+  rotate: false
+  xy: 776, 10
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_020_Cyclist_F
+  rotate: false
+  xy: 1292, 1300
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_024_Youngster
+  rotate: false
+  xy: 1550, 268
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_034_Rancher
+  rotate: false
+  xy: 518, 268
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_038_Socialite
+  rotate: false
+  xy: 776, 268
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_041_Poke_Fan_F
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_045_Beauty
+  rotate: false
+  xy: 776, 526
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_048_Firebreather
+  rotate: false
+  xy: 1034, 1042
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_058_School_Kid_F
+  rotate: false
+  xy: 518, 10
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_068_Fisherman
+  rotate: false
+  xy: 1042, 1558
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_086_Juggler
+  rotate: false
+  xy: 518, 526
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_121_Bill
+  rotate: false
+  xy: 526, 1558
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_142_Factory_Head_Thorton
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_150_Gym_Leader_Lt_Surge
+  rotate: false
+  xy: 1550, 10
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_153_Gym_Leader_Janine
+  rotate: false
+  xy: 1300, 1558
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_158_Gym_Leader_Morty
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_164_Gym_Leader_Gardenia
+  rotate: false
+  xy: 776, 1042
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_169_Gym_Leader_Candice
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_174_Elite_Four_Karen
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_186_Rocket_Executive_Petrel
+  rotate: false
+  xy: 1558, 1558
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_206_Lyra
+  rotate: false
+  xy: 1550, 1300
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z03_Dragon_Tamer
+  rotate: false
+  xy: 268, 1558
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z12_Ultima
+  rotate: false
+  xy: 1292, 1042
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z18_Gym_Leader_Wattson
+  rotate: false
+  xy: 1292, 526
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z33_Gym_Leader_Marlon_Swimming
+  rotate: false
+  xy: 776, 784
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z41_Team_Flare_Boss_Lysandre
+  rotate: false
+  xy: 1034, 784
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z46_Team_Plasma_Grunt_F
+  rotate: false
+  xy: 518, 784
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z51_Team_Plasma_Boss_Ghetsis
+  rotate: false
+  xy: 1034, 1300
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+aquam
+  rotate: false
+  xy: 2, 1550
+  size: 264, 264
+  orig: 264, 264
+  offset: 0, 0
+  index: -1
+phone004
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trGuitarist
+  rotate: false
+  xy: 784, 1558
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+trchar015
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+NPC2.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+NPC
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 50
+NPC
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 52
+NPC
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 59
+NPC
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 60
+NPC
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 61
+NPC
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 62
+NPC
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 111
+NPC 120
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 121
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 124
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 125
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 127
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 135
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 137
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 138
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 154
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 98
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 99
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_011_Skier_M
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_017_Roughneck
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_032_Tuber_F
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_072_Sage
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_120_Director
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_123_Magnus
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_126_Mom
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_128_Mom
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_131_Riley
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_134_Mira
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_135_Looker
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_136_Prof_Oak
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_143_Hall_Matron_Argenta
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_168_Gym_Leader_Byron
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_178_Elite_Four_Lucian
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_187_Rocket_Executive_Proton
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z16_Gym_Leader_Roxanne
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z19_Gym_Leader_Flannery
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z32_Gym_Leader_Drayden
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z36_Elite_Four_Agatha
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z40_Team_Aqua_Boss_Archie
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z50_Team_Plasma_King_N
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar050
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar051
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar074
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar079
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar093
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar096
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar112
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar115
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar167
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+
+NPC3.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+NPC
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 74
+NPC
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 75
+NPC
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 76
+NPC
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 77
+NPC
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 89
+NPC
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 112
+NPC 118
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 122
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 145
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 147
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 149
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 150
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 155
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 157
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 159
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_001_Ace_Trainer_M
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_006_Ace_Trainer_F
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_016_Picnicker
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_018_Biker
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_022_Reporter
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_025_Lass
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_029_Swimmer_F
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_033_Sailor
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_037_Gentleman
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_039_Poke_Fan_M
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_040_Poke_Fan_M
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_057_School_Kid_M
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_083_Parasol_Lady
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_084_Poke_Maniac
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_124_DJ_Mary
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_125_Daisy_Oak
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_129_Kurt
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_154_Gym_Leader_Blaine
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_157_Gym_Leader_Whitney
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_161_Gym_Leader_Pryce
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_163_Gym_Leader_Roark
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_171_Elite_Four_Will
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_173_Elite_Four_Bruno
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z28_Gym_Leader_Cheren
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z38_Team_Rocket_Boss_Giovanni
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z45_Team_Plasma_Grunt_M
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar100
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar102
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar103
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar105
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar109
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+trchar111
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar127
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar143
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+NPC4.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+NPC
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 90
+NPC
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 93
+NPC
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 94
+NPC
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 95
+NPC
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 96
+NPC
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 98
+NPC
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 99
+NPC
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 109
+NPC 114
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 136
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+NPC 141
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 91
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 92
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 94
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 95
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_002_Ace_Trainer_F
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_003_Ace_Trainer_M
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_035_Cowgirl
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_063_Baby
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_065_Waitress
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_066_Idol
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_073_Elder
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_078_Medium
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_080_Worker
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_081_Ruin_Maniac
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_115_Nurse
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+NPC_115_Nurse
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+NPC_122_Primo
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_144_Arcade_Star_Dahlia
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_152_Gym_Leader_Sabrina
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_156_Gym_Leader_Bugsy
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_177_Elite_Four_Flint
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_193_Galactic_Commander_Mars
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_199_Lucas
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z04_Veteran
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z10_Hilbert
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z13_Mr_Fuji
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z24_Gym_Leader_Juan
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z27_Gym_Leader_Cress
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z30_Gym_Leader_Burgh
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z35_Elite_Four_Lorelei
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z39_Team_Magma_Boss_Maxie
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trGuitarist
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+trchar114
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar121
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar122
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar123
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar135
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+trchar147
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+NPC5.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+NPC
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 97
+NPC 101
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 109
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 126
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 156
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_008_Black_Belt
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_009_Battle_Girl
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_012_Skier_F
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_021_Cameraman
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_027_Swimmer_M
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_042_Rich_Boy
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_049_Collector
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_051_Aroma_Lady
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_055_Scientist_F
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_067_Maid
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_085_Burglar
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_088_Policeman
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_113_Mart_M
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_133_Buck
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_146_Caitlin
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_176_Elite_Four_Bertha
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_179_Champion_Blue_Oak
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_180_Champion_Red
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_181_Champion_Lance
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_183_Champion_Cynthia
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_185_Rocket_Grunt_F
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_188_Rocket_Executive_Ariana
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_195_Galactic_Commander_Saturn
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z11_Hugh
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z15_Mr_Stone
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z21_Gym_Leader_Winona
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z23_Gym_Leader_Liza
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z31_Gym_Leader_Brycen
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z33_Gym_Leader_Marlon_WithGoggles
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z34_Island_Kahuna_Nanu
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z37_Champion_Wallace
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar010
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar022
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar023
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar031
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar033
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar038
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar077
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar086
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar135
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar138
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar139
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar145
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar148
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+NPC6.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+NPC
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 108
+NPC
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 100
+NPC
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 101
+NPC
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 102
+NPC
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 103
+NPC
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 106
+NPC 105
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 93
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 96
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 97
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_004_Ace_Trainer_F
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_015_Camper
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_023_Youngster
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_026_Lass
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_030_Swimmer_F
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_031_Tuber_M
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_036_Gentleman
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_043_Lady
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_044_Beauty
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_082_Psychic
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_127_Mom
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_140_Barry
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_148_Gym_Leader_Brock
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_151_Gym_Leader_Erika
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_155_Gym_Leader_Falkner
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_162_Gym_Leader_Clair
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_166_Gym_Leader_Crasher_Wake
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_170_Gym_Leader_Volkner
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_184_Rocket_Grunt_M
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_200_Lucas_Contest
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_201_Dawn
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z25_Gym_Leader_Cilan
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z29_Gym_Leader_Lenora
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z33_Gym_Leader_Marlon_SwimmingWithGoggles
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z42_Team_Skull_Boss_Guzma
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z43_Aether_Branch_Chief_Faba
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z49_Team_Plasma_Leader_Colress
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z51_Team_Plasma_Boss_Ghetsis_B2W2
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WES
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar041
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar045
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar046
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar047
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar055
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar064
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar068
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar085
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+trchar094
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar137
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+NPC7.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+CharsetMagmaGrunt
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 92
+NPC
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 110
+NPC
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 116
+NPC
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 117
+NPC
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 118
+NPC
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 91
+NPC 146
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC 148
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_005_Ace_Trainer_M
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_013_Bug_Catcher
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_019_Cyclist_M
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_069_Guitarist
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_070_Artist
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_071_Kimono_Girl
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_079_Medium
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_087_Jogger
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_114_Mart_F
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_139_Silver
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_145_Castle_Valet_Darach
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_147_Eusine
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_159_Gym_Leader_Chuck
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_160_Gym_Leader_Jasmine
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_167_Gym_Leader_Fantina
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_175_Elite_Four_Aaron
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_190_Rocket_Boss_Giovanni
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_191_Galactic_Grunt_M
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_192_Galactic_Grunt_F
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_197_Galactic_Boss_Cyrus
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_198_Lucas
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_203_Ethan
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z01_Bird_Keeper_M
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z08_Breeder_F
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z14_Mr_Briney
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z26_Gym_Leader_Chili
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z33_Gym_Leader_Marlon
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+d3gk331-3df569bd-6129-40a0-a31f-448d38911bd9
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar007
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar028
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar036
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar070
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar072
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar075
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar076
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar078
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar085
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+trchar113
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar125
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar167
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+
+NPC8.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+NPC
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 104
+NPC
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 107
+NPC
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 119
+NPC 123
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_007_Black_Belt
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_010_Boarder
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_028_Swimmer_M
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_046_Hiker
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_047_Clown
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_053_Super_Nerd
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_054_Scientist_M
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_056_School_Kid_M
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_064_Waiter
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_130_Cheryl
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_132_Marley
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_137_Prof_Elm
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_138_Prof_Rowan
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_141_Tower_Tycoon_Palmer
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_149_Gym_Leader_Misty
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_165_Gym_Leader_Maylene
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_172_Elite_Four_Koga
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_182_Champion_Steven_Stone
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_189_Rocket_Executive_Archer
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_194_Galactic_Commander_Jupiter
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_196_Galactic_Commander_Charon
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z02_Bird_Keeper_F
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z05_Private_Investigator
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z06_Psychic_F
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z07_Breeder_M
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z17_Gym_Leader_Brawly
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z20_Gym_Leader_Norman
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z22_Gym_Leader_Tate
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z44_Team_Yell_Captain_Piers
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z47_Team_Neo_Plasma_M
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NPC_Z48_Team_Neo_Plasma_Grunt_F
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+kymotonian_brendan_complete_by_kleinstudio_d3gk26y-fullview
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+sidney
+  rotate: false
+  xy: 1550, 3
+  size: 254, 255
+  orig: 254, 255
+  offset: 0, 0
+  index: -1
+trchar013
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar043
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar057
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar090
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar098
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar119
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar152
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar156
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+trchar166
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 0
+trchar166
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+trchar176
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+wally
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1

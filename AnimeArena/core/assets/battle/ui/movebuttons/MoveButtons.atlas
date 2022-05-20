@@ -1,0 +1,139 @@
+
+MoveButtons.png
+size: 2048,128
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+bug
+  rotate: false
+  xy: 1522, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+dark
+  rotate: false
+  xy: 1712, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+dragon
+  rotate: false
+  xy: 762, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+electric
+  rotate: false
+  xy: 1142, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+empty
+  rotate: false
+  xy: 382, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+fairy
+  rotate: false
+  xy: 952, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+fighting
+  rotate: false
+  xy: 762, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+fire
+  rotate: false
+  xy: 1142, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+flying
+  rotate: false
+  xy: 572, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+ghost
+  rotate: false
+  xy: 572, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+grass
+  rotate: false
+  xy: 2, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+ground
+  rotate: false
+  xy: 192, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+ice
+  rotate: false
+  xy: 382, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+normal
+  rotate: false
+  xy: 1332, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+poison
+  rotate: false
+  xy: 192, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+psychic
+  rotate: false
+  xy: 1522, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+rock
+  rotate: false
+  xy: 1332, 46
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+steel
+  rotate: false
+  xy: 2, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1
+water
+  rotate: false
+  xy: 952, 2
+  size: 188, 42
+  orig: 188, 42
+  offset: 0, 0
+  index: -1

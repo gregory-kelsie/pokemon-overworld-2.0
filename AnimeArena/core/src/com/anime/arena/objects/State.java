@@ -1,0 +1,5 @@
+package com.anime.arena.objects;
+
+public enum State {
+    STANDING, WALKING_RIGHT, WALKING_LEFT, WALKING_UP, WALKING_DOWN, JUMPING_DOWN, JUMPING_LEFT, JUMPING_RIGHT
+}
