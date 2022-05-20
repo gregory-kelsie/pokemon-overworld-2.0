@@ -23,7 +23,7 @@ public class PokemonAPI {
         Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.POST);
         request.setUrl("http://kelsiegr.com/pokemononline/jsonlogin.php");
 
-        UsernamePasswordDTO up = new UsernamePasswordDTO("mileycyrus", "wreckingball");
+        UsernamePasswordDTO up = new UsernamePasswordDTO(username, password);
         Gson g = new Gson();
         String gson = g.toJson(up);
         request.setContent(gson);

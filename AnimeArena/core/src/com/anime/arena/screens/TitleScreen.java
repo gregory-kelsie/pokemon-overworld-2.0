@@ -1,6 +1,7 @@
 package com.anime.arena.screens;
 
 import com.anime.arena.AnimeArena;
+import com.anime.arena.api.PokemonAPI;
 import com.anime.arena.pokemon.BasePokemon;
 import com.anime.arena.pokemon.BasePokemonFactory;
 import com.badlogic.gdx.Gdx;
@@ -32,6 +33,19 @@ public class TitleScreen implements Screen {
     private Texture selectedInputBox;
     private Texture keyboardTexture;
     private Texture keyboardIndicator;
+    private Texture abcOffTexture;
+    private Texture numbersOffTexture;
+    private Texture numbersOnTexture;
+    private Texture backOffTexture;
+    private Texture okOffTexture;
+
+    private Texture backOnTexture;
+    private Texture okOnTexture;
+
+    private Texture selectedButton;
+    private Texture button;
+    private Texture loginTexture;
+    private Texture exitTexture;
 
     private OrthographicCamera gameCam;
     private OrthographicCamera controlsCam;
@@ -50,6 +64,7 @@ public class TitleScreen implements Screen {
 
     private int selectPosition;
     private int textBoxPosition;
+    private int keyboardPosition;
 
     private String[][] abcLayout = {{"A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M"},
             {"N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"},
@@ -69,7 +84,14 @@ public class TitleScreen implements Screen {
     public static final int KEYBOARD = 1;
     public static final int USERNAME = 0;
     public static final int PASSWORD = 1;
+    public static final int LOGIN_BUTTON = 2;
+    public static final int EXIT_BUTTON = 3;
 
+    public static final int ON_KEYBOARD = 0;
+    public static final int ON_BACK = 1;
+    public static final int ON_OK = 2;
+
+    private PokemonAPI pokemonAPI;
 
     public TitleScreen(AnimeArena game) {
         this.game = game;
@@ -86,6 +108,17 @@ public class TitleScreen implements Screen {
         this.selectedInputBox = new Texture("title/selected-username-input.png");
         this.keyboardTexture = new Texture("title/keyboard.png");
         this.keyboardIndicator = new Texture("title/indicator.png");
+        this.abcOffTexture = new Texture("title/abc-off.png");
+        this.numbersOnTexture = new Texture("title/number-on.png");
+        this.backOffTexture = new Texture("title/back-off.png");
+        this.okOffTexture = new Texture("title/ok-off.png");
+        this.backOnTexture = new Texture("title/back-on.png");
+        this.okOnTexture = new Texture("title/ok-on.png");
+
+        this.selectedButton = new Texture("title/selected-button.png");
+        this.button = new Texture("title/button.png");
+        this.loginTexture = new Texture("title/login.png");
+        this.exitTexture = new Texture("title/exit.png");
 
         this.selectPosition = TITLE_SCREEN;
         this.textBoxPosition = USERNAME;
@@ -101,7 +134,7 @@ public class TitleScreen implements Screen {
         initCamera();
 
         initVariables();
-
+        this.pokemonAPI = new PokemonAPI();
         gameCam.position.set((AnimeArena.V_WIDTH / 2) / AnimeArena.PPM, (AnimeArena.V_HEIGHT / 2) / AnimeArena.PPM, 0);
 
     }
@@ -109,6 +142,7 @@ public class TitleScreen implements Screen {
     private void resetKeyboardPos() {
         this.keyboardPosX = 0;
         this.keyboardPosY = 0;
+        this.keyboardPosition = ON_KEYBOARD;
     }
 
 
@@ -138,9 +172,6 @@ public class TitleScreen implements Screen {
         parameter3.spaceY = 20;
         parameter3.spaceX = -2;
 
-        parameter3.shadowColor = Color.GRAY;
-        parameter3.shadowOffsetX = 4;
-        parameter3.shadowOffsetY = 4;
 
 
         listFont = generator.generateFont(parameter2);
@@ -173,47 +204,109 @@ public class TitleScreen implements Screen {
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.UP)) {
             if (selectPosition == TITLE_SCREEN) {
-                textBoxPosition = (textBoxPosition == PASSWORD) ? USERNAME : textBoxPosition;
+                if (textBoxPosition == PASSWORD) {
+                    textBoxPosition = USERNAME;
+                } else if (textBoxPosition == LOGIN_BUTTON || textBoxPosition == EXIT_BUTTON) {
+                    textBoxPosition = PASSWORD;
+                }
             } else if (selectPosition == KEYBOARD) {
                 if (keyboardPosY > 0) {
                     keyboardPosY--;
+                } else if (keyboardPosY == 0 && keyboardPosition == ON_KEYBOARD && keyboardPosX >= 8 && keyboardPosX <= 10) {
+                    keyboardPosition = ON_BACK;
+                } else if (keyboardPosY == 0 && keyboardPosition == ON_KEYBOARD && keyboardPosX >= 11 && keyboardPosX <= 12) {
+                    keyboardPosition = ON_OK;
                 }
             }
         } else if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
             if (selectPosition == TITLE_SCREEN) {
-                textBoxPosition = (textBoxPosition == USERNAME) ? PASSWORD : textBoxPosition;
-            }else if (selectPosition == KEYBOARD) {
-                if (keyboardPosY < 4) {
+                if (textBoxPosition == USERNAME) {
+                    textBoxPosition = PASSWORD;
+                } else if (textBoxPosition == PASSWORD) {
+                    textBoxPosition = LOGIN_BUTTON;
+                }
+            } else if (selectPosition == KEYBOARD) {
+                if (keyboardPosition == ON_KEYBOARD && keyboardPosY < 4) {
                     keyboardPosY++;
+                } else if (keyboardPosition == ON_BACK || keyboardPosition == ON_OK) {
+                    keyboardPosX = keyboardPosition == ON_BACK ? 9 : 11;
+                    keyboardPosition = ON_KEYBOARD;
                 }
             }
         } else if (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)) {
             if (selectPosition == KEYBOARD) {
-                if (keyboardPosX < 12) {
+                if (keyboardPosition == ON_KEYBOARD && keyboardPosX < 12) {
                     keyboardPosX++;
+                } else if (keyboardPosition == ON_BACK) {
+                    keyboardPosX = 11;
+                    keyboardPosition = ON_OK;
+                }
+            } else if (selectPosition == TITLE_SCREEN) {
+                if (textBoxPosition == LOGIN_BUTTON) {
+                    textBoxPosition = EXIT_BUTTON;
                 }
             }
         } else if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
             if (selectPosition == KEYBOARD) {
-                if (keyboardPosX > 0) {
+                if (keyboardPosition == ON_KEYBOARD && keyboardPosX > 0) {
                     keyboardPosX--;
+                } else if (keyboardPosition == ON_OK) {
+                    keyboardPosition = ON_BACK;
+                    keyboardPosX = 9;
+                }
+            } else if (selectPosition == TITLE_SCREEN) {
+                if (textBoxPosition == EXIT_BUTTON) {
+                    textBoxPosition = LOGIN_BUTTON;
                 }
             }
         } else if (Gdx.input.isKeyJustPressed((Input.Keys.X))) {
             if (selectPosition == KEYBOARD) {
                 selectPosition = TITLE_SCREEN;
+                resetKeyboardPos();
+
             }
         } else if (Gdx.input.isKeyJustPressed((Input.Keys.Z))) {
             if (selectPosition == TITLE_SCREEN) {
-                selectPosition = KEYBOARD;
                 if (textBoxPosition == USERNAME) {
+                    selectPosition = KEYBOARD;
                     keyboardInput = username;
-                } else {
+                } else if (textBoxPosition == PASSWORD) {
+                    selectPosition = KEYBOARD;
                     keyboardInput = password;
+                } else if (textBoxPosition == LOGIN_BUTTON) {
+                    pokemonAPI.login(username, password);
                 }
             } else if (selectPosition == KEYBOARD) {
-                keyboardInput += abcLayout[keyboardPosY][keyboardPosX];
+                if (keyboardPosition == ON_KEYBOARD && keyboardInput.length() <= 15) {
+                    keyboardInput += abcLayout[keyboardPosY][keyboardPosX];
+                } else if (keyboardPosition == ON_BACK) {
+                    if (keyboardInput.length() > 0) {
+                        keyboardInput = keyboardInput.substring(0, keyboardInput.length() - 1);
+                    }
+                } else if (keyboardPosition == ON_OK) {
+                    if (textBoxPosition == USERNAME) {
+                        username = keyboardInput;
+                    } else if (textBoxPosition == PASSWORD) {
+                        password = keyboardInput;
+                    }
+                    selectPosition = TITLE_SCREEN;
+                    resetKeyboardPos();
+                }
             }
+        } else if (Gdx.input.isKeyJustPressed((Input.Keys.BACKSPACE))) {
+            if (selectPosition == KEYBOARD) {
+                if (keyboardInput.length() > 0) {
+                    keyboardInput = keyboardInput.substring(0, keyboardInput.length() - 1);
+                }
+            }
+        } else if (Gdx.input.isKeyJustPressed((Input.Keys.ENTER))) {
+            if (textBoxPosition == USERNAME) {
+                username = keyboardInput;
+            } else if (textBoxPosition == PASSWORD) {
+                password = keyboardInput;
+            }
+            selectPosition = TITLE_SCREEN;
+            resetKeyboardPos();
         }
 
     }
@@ -243,23 +336,71 @@ public class TitleScreen implements Screen {
         game.getBatch().draw(usernamePasswordTexture, 160, 1160, 228, 98);
         if (textBoxPosition == USERNAME) {
             game.getBatch().draw(selectedInputBox, 420, 1215, 514, 48);
-            game.getBatch().draw(inputBox, 420, 1160, 514, 48);
         } else {
             game.getBatch().draw(inputBox, 420, 1215, 514, 48);
-            game.getBatch().draw(selectedInputBox, 420, 1160, 514, 48);
+
         }
+        if (textBoxPosition == PASSWORD) {
+            game.getBatch().draw(selectedInputBox, 420, 1160, 514, 48);
+        } else {
+            game.getBatch().draw(inputBox, 420, 1160, 514, 48);
+        }
+        if (textBoxPosition == LOGIN_BUTTON) {
+            game.getBatch().draw(selectedButton, 217, 1013, 320, 124);
+        } else {
+            game.getBatch().draw(button, 234, 1030, 286, 90);
+        }
+        if (textBoxPosition == EXIT_BUTTON) {
+            game.getBatch().draw(selectedButton, 543, 1013, 320, 124);
+        } else {
+            game.getBatch().draw(button, 560, 1030, 286, 90);
+        }
+
+
+
+        game.getBatch().draw(loginTexture, 320, 1060, 100, 32);
+        game.getBatch().draw(exitTexture, 660, 1060, 80, 32);
+
+        menuFont.draw(game.getBatch(), username, 430, 1252);
+        menuFont.draw(game.getBatch(), getMaskedInput(password), 430, 1195);
+
+
 
         if (selectPosition == KEYBOARD) {
             game.getBatch().draw(keyboardTexture, 28, 1056, 1024, 768);
-            menuFont.draw(game.getBatch(), keyboardInput, 180, 1718);
+            Texture backTexture;
+            if (keyboardPosition == ON_BACK) {
+                backTexture = backOnTexture;
+            } else {
+                backTexture = backOffTexture;
+            }
+            Texture okTexture;
+            if (keyboardPosition == ON_OK) {
+                okTexture = okOnTexture;
+            } else {
+                okTexture = okOffTexture;
+            }
+            game.getBatch().draw(backTexture, 648, 1493, 131, 79);
+            game.getBatch().draw(okTexture, 794, 1493, 131, 79);
+            if (textBoxPosition == USERNAME) {
+                menuFont.draw(game.getBatch(), keyboardInput, 180, 1718);
+            } else if (textBoxPosition == PASSWORD) {
+                menuFont.draw(game.getBatch(), getMaskedInput(keyboardInput), 180, 1718);
+            }
             int xPos = 163 + (keyboardPosX * 59);
             int yPos = 1400 - (keyboardPosY * 70);
-            game.getBatch().draw(keyboardIndicator, xPos, yPos, 64, 64);
+            if (keyboardPosition  == ON_KEYBOARD) {
+                game.getBatch().draw(keyboardIndicator, xPos, yPos, 64, 64);
+            }
         }
 
         drawScreen(game.getBatch());
 
         game.getBatch().end();
+    }
+
+    private String getMaskedInput(String str) {
+        return str.replaceAll(".", "*");
     }
 
     private void drawScreen(SpriteBatch batch) {
