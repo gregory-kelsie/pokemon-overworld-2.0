@@ -2,6 +2,7 @@ package com.anime.arena.screens;
 
 import com.anime.arena.AnimeArena;
 import com.anime.arena.api.PokemonAPI;
+import com.anime.arena.dto.PlayerProfile;
 import com.anime.arena.pokemon.BasePokemon;
 import com.anime.arena.pokemon.BasePokemonFactory;
 import com.badlogic.gdx.Gdx;
@@ -80,6 +81,8 @@ public class TitleScreen implements Screen {
     private String username;
     private String password;
 
+    private boolean loggingIn;
+
     public static final int TITLE_SCREEN = 0;
     public static final int KEYBOARD = 1;
     public static final int USERNAME = 0;
@@ -96,7 +99,7 @@ public class TitleScreen implements Screen {
     public TitleScreen(AnimeArena game) {
         this.game = game;
 
-
+        this.loggingIn = false;
 
         this.black = new Texture("animation/black.png");
         this.background = new Texture("title/background.png");
@@ -194,8 +197,27 @@ public class TitleScreen implements Screen {
     }
 
     public void update(float dt) {
-        handleInput(dt);
-
+        if (loggingIn) {
+            if (!pokemonAPI.isFetchingResponse() && pokemonAPI.isLoggedIn()) {
+                loggingIn = false;
+                PlayerProfile p = pokemonAPI.getPlayerProfile();
+                if (p != null) {
+                    if (p.getStartedGame() == 0) {
+                        //Go to create character screen
+                        Gdx.app.log("update", "The player " + p.getUsername() + " will now create a character");
+                    } else if (p.getStartedGame() == 1) {
+                        //Go to the player's location in the game screen
+                        Gdx.app.log("update", "The player " + p.getUsername() + " is now logging in");
+                    } else {
+                        Gdx.app.log("update", "The player profile startedGame flag is invalid: " + p.getStartedGame());
+                    }
+                }
+            } else if (!pokemonAPI.isFetchingResponse()) {
+                loggingIn = false;
+            }
+        } else {
+            handleInput(dt);
+        }
     }
 
 
@@ -274,7 +296,12 @@ public class TitleScreen implements Screen {
                     selectPosition = KEYBOARD;
                     keyboardInput = password;
                 } else if (textBoxPosition == LOGIN_BUTTON) {
-                    pokemonAPI.login(username, password);
+                    if (username.length() > 0 && password.length() > 0) {
+                        pokemonAPI.login(username, password);
+                        loggingIn = true;
+                    } else {
+                        Gdx.app.log("handleInput", "Cannot log in with a blank username or password" + Gdx.app.getLogLevel());
+                    }
                 }
             } else if (selectPosition == KEYBOARD) {
                 if (keyboardPosition == ON_KEYBOARD && keyboardInput.length() <= 15) {
