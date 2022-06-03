@@ -15,13 +15,57 @@ import java.util.Map;
 
 public class PokemonAPI {
     private boolean loggedIn;
+    private boolean createdCharacter;
     private boolean fetchingResponse;
     private JsonArray pokedexResponse;
 
     private PlayerProfile playerProfile;
     public PokemonAPI() {
         loggedIn = false;
+        createdCharacter = false;
         fetchingResponse = false;
+    }
+
+    public void createCharacter(PlayerProfile newPlayerProfile) {
+        if (!fetchingResponse) {
+            fetchingResponse = true;
+            Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.POST);
+            request.setUrl("http://kelsiegr.com/pokemononline/createCharacter.php");
+            Gson g = new Gson();
+            String gson = g.toJson(newPlayerProfile);
+            Gdx.app.log("PokemonAPI::createCharacter", gson);
+            request.setContent(gson);
+            Gdx.net.sendHttpRequest(request, new Net.HttpResponseListener() {
+
+                @Override
+                public void handleHttpResponse(Net.HttpResponse httpResponse) {
+                    fetchingResponse = false;
+                    String jsonResponse = httpResponse.getResultAsString();
+                    Gdx.app.log("PokemonAPI::createCharacter:handleHttpResponse", jsonResponse);
+                    JsonObject loggedInResponse = new JsonParser().parse(jsonResponse).getAsJsonObject();
+                    int responseCode = loggedInResponse.get("success").getAsInt();
+                    if (responseCode == 1) {
+                       createdCharacter = true;
+                    } else {
+                        Gdx.app.log("PokemonAPI::createCharacter:handleHttpResponse", "Failed to create character");
+                    }
+
+                }
+
+                @Override
+                public void failed(Throwable t) {
+                    Gdx.app.log("PokemonAPI::createCharacter:failed", t.getMessage());
+                    fetchingResponse = false;
+                }
+
+                @Override
+                public void cancelled() {
+                    Gdx.app.log("PokemonAPI::createCharacter:cancelled", "cancelled");
+                    fetchingResponse = false;
+                }
+            });
+        }
+
     }
 
     public boolean isFetchingResponse() {
@@ -30,6 +74,10 @@ public class PokemonAPI {
 
     public boolean isLoggedIn() {
         return loggedIn;
+    }
+
+    public boolean hasCreatedCharacter() {
+        return createdCharacter;
     }
 
     public PlayerProfile getPlayerProfile() {

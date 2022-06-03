@@ -202,9 +202,10 @@ public class TitleScreen implements Screen {
                 loggingIn = false;
                 PlayerProfile p = pokemonAPI.getPlayerProfile();
                 if (p != null) {
-                    if (p.getStartedGame() == 0) {
+                    if (p.getStartedGame() == 0 || CharacterCreateScreen.DEBUG_CHARACTER_CREATE_SCREEN) {
                         //Go to create character screen
                         Gdx.app.log("update", "The player " + p.getUsername() + " will now create a character");
+                        game.setScreen(new CharacterCreateScreen(game, p));
                     } else if (p.getStartedGame() == 1) {
                         //Go to the player's location in the game screen
                         Gdx.app.log("update", "The player " + p.getUsername() + " is now logging in");
@@ -213,7 +214,7 @@ public class TitleScreen implements Screen {
                     }
                 }
             } else if (!pokemonAPI.isFetchingResponse()) {
-                loggingIn = false;
+                //loggingIn = false;
             }
         } else {
             handleInput(dt);

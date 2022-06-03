@@ -590,6 +590,10 @@ public class PlayScreen implements Screen {
         return swimmingAtlas;
     }
 
+    public HashMap<String, TextureAtlas> getHairAtlases() {
+        return hairAtlases;
+    }
+
     public TextureAtlas getTopAtlas() {
         return topAtlas;
     }

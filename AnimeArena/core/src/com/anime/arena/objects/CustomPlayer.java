@@ -28,6 +28,8 @@ public class CustomPlayer {
     private Vector2 velocity;
     private float speed = 60 * 1f;
 
+    private boolean displayShadow;
+
     private Texture shadow;
     public CustomPlayer(PlayerOutfit outfit) {
         this.outfit = outfit;
@@ -35,13 +37,19 @@ public class CustomPlayer {
         previousState = State.STANDING;
         stateTimer = 0;
         isMoving = true;
-        isSwimming = true;
+        isSwimming = false;
         direction = Direction.DOWN;
         this.velocity = new Vector2(0f, 0f);
         initSpritePosition(0f, 0f);
         shadow = new Texture("sprites/shadow3.png");
+        displayShadow = true;
 
     }
+
+    public void setShadow(boolean displayShadow) {
+        this.displayShadow = displayShadow;
+    }
+
 
     public PlayerOutfit getOutfit() {
         return outfit;
@@ -147,6 +155,30 @@ public class CustomPlayer {
         }
     }
 
+    public void initSpritePosition2(float x, float y) {
+        if (body != null) {
+            body.setSize(128, 128);
+            body.setX(x);
+            body.setY(y);
+            swimmingBody.setSize(128, 128);
+            swimmingBody.setX(x);
+            swimmingBody.setY(y);
+            //body.setBounds(x, y, 32 / AnimeArena.PPM, 32 / AnimeArena.PPM);
+        }
+        if (hair != null) {
+            hair.setBounds(x, y, 128 / AnimeArena.PPM, 128 / AnimeArena.PPM);
+        }
+        if (top != null) {
+            top.setBounds(x, y, 128 / AnimeArena.PPM, 128 / AnimeArena.PPM);
+        }
+        if (bottom != null) {
+            bottom.setBounds(x, y, 128 / AnimeArena.PPM, 128 / AnimeArena.PPM);
+        }
+        if (bag != null) {
+            bag.setBounds(x, y, 128 / AnimeArena.PPM, 128 / AnimeArena.PPM);
+        }
+    }
+
     public void updateSpritePosition() {
         //Update each sprite part based on the body position
         if (hair != null) {
@@ -168,7 +200,9 @@ public class CustomPlayer {
 
 
     private void drawShadow(Batch spriteBatch) {
-        spriteBatch.draw(shadow, body.getX() + 8, body.getY() - 1);
+        if (displayShadow) {
+            spriteBatch.draw(shadow, body.getX() + 8, body.getY() - 1);
+        }
     }
 
     public void draw(Batch batch) {

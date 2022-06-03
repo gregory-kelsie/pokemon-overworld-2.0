@@ -1,5 +1,7 @@
 package com.anime.arena.dto;
 
+import com.anime.arena.api.PokemonAPI;
+
 public class PlayerProfile {
     private int uid;
     private String username;
@@ -9,6 +11,8 @@ public class PlayerProfile {
     private String skinTone;
     private String hairStyle;
     private String hairColour;
+    private int topID;
+    private int bottomID;
 
     public PlayerProfile(int uid, String username, int startedGame) {
         this.uid = uid;
@@ -25,6 +29,22 @@ public class PlayerProfile {
         this.skinTone = skinTone;
         this.hairStyle = hairStyle;
         this.hairColour = hairColour;
+    }
+
+    public int getTopID() {
+        return topID;
+    }
+
+    public void setTopID(int topID) {
+        this.topID = topID;
+    }
+
+    public int getBottomID() {
+        return bottomID;
+    }
+
+    public void setBottomID(int bottomID) {
+        this.bottomID = bottomID;
     }
 
     public String getGender() {
@@ -89,5 +109,10 @@ public class PlayerProfile {
 
     public void setHairColour(String hairColour) {
         this.hairColour = hairColour;
+    }
+
+    public void updateProfile() {
+        PokemonAPI api = new PokemonAPI();
+        api.createCharacter(this);
     }
 }
