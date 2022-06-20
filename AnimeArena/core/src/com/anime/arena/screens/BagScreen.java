@@ -4,7 +4,7 @@ import com.anime.arena.AnimeArena;
 import com.anime.arena.items.Bag;
 import com.anime.arena.items.BagItem;
 import com.anime.arena.items.Item;
-import com.anime.arena.items.ItemFactory;
+import com.anime.arena.objects.OutfitFactory;
 import com.anime.arena.objects.Player;
 import com.anime.arena.tools.DatabaseLoader;
 import com.anime.arena.tools.TextFormater;
@@ -59,7 +59,6 @@ public class BagScreen implements Screen {
     private Texture bagSel;
     private Sprite itemIcon;
     private Texture itemBack;
-    private ItemFactory itemFactory;
     private Bag bag;
     private int scrollPosition;
     private int bagOffset;
@@ -68,8 +67,11 @@ public class BagScreen implements Screen {
     private Screen previousScreen;
     private DatabaseLoader dbLoader;
     private Player player;
-    public BagScreen(AnimeArena game, Player player, TextureAtlas pokemonAtlas, TextureAtlas pokemonIconAtlas, TextureAtlas pokemonTypeAtlas, Screen previousScreen, DatabaseLoader dbLoader) {
+    private OutfitFactory outfitFactory;
+    public BagScreen(AnimeArena game, Player player, TextureAtlas pokemonAtlas, TextureAtlas pokemonIconAtlas,
+                     TextureAtlas pokemonTypeAtlas, Screen previousScreen, DatabaseLoader dbLoader) {
         this.game = game;
+        this.outfitFactory = outfitFactory;
         this.black = new Texture("animation/black.png");
         this.medicine = new Texture("bag/bagbg2.png");
         this.holdItemBG = new Texture("bag/bagbg1.png");
@@ -130,8 +132,8 @@ public class BagScreen implements Screen {
         initCamera();
 
         gameCam.position.set((AnimeArena.V_WIDTH / 2) / AnimeArena.PPM, (AnimeArena.V_HEIGHT / 2) / AnimeArena.PPM, 0);
-
     }
+
 
     private List<BagItem> getCurrentBagItems() {
         if (currentBackground == 0) {
@@ -140,6 +142,8 @@ public class BagScreen implements Screen {
             return bag.getMedicine();
         } else if (currentBackground == 2) {
             return bag.getPokeballs();
+        } else if (currentBackground == 6) {
+            return bag.getClothes();
         }
         else {
             return bag.getMail();
@@ -248,8 +252,17 @@ public class BagScreen implements Screen {
             if (scrollPosition + bagOffset == getCurrentBagItems().size()) {
                 closeBag();
             } else {
-                game.setScreen(new PokemonScreen(game, this, player, pokemonAtlas, pokemonIconAtlas,
-                        pokemonTypeAtlas, dbLoader, bag, getCurrentBagItems().get(scrollPosition + bagOffset)));
+                BagItem i = getCurrentBagItems().get(scrollPosition + bagOffset);
+                if (i.getItem().getItemType() == 6) { //Clothing item
+                 //Open up an equip menu
+                    boolean result = i.getItem().use(player, dbLoader.getItemFactory());
+                    if (result) {
+                        bag.useItem(i);
+                    }
+                } else {
+                    game.setScreen(new PokemonScreen(game, this, player, pokemonAtlas, pokemonIconAtlas,
+                            pokemonTypeAtlas, dbLoader, bag, getCurrentBagItems().get(scrollPosition + bagOffset)));
+                }
             }
         }
 

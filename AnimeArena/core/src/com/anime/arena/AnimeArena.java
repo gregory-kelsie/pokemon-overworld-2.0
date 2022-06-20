@@ -34,7 +34,8 @@ public class AnimeArena extends Game {
 		//setScreen(new PokemonTestScreen(this));
 		//setScreen(new AnimationScreen(this));
 		//setScreen(new BagTestScreen(this));
-		setScreen(new PlayScreen(this));
+		//setScreen(new PlayScreen(this));
+		setScreen(new TitleScreen(this));
 		//setScreen(new WildPokemonTransitionTestScreen(this));
 	}
 

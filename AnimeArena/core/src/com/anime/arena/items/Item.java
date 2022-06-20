@@ -6,11 +6,11 @@ import com.anime.arena.pokemon.Pokemon;
 import com.anime.arena.tools.TextFormater;
 
 public class Item {
-    private int itemID;
-    private String name;
-    private String description;
-    private String itemIcon;
-    private int itemType;
+    protected int itemID;
+    protected String name;
+    protected String description;
+    protected String itemIcon;
+    protected int itemType;
 
     public Item() {
 
@@ -49,6 +49,10 @@ public class Item {
     public boolean isUsable() { return false; }
 
     public boolean use(Player player, Pokemon p, BasePokemonFactory factory) {
+        return false;
+    }
+
+    public boolean use(Player player, ItemFactory itemFactory) {
         return false;
     }
 }

@@ -10,6 +10,7 @@ import com.anime.arena.pokemon.BasePokemon;
 import com.anime.arena.pokemon.BasePokemonFactory;
 import com.anime.arena.pokemon.PokemonType;
 import com.anime.arena.tools.DatabaseLoader;
+import com.anime.arena.tools.ScriptParameters;
 import com.anime.arena.tools.TextFormater;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -32,6 +33,7 @@ import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
 
 import java.util.*;
+
 
 public class PokedexScreen implements Screen {
 
@@ -83,7 +85,7 @@ public class PokedexScreen implements Screen {
     private TextureAtlas pokemonTypeAtlas;
     private Pokedex pokedex;
 
-    public static boolean ENABLE_POKEDEX = false;
+
     public PokedexScreen(AnimeArena game, Screen previousScreen, TextureAtlas pokemonAtlas, TextureAtlas pokemonTypeAtlas, Pokedex pokedex, DatabaseLoader dbLoader) {
         this.game = game;
         this.pokemonAtlas = pokemonAtlas;
@@ -487,7 +489,7 @@ public class PokedexScreen implements Screen {
 
         listFont.draw(batch, "kg", 960, 1420);
 
-        if (ENABLE_POKEDEX || pokedex.hasObtained(selectedPokemon.getDexNumber())) {
+        if (ScriptParameters.ENABLE_POKEDEX || pokedex.hasObtained(selectedPokemon.getDexNumber())) {
             batch.draw(ownedIcon, 435, 1740, ownedIcon.getWidth() * 3, ownedIcon.getHeight() * 3);
             listFont.draw(batch, selectedPokemon.getClassification() + " Pok\u00e9mon", 440, 1715);
             listFont.draw(batch, Double.toString(selectedPokemon.getWeight()), 800, 1420);
@@ -556,7 +558,7 @@ public class PokedexScreen implements Screen {
     }
 
     private boolean displayPokemon(int dexNum) {
-        if (!ENABLE_POKEDEX) {
+        if (!ScriptParameters.ENABLE_POKEDEX) {
             if (pokedex.hasObtained(dexNum) || pokedex.hasSeen(dexNum)) {
                 return true;
             }
