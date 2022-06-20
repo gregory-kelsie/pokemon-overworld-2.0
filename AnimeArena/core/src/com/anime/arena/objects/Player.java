@@ -1,9 +1,11 @@
 package com.anime.arena.objects;
 
 import com.anime.arena.AnimeArena;
+import com.anime.arena.dto.PlayerProfile;
 import com.anime.arena.interactions.EncounterEvent;
 import com.anime.arena.interactions.WarpEvent;
 import com.anime.arena.items.Bag;
+import com.anime.arena.items.Clothing;
 import com.anime.arena.pokedex.Pokedex;
 import com.anime.arena.pokemon.Pokemon;
 import com.anime.arena.quest.Quest;
@@ -38,6 +40,8 @@ public class Player {
     private PlayScreen screen;
 
     private PlayerOutfit outfit;
+
+    private PlayerProfile playerProfile;
 
     //Sprites
     private PlayerBody body;
@@ -122,9 +126,10 @@ public class Player {
 
 
 
-    public Player(PlayScreen screen, PokemonMap map, OrthographicCamera gameCam) {
-        initOutfit();
+    public Player(PlayScreen screen, PlayerProfile playerProfile, PokemonMap map, OrthographicCamera gameCam) {
+        this.playerProfile = playerProfile;
         this.screen = screen;
+        initOutfit();
         this.pokemonMap = map;
         moveButtonDownTime = 0;
         currentState = State.STANDING;
@@ -337,21 +342,36 @@ public class Player {
      *****************************************************************************************************************/
 
     private void initOutfit() {
-        String body = "male-dark";
-        String hairType = "MaleHair4";
-        String hairColour = "red";
-        String top = "hoodie black";
-        String bottom = "jeans navy";
-        outfit = new PlayerOutfit();
-        outfit.setBodyType(body);
-        outfit.setHairType(hairType);
-        outfit.setHairColour(hairColour);
-        outfit.setTop(top);
-        outfit.setBottom(bottom);
+        if (playerProfile == null) {
+            String body = "male-dark";
+            String hairType = "MaleHair4";
+            String hairColour = "red";
+            String top = "t-shirt-green";
+            String bottom = "shorts-red";
+            outfit = new PlayerOutfit();
+            outfit.setBodyType(body);
+            outfit.setHairType(hairType);
+            outfit.setHairColour(hairColour);
+            outfit.setTop(top);
+            outfit.setBottom(bottom);
+        } else {
+            outfit = new PlayerOutfit();
+            outfit.setBodyType(playerProfile.getSkinTone());
+            outfit.setHairType(playerProfile.getHairStyle());
+            outfit.setHairColour(playerProfile.getHairColour());
+            Clothing top = (Clothing) screen.getItemFactory().createItem(playerProfile.getTopID());
+            Clothing bottom = (Clothing) screen.getItemFactory().createItem(playerProfile.getBottomID());
+            outfit.setTop(top.getClothingID());
+            outfit.setBottom(bottom.getClothingID());
+        }
     }
 
     public PlayerSwitches getSwitches() {
         return switches;
+    }
+
+    public PlayerProfile getPlayerProfile() {
+        return playerProfile;
     }
 
     public List<Quest> getQuests() {

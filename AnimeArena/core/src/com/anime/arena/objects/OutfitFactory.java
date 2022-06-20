@@ -39,6 +39,7 @@ public class OutfitFactory {
         topAtlas = screen.getTopAtlas();
         bottomAtlas = screen.getBottomAtlas();
         bagAtlas = screen.getBagAtlas();
+
     }
 
     public PlayerBody createBody() {
@@ -65,7 +66,7 @@ public class OutfitFactory {
 
 
     public PlayerBody createHair() {
-        if (outfit.getHairType() != null) {
+        if (outfit.getHairType() != null && !outfit.getHairType().equals("")) {
             return new PlayerBody(hairAtlases.get(outfit.getHairType()), outfit.getHairColour());
         }
         return null;

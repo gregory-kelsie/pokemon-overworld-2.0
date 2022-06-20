@@ -8,6 +8,7 @@ public class Bag {
     public List<BagItem> items;
     private List<BagItem> medicine;
     private List<BagItem> pokeballs;
+    private List<BagItem> clothes;
     private List<BagItem> mail;
 
     public Bag() {
@@ -15,6 +16,7 @@ public class Bag {
         medicine = new ArrayList<BagItem>();
         mail = new ArrayList<BagItem>();
         pokeballs = new ArrayList<BagItem>();
+        clothes = new ArrayList<BagItem>();
     }
 
     public void useItem(int itemID, List<BagItem> items) {
@@ -53,6 +55,10 @@ public class Bag {
         return pokeballs;
     }
 
+    public List<BagItem> getClothes() {
+        return clothes;
+    }
+
     public void addItem(ItemFactory itemFactory, int itemID, int amount) {
         Item i = itemFactory.createItem(itemID);
         if (i.getItemType() == ItemType.MEDICINE.getValue() || i.getItemType() == ItemType.VITAMIN.getValue()) {
@@ -62,6 +68,8 @@ public class Bag {
             addToBag(itemFactory, itemID, amount, items);
         } else if (i.getItemType() == ItemType.POKEBALL.getValue()) {
             addToBag(itemFactory, itemID, amount, pokeballs);
+        } else if (i.getItemType() == ItemType.CLOTHES.getValue()) {
+            addToBag(itemFactory, itemID, amount, clothes);
         }
 
     }
@@ -93,6 +101,8 @@ public class Bag {
             removeFromBag(bagItem, items);
         } else if (i.getItemType() == ItemType.POKEBALL.getValue()) {
             removeFromBag(bagItem, pokeballs);
+        } else if (i.getItemType() == ItemType.CLOTHES.getValue()) {
+            removeFromBag(bagItem, clothes);
         }
     }
 

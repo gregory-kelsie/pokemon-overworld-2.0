@@ -1,13 +1,11 @@
 package com.anime.arena.screens;
 
 import com.anime.arena.AnimeArena;
+import com.anime.arena.api.PokemonAPI;
 import com.anime.arena.dto.PlayerProfile;
 import com.anime.arena.objects.CustomPlayer;
 import com.anime.arena.objects.OutfitFactory;
-import com.anime.arena.objects.PlayerBody;
 import com.anime.arena.objects.PlayerOutfit;
-import com.anime.arena.pokemon.BasePokemon;
-import com.anime.arena.pokemon.BasePokemonFactory;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -15,17 +13,16 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
-import java.util.Locale;
 
 public class CharacterCreateScreen implements Screen {
 
@@ -45,14 +42,10 @@ public class CharacterCreateScreen implements Screen {
     private OrthographicCamera controlsCam;
     private Viewport gamePort;
 
-    private Screen previousScreen;
-
 
     private BitmapFont menuFont;
-    private BitmapFont listFont;
-    private BitmapFont nameFont;
+    private BitmapFont errorFont;
 
-    private int screenPosition; //0 menu, 1 list, 2 entry, 3 sprite, 4 nest
 
     private int selectPosition;
 
@@ -72,16 +65,24 @@ public class CharacterCreateScreen implements Screen {
     private int topsIndex;
     private int bottomsIndex;
 
+    private String errorMessage;
+
     private HashMap<String, Integer> topMap;
     private HashMap<String, Integer> bottomMap;
 
     private CustomPlayer displayCharacter;
     private PlayerProfile playerProfile;
+    private PokemonAPI api;
 
-    public static final boolean DEBUG_CHARACTER_CREATE_SCREEN = true;
+    private TextureAtlas loadingAtlas;
+    private Animation<TextureRegion> loadingAnimation;
+    private float animationTimer;
+
+
 
     public CharacterCreateScreen(AnimeArena game, PlayerProfile playerProfile) {
         this.game = game;
+        this.api = new PokemonAPI();
         this.playerProfile = playerProfile;
         this.black = new Texture("animation/black.png");
         this.background = new Texture("charcreate/background.png");
@@ -92,6 +93,7 @@ public class CharacterCreateScreen implements Screen {
         this.characterPanel = new Texture("charcreate/charpanel.png");
         this.titleTexture = new Texture("charcreate/title.png");
         this.labelsTexture = new Texture("charcreate/labels.png");
+        this.loadingAtlas = new TextureAtlas("animation/loading/Loading.atlas");
 
         this.selectPosition = 0; //Gender, the top of the list
         this.femaleGenders  = new String[]{"female-pale", "female-light", "female-medium", "female-dark"};
@@ -129,9 +131,25 @@ public class CharacterCreateScreen implements Screen {
         initCamera();
 
         initVariables();
-
+        initAnimations();
         gameCam.position.set((AnimeArena.V_WIDTH / 2) / AnimeArena.PPM, (AnimeArena.V_HEIGHT / 2) / AnimeArena.PPM, 0);
 
+    }
+
+    private void initAnimations() {
+        //Init loading animation
+        Array<TextureRegion> frames = new Array<>();
+        for (int i = 1; i < 20; i++) {
+            String fileName = "";
+            if (i < 10) {
+                fileName = "0" + i;
+            } else {
+                fileName += i;
+            }
+            frames.add(new TextureRegion(loadingAtlas.findRegion(fileName)));
+        }
+        loadingAnimation = new Animation<TextureRegion>(0.06f, frames);
+        animationTimer = 0.0f;
     }
 
     private void initDisplayCharacter() {
@@ -162,23 +180,14 @@ public class CharacterCreateScreen implements Screen {
 
 
     private void initVariables() {
-        screenPosition = 0;
         selectPosition = 0;
+        this.errorMessage = "";
 
     }
 
     private void initFont() {
         //List Font
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/pkmnems.ttf"));
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter2 = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter2.size = 60;
-        parameter2.color = Color.DARK_GRAY;
-        parameter2.spaceY = 20;
-        parameter2.spaceX = -2;
-
-        parameter2.shadowColor = Color.GRAY;
-        parameter2.shadowOffsetX = 1;
-        parameter2.shadowOffsetY = 1;
 
         FreeTypeFontGenerator.FreeTypeFontParameter parameter3 = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter3.size = 48;
@@ -186,10 +195,14 @@ public class CharacterCreateScreen implements Screen {
         parameter3.spaceY = 20;
         parameter3.spaceX = -2;
 
+        FreeTypeFontGenerator.FreeTypeFontParameter errorParameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        errorParameter.size = 36;
+        errorParameter.color = Color.RED;
+        errorParameter.spaceY = 20;
+        errorParameter.spaceX = -2;
 
-
-        listFont = generator.generateFont(parameter2);
         menuFont = generator.generateFont(parameter3);
+        errorFont = generator.generateFont(errorParameter);
     }
 
     private void initCamera() {
@@ -210,6 +223,17 @@ public class CharacterCreateScreen implements Screen {
     public void update(float dt) {
         handleInput(dt);
         displayCharacter.update(dt);
+        animationTimer += dt;
+        //1.2 is number of frames in animation * frame time
+        if (animationTimer >= 1.2) {
+            animationTimer = 0;
+        }
+
+        if (api.hasCreatedCharacter()) {
+            game.setScreen(new PlayScreen(game, playerProfile));
+        } else if (api.hasError()) {
+            errorMessage = api.getErrorMessage();
+        }
 
     }
 
@@ -253,7 +277,7 @@ public class CharacterCreateScreen implements Screen {
                     setFemaleHairStyle();
                 }
             } else if (selectPosition == 3) {
-                if (hairColourIndex < hairColours.length - 1) {
+                if (hairColourIndex < hairColours.length - 1 && hairTypeIndex != 0) {
                     hairColourIndex++;
                     setHairColour();
                 }
@@ -296,7 +320,7 @@ public class CharacterCreateScreen implements Screen {
                     setFemaleHairStyle();
                 }
             } else if (selectPosition == 3) {
-                if (hairColourIndex > 0) {
+                if (hairColourIndex > 0 && hairTypeIndex != 0) {
                     hairColourIndex--;
                     setHairColour();
                 }
@@ -314,6 +338,7 @@ public class CharacterCreateScreen implements Screen {
         } else if (Gdx.input.isKeyJustPressed((Input.Keys.X))) {
 
         } else if (Gdx.input.isKeyJustPressed((Input.Keys.Z))) {
+            errorMessage = "";
             saveCharacter();
         }
 
@@ -327,19 +352,27 @@ public class CharacterCreateScreen implements Screen {
     }
 
     private void setFemaleBody() {
-
         displayCharacter.getOutfit().setBodyType(femaleGenders[bodyTypeIndex]);
         displayCharacter.setBody(outfitFactory.createBody());
         displayCharacter.initSpritePosition2(245, 1138);
     }
 
+    private void maintainHairColour() {
+        if (hairTypeIndex == 0) {
+            hairColourIndex = 0;
+            setHairColour();
+        }
+    }
+
     private void setMaleHairStyle() {
+        maintainHairColour();
         displayCharacter.getOutfit().setHairType(maleHairStyles[hairTypeIndex]);
         displayCharacter.setHair(outfitFactory.createHair());
         displayCharacter.initSpritePosition2(245, 1138);
     }
 
     private void setFemaleHairStyle() {
+        maintainHairColour();
         displayCharacter.getOutfit().setHairType(femaleHairStyles[hairTypeIndex]);
         displayCharacter.setHair(outfitFactory.createHair());
         displayCharacter.initSpritePosition2(245, 1138);
@@ -364,18 +397,33 @@ public class CharacterCreateScreen implements Screen {
     }
 
     private void saveCharacter() {
-        playerProfile.setHairColour(hairColours[hairColourIndex]);
-        playerProfile.setGender(Character.toString(gender).toUpperCase());
-        if (gender == 'M') {
-            playerProfile.setHairStyle(maleHairStyles[hairTypeIndex]);
-            playerProfile.setSkinTone(maleGenders[bodyTypeIndex]);
+        if (isValidTrainer()) {
+            playerProfile.setHairColour(hairColours[hairColourIndex]);
+            playerProfile.setGender(Character.toString(gender).toUpperCase());
+            if (gender == 'M') {
+                playerProfile.setHairStyle(maleHairStyles[hairTypeIndex]);
+                playerProfile.setSkinTone(maleGenders[bodyTypeIndex]);
+            } else {
+                playerProfile.setHairStyle(femaleHairStyles[hairTypeIndex]);
+                playerProfile.setSkinTone(femaleGenders[bodyTypeIndex]);
+            }
+            playerProfile.setTopID(topMap.get(tops[topsIndex]));
+            playerProfile.setBottomID(bottomMap.get(bottoms[bottomsIndex]));
+            playerProfile.setMapName("startinglab");
+            playerProfile.setxPosition(18);
+            playerProfile.setyPosition(25);
+            api.createCharacter(playerProfile);
+
         } else {
-            playerProfile.setHairStyle(femaleHairStyles[hairTypeIndex]);
-            playerProfile.setSkinTone(femaleGenders[bodyTypeIndex]);
+            errorMessage = "Your trainer needs a shirt and/or pants.";
         }
-        playerProfile.setTopID(topMap.get(tops[topsIndex]));
-        playerProfile.setBottomID(bottomMap.get(bottoms[bottomsIndex]));
-        playerProfile.updateProfile();
+    }
+
+    private boolean isValidTrainer() {
+        if (bottomsIndex == 0 || topsIndex == 0) {
+            return false;
+        }
+        return true;
     }
 
 
@@ -430,6 +478,13 @@ public class CharacterCreateScreen implements Screen {
         menuFont.draw(game.getBatch(), Integer.toString(hairColourIndex), 650, 1460);
         menuFont.draw(game.getBatch(), Integer.toString(topsIndex), 650, 1400);
         menuFont.draw(game.getBatch(), Integer.toString(bottomsIndex), 650, 1345);
+
+        if (!errorMessage.equals("")) {
+            errorFont.draw(game.getBatch(), errorMessage, 20, 1000);
+        }
+        if (api.isFetchingResponse()) {
+            game.getBatch().draw(loadingAnimation.getKeyFrame(animationTimer, true), 770, 1130, 100, 100);
+        }
         game.getBatch().end();
     }
 

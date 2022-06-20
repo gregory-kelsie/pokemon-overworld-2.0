@@ -4,6 +4,7 @@ import com.anime.arena.AnimeArena;
 import com.anime.arena.animation.FadeInAnimation;
 import com.anime.arena.animation.FadeOutAnimation;
 import com.anime.arena.animation.MapHeader;
+import com.anime.arena.dto.PlayerProfile;
 import com.anime.arena.emojis.EmojiHandler;
 import com.anime.arena.interactions.*;
 import com.anime.arena.items.ItemFactory;
@@ -82,6 +83,7 @@ public class PlayScreen implements Screen {
     private Texture mapNameBoxTexture;
     private BitmapFont regularFont;
     private BitmapFont menuFont;
+    private BitmapFont loadingFont;
 
     //Map Objects
     private List<TreeObject> trees;
@@ -104,6 +106,7 @@ public class PlayScreen implements Screen {
     private Music wildPokemonBgm;
 
     private CustomPlayer customPlayer;
+    private PlayerProfile playerProfile;
 
     //Quest Textures
     private Texture questStart;
@@ -183,6 +186,26 @@ public class PlayScreen implements Screen {
         tbf = new TextBoxFactory(this);
 
 
+    }
+
+    public PlayScreen(AnimeArena game, PlayerProfile playerProfile) {
+        this.playerProfile = playerProfile;
+        this.game = game;
+        texture = new Texture("badlogic.jpg");
+        initSounds();
+        initShaders();
+        initHudTextures();
+        initFont();
+        initMenu();
+        initOverworldSpriteSheets();
+        initPokemonSpriteSheets();
+        initCamera();
+        loadPokemonFromDB();
+
+
+        emojiAtlas = new TextureAtlas("sprites/Emoji.atlas");
+        emojiHandler = new EmojiHandler(emojiAtlas);
+        tbf = new TextBoxFactory(this);
     }
 
     private void initMenu() {
@@ -280,6 +303,15 @@ public class PlayScreen implements Screen {
         parameter2.shadowOffsetY = 1;
 
         menuFont = generator.generateFont(parameter2);
+
+        FreeTypeFontGenerator.FreeTypeFontParameter parameter = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        parameter.size = 96;
+        parameter.borderWidth = 4;
+        parameter.borderColor = Color.BLACK;
+        parameter.color = Color.WHITE;
+        parameter.spaceY = 20;
+        parameter.spaceX = -4;
+        loadingFont = generator.generateFont(parameter);
     }
 
     private void initSounds() {
@@ -307,11 +339,17 @@ public class PlayScreen implements Screen {
 //        bodyAtlas = new TextureAtlas("sprites/player/compare/Bodies.atlas");
         bodyAtlas = new TextureAtlas("sprites/player/Bodies.atlas");
         swimmingAtlas = new TextureAtlas("sprites/player/swimming.atlas");
-        topAtlas = new TextureAtlas("sprites/player/Tops.atlas");
-        bottomAtlas = new TextureAtlas("sprites/player/Bottoms.atlas");
+        topAtlas = new TextureAtlas("sprites/player/Upper.atlas");
+        bottomAtlas = new TextureAtlas("sprites/player/Lower.atlas");
         hairAtlases = new HashMap<String, TextureAtlas>();
         hairAtlases.put("MaleHair1", new TextureAtlas("sprites/player/MaleHair1.atlas"));
+        hairAtlases.put("MaleHair2", new TextureAtlas("sprites/player/MaleHair2.atlas"));
+        hairAtlases.put("MaleHair3", new TextureAtlas("sprites/player/MaleHair3.atlas"));
         hairAtlases.put("MaleHair4", new TextureAtlas("sprites/player/MaleHair4.atlas"));
+        hairAtlases.put("FemaleHair1", new TextureAtlas("sprites/player/FemaleHair1.atlas"));
+        hairAtlases.put("FemaleHair2", new TextureAtlas("sprites/player/FemaleHair2.atlas"));
+        hairAtlases.put("FemaleHair3", new TextureAtlas("sprites/player/FemaleHair3.atlas"));
+        hairAtlases.put("FemaleHair4", new TextureAtlas("sprites/player/FemaleHair4.atlas"));
         berryAtlas = new TextureAtlas("sprites/berries.atlas");
 
     }
@@ -363,8 +401,8 @@ public class PlayScreen implements Screen {
         String body = "male-dark";
         String hairType = "MaleHair4";
         String hairColour = "cyan";
-        String top = "hoodie black";
-        String bottom = "jeans navy";
+        String top = "t-shirt-white";
+        String bottom = "shorts-white";
         PlayerOutfit outfit = new PlayerOutfit();
         outfit.setBodyType(body);
         outfit.setHairType(hairType);
@@ -383,7 +421,7 @@ public class PlayScreen implements Screen {
     }
 
     private void loadPlayer() {
-        player = new Player(this, pokemonMap, gameCam);
+        player = new Player(this, this.playerProfile, pokemonMap, gameCam);
         player.getBag().addItem(dbLoader.getItemFactory(), 1, 10);
         player.getBag().addItem(dbLoader.getItemFactory(), 2, 10);
         player.getBag().addItem(dbLoader.getItemFactory(), 3, 10);
@@ -398,7 +436,7 @@ public class PlayScreen implements Screen {
         player.getBag().addItem(dbLoader.getItemFactory(), 12, 10);
         player.getBag().addItem(dbLoader.getItemFactory(), 13, 10);
         player.getBag().addItem(dbLoader.getItemFactory(), 20, 10);
-
+        player.getBag().addItem(dbLoader.getItemFactory(), 32, 10);
 
 //        player.setX(-5);
 //        player.setY(0);
@@ -410,8 +448,14 @@ public class PlayScreen implements Screen {
         player.setBottom(outfitFactory.createBottom());
         player.setBag(outfitFactory.createBag());
         player.initSpritePositions(0f, 0f);
-        player.setYTile(17); //15 SETTING THIS AS 13+ causes a glitch (red screen not everything gets rendered)
-        player.setXTile(18); //7
+        initPlayerPosition();
+    }
+
+    private void initPlayerPosition() {
+        //Defaults is x = 18, y = 25 for the lab
+
+        player.setYTile(playerProfile.getyPosition());
+        player.setXTile(playerProfile.getxPosition());
     }
 
     private void initMap() {
@@ -426,8 +470,8 @@ public class PlayScreen implements Screen {
         }
         String testMap = "maps/test.tmx";//"maps/untitled2.tmx";
         String route1 = "maps/3.0.tmx";
-        String oakLab = "maps/startinglab.tmx";
-        pokemonMap = new PokemonMap(mapLoader.load(oakLab), this);
+        String currentMap = "maps/" + playerProfile.getMapName() + ".tmx";
+        pokemonMap = new PokemonMap(mapLoader.load(currentMap), this);
         if (pokemonMap.getBGM() != "") {
             mapBgm = Gdx.audio.newMusic(Gdx.files.internal("audio/bgm/" + pokemonMap.getBGM()));
             bgm = mapBgm;
@@ -704,7 +748,7 @@ public class PlayScreen implements Screen {
             player.stopRun();
         }
         if (Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
-            if (!isMenuOpen && event == null) {
+            if (!isMenuOpen && event == null && player.getSwitches().isActive(3)) {
                 isMenuOpen = true;
                 menuOpenSound.play();
             }
@@ -929,14 +973,23 @@ public class PlayScreen implements Screen {
                 fadeInAnimation.render(delta, game.getBatch());
                 game.getBatch().end();
             } else {
-                Gdx.gl.glClearColor(1, 0, 0, 1);
-                Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+                drawLoadingScreen(game.getBatch());
             }
         } else {
-            Gdx.gl.glClearColor(1, 0, 0, 1);
-            Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+            drawLoadingScreen(game.getBatch());
         }
 
+    }
+
+    private void drawLoadingScreen(SpriteBatch batch) {
+        Gdx.gl.glClearColor(1, 0, 0, 1);
+        Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+        batch.setProjectionMatrix(controlsCam.combined);
+        batch.begin();
+        batch.draw(blackTexture, 0, 960);
+        loadingFont.draw(batch, "Loading...", 350, 1510);
+        batch.end();
     }
 
     private void updateQuestPopup(float dt) {

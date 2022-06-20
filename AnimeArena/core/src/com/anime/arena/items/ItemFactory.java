@@ -86,6 +86,18 @@ public class ItemFactory {
                     vitamin.setSpdEV(jsonItem.get("spd_ev").getAsInt());
                 }
                 return vitamin;
+            } else if (itemType == 6) {
+                Clothing clothing = new Clothing(itemID, itemName, description, image, itemType);
+                if (!jsonItem.get("clothing_id").isJsonNull()) {
+                    clothing.setClothingID(jsonItem.get("clothing_id").getAsString());
+                }
+                if (!jsonItem.get("clothing_type").isJsonNull()) {
+                    clothing.setClothingType(jsonItem.get("clothing_type").getAsString());
+                }
+                if (!jsonItem.get("clothing_gender").isJsonNull()) {
+                    clothing.setGender(jsonItem.get("clothing_gender").getAsString());
+                }
+                return clothing;
             }
         }
         return null;

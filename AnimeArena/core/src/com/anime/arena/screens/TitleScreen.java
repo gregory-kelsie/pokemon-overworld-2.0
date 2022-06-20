@@ -5,6 +5,7 @@ import com.anime.arena.api.PokemonAPI;
 import com.anime.arena.dto.PlayerProfile;
 import com.anime.arena.pokemon.BasePokemon;
 import com.anime.arena.pokemon.BasePokemonFactory;
+import com.anime.arena.tools.ScriptParameters;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -12,10 +13,9 @@ import com.badlogic.gdx.graphics.Color;
 import com.badlogic.gdx.graphics.GL20;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.Texture;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
-import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.badlogic.gdx.graphics.g2d.TextureAtlas;
+import com.badlogic.gdx.graphics.g2d.*;
 import com.badlogic.gdx.graphics.g2d.freetype.FreeTypeFontGenerator;
+import com.badlogic.gdx.utils.Array;
 import com.badlogic.gdx.utils.viewport.FitViewport;
 import com.badlogic.gdx.utils.viewport.Viewport;
 
@@ -47,18 +47,17 @@ public class TitleScreen implements Screen {
     private Texture button;
     private Texture loginTexture;
     private Texture exitTexture;
+    private Texture loadingBallTexture;
+    private TextureAtlas loadingAtlas;
+    private Animation<TextureRegion> loadingAnimation;
+    private float animationTimer;
 
     private OrthographicCamera gameCam;
     private OrthographicCamera controlsCam;
     private Viewport gamePort;
 
-    private Screen previousScreen;
-    private BasePokemonFactory pokemonFactory;
-
-
     private BitmapFont menuFont;
-    private BitmapFont listFont;
-    private BitmapFont nameFont;
+    private BitmapFont errorFont;
 
     private int screenPosition; //0 menu, 1 list, 2 entry, 3 sprite, 4 nest
 
@@ -81,7 +80,7 @@ public class TitleScreen implements Screen {
     private String username;
     private String password;
 
-    private boolean loggingIn;
+    private String errorMessage;
 
     public static final int TITLE_SCREEN = 0;
     public static final int KEYBOARD = 1;
@@ -98,8 +97,6 @@ public class TitleScreen implements Screen {
 
     public TitleScreen(AnimeArena game) {
         this.game = game;
-
-        this.loggingIn = false;
 
         this.black = new Texture("animation/black.png");
         this.background = new Texture("title/background.png");
@@ -122,12 +119,14 @@ public class TitleScreen implements Screen {
         this.button = new Texture("title/button.png");
         this.loginTexture = new Texture("title/login.png");
         this.exitTexture = new Texture("title/exit.png");
+        this.loadingBallTexture = new Texture("hud/ball00.png");
+        this.loadingAtlas = new TextureAtlas("animation/loading/Loading.atlas");
 
         this.selectPosition = TITLE_SCREEN;
         this.textBoxPosition = USERNAME;
 
-        this.username = "";
-        this.password = "";
+        this.username = "mileycyrus";
+        this.password = "wreckingball";
 
         this.keyboardInput = "";
         resetKeyboardPos();
@@ -137,9 +136,26 @@ public class TitleScreen implements Screen {
         initCamera();
 
         initVariables();
+        initAnimations();
         this.pokemonAPI = new PokemonAPI();
         gameCam.position.set((AnimeArena.V_WIDTH / 2) / AnimeArena.PPM, (AnimeArena.V_HEIGHT / 2) / AnimeArena.PPM, 0);
 
+    }
+
+    private void initAnimations() {
+        //Init loading animation
+        Array<TextureRegion> frames = new Array<>();
+        for (int i = 1; i < 20; i++) {
+            String fileName = "";
+            if (i < 10) {
+                fileName = "0" + i;
+            } else {
+                fileName += i;
+            }
+            frames.add(new TextureRegion(loadingAtlas.findRegion(fileName)));
+        }
+        loadingAnimation = new Animation<TextureRegion>(0.06f, frames);
+        animationTimer = 0.0f;
     }
 
     private void resetKeyboardPos() {
@@ -153,21 +169,12 @@ public class TitleScreen implements Screen {
     private void initVariables() {
         screenPosition = 0;
         selectPosition = 0;
+        errorMessage = "";
 
     }
 
     private void initFont() {
-        //List Font
         FreeTypeFontGenerator generator = new FreeTypeFontGenerator(Gdx.files.internal("fonts/pkmnems.ttf"));
-        FreeTypeFontGenerator.FreeTypeFontParameter parameter2 = new FreeTypeFontGenerator.FreeTypeFontParameter();
-        parameter2.size = 60;
-        parameter2.color = Color.DARK_GRAY;
-        parameter2.spaceY = 20;
-        parameter2.spaceX = -2;
-
-        parameter2.shadowColor = Color.GRAY;
-        parameter2.shadowOffsetX = 1;
-        parameter2.shadowOffsetY = 1;
 
         FreeTypeFontGenerator.FreeTypeFontParameter parameter3 = new FreeTypeFontGenerator.FreeTypeFontParameter();
         parameter3.size = 60;
@@ -175,10 +182,15 @@ public class TitleScreen implements Screen {
         parameter3.spaceY = 20;
         parameter3.spaceX = -2;
 
+        FreeTypeFontGenerator.FreeTypeFontParameter parameter4 = new FreeTypeFontGenerator.FreeTypeFontParameter();
+        parameter4.size = 36;
+        parameter4.color = Color.RED;
+        parameter4.spaceY = 20;
+        parameter4.spaceX = -2;
 
 
-        listFont = generator.generateFont(parameter2);
         menuFont = generator.generateFont(parameter3);
+        errorFont = generator.generateFont(parameter4);
     }
 
     private void initCamera() {
@@ -197,27 +209,36 @@ public class TitleScreen implements Screen {
     }
 
     public void update(float dt) {
-        if (loggingIn) {
-            if (!pokemonAPI.isFetchingResponse() && pokemonAPI.isLoggedIn()) {
-                loggingIn = false;
+        if (pokemonAPI.isLoggedIn() && !pokemonAPI.isFetchingResponse()) {
+            if (!pokemonAPI.isFetchingResponse()) {
                 PlayerProfile p = pokemonAPI.getPlayerProfile();
                 if (p != null) {
-                    if (p.getStartedGame() == 0 || CharacterCreateScreen.DEBUG_CHARACTER_CREATE_SCREEN) {
+                    if (p.getStartedGame() == 0 || ScriptParameters.DEBUG_CHARACTER_CREATE_SCREEN) {
                         //Go to create character screen
                         Gdx.app.log("update", "The player " + p.getUsername() + " will now create a character");
                         game.setScreen(new CharacterCreateScreen(game, p));
                     } else if (p.getStartedGame() == 1) {
                         //Go to the player's location in the game screen
                         Gdx.app.log("update", "The player " + p.getUsername() + " is now logging in");
+                        game.setScreen(new PlayScreen(game, p));
                     } else {
                         Gdx.app.log("update", "The player profile startedGame flag is invalid: " + p.getStartedGame());
                     }
+                } else {
+                    Gdx.app.log("update", "player profile is null");
                 }
-            } else if (!pokemonAPI.isFetchingResponse()) {
-                //loggingIn = false;
             }
         } else {
             handleInput(dt);
+        }
+        animationTimer += dt;
+        //1.2 is number of frames in animation * frame time
+        if (animationTimer >= 1.2) {
+            animationTimer = 0;
+        }
+
+        if (pokemonAPI.hasError()) {
+            errorMessage = pokemonAPI.getErrorMessage();
         }
     }
 
@@ -291,16 +312,19 @@ public class TitleScreen implements Screen {
         } else if (Gdx.input.isKeyJustPressed((Input.Keys.Z))) {
             if (selectPosition == TITLE_SCREEN) {
                 if (textBoxPosition == USERNAME) {
+                    errorMessage = "";
                     selectPosition = KEYBOARD;
                     keyboardInput = username;
                 } else if (textBoxPosition == PASSWORD) {
+                    errorMessage = "";
                     selectPosition = KEYBOARD;
                     keyboardInput = password;
                 } else if (textBoxPosition == LOGIN_BUTTON) {
+                    errorMessage = "";
                     if (username.length() > 0 && password.length() > 0) {
                         pokemonAPI.login(username, password);
-                        loggingIn = true;
                     } else {
+                        errorMessage = "Cannot log in with a blank username or password";
                         Gdx.app.log("handleInput", "Cannot log in with a blank username or password" + Gdx.app.getLogLevel());
                     }
                 }
@@ -391,6 +415,14 @@ public class TitleScreen implements Screen {
 
         menuFont.draw(game.getBatch(), username, 430, 1252);
         menuFont.draw(game.getBatch(), getMaskedInput(password), 430, 1195);
+
+        if (!errorMessage.equals("")) {
+            errorFont.draw(game.getBatch(), errorMessage, 20, 1000);
+        }
+
+        if (pokemonAPI.isFetchingResponse()) {
+            game.getBatch().draw(loadingAnimation.getKeyFrame(animationTimer, true), 850, 1025, 100, 100);
+        }
 
 
 

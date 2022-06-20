@@ -11,6 +11,9 @@ public class PlayerProfile {
     private String skinTone;
     private String hairStyle;
     private String hairColour;
+    private String mapName;
+    private int xPosition;
+    private int yPosition;
     private int topID;
     private int bottomID;
 
@@ -20,7 +23,8 @@ public class PlayerProfile {
         this.startedGame = startedGame;
     }
 
-    public PlayerProfile(int uid, String username, int startedGame, int money, String gender, String skinTone, String hairStyle, String hairColour) {
+    public PlayerProfile(int uid, String username, int startedGame, int money, String gender, String skinTone, String hairStyle, String hairColour,
+                         String mapName, int topID, int bottomID, int xPosition, int yPosition) {
         this.uid = uid;
         this.username = username;
         this.startedGame = startedGame;
@@ -29,6 +33,35 @@ public class PlayerProfile {
         this.skinTone = skinTone;
         this.hairStyle = hairStyle;
         this.hairColour = hairColour;
+        this.mapName = mapName;
+        this.topID = topID;
+        this.bottomID = bottomID;
+        this.xPosition = xPosition;
+        this.yPosition = yPosition;
+    }
+
+    public String getMapName() {
+        return mapName;
+    }
+
+    public void setMapName(String mapName) {
+        this.mapName = mapName;
+    }
+
+    public int getxPosition() {
+        return xPosition;
+    }
+
+    public void setxPosition(int xPosition) {
+        this.xPosition = xPosition;
+    }
+
+    public int getyPosition() {
+        return yPosition;
+    }
+
+    public void setyPosition(int yPosition) {
+        this.yPosition = yPosition;
     }
 
     public int getTopID() {
@@ -111,8 +144,4 @@ public class PlayerProfile {
         this.hairColour = hairColour;
     }
 
-    public void updateProfile() {
-        PokemonAPI api = new PokemonAPI();
-        api.createCharacter(this);
-    }
 }

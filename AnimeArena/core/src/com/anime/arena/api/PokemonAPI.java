@@ -4,6 +4,7 @@ import com.anime.arena.dto.PlayerProfile;
 import com.anime.arena.dto.UsernamePasswordDTO;
 import com.anime.arena.pokemon.BasePokemon;
 import com.anime.arena.pokemon.BasePokemonFactory;
+import com.anime.arena.tools.ScriptParameters;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Net;
 import com.badlogic.gdx.net.HttpParametersUtils;
@@ -18,16 +19,19 @@ public class PokemonAPI {
     private boolean createdCharacter;
     private boolean fetchingResponse;
     private JsonArray pokedexResponse;
+    private String errorMessage;
+
 
     private PlayerProfile playerProfile;
     public PokemonAPI() {
         loggedIn = false;
         createdCharacter = false;
         fetchingResponse = false;
+        errorMessage = "";
     }
 
     public void createCharacter(PlayerProfile newPlayerProfile) {
-        if (!fetchingResponse) {
+        if (!fetchingResponse && !ScriptParameters.DISABLE_CREATE_CHARACTER) {
             fetchingResponse = true;
             Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.POST);
             request.setUrl("http://kelsiegr.com/pokemononline/createCharacter.php");
@@ -42,14 +46,16 @@ public class PokemonAPI {
                     fetchingResponse = false;
                     String jsonResponse = httpResponse.getResultAsString();
                     Gdx.app.log("PokemonAPI::createCharacter:handleHttpResponse", jsonResponse);
+
                     JsonObject loggedInResponse = new JsonParser().parse(jsonResponse).getAsJsonObject();
                     int responseCode = loggedInResponse.get("success").getAsInt();
+
                     if (responseCode == 1) {
                        createdCharacter = true;
                     } else {
                         Gdx.app.log("PokemonAPI::createCharacter:handleHttpResponse", "Failed to create character");
+                        errorMessage = loggedInResponse.get("message").getAsString();
                     }
-
                 }
 
                 @Override
@@ -68,12 +74,23 @@ public class PokemonAPI {
 
     }
 
+
     public boolean isFetchingResponse() {
         return fetchingResponse;
     }
 
     public boolean isLoggedIn() {
         return loggedIn;
+    }
+
+    public boolean hasError() {
+        return !errorMessage.equals("");
+    }
+
+    public String getErrorMessage() {
+        String msg = errorMessage;
+        errorMessage = "";
+        return msg;
     }
 
     public boolean hasCreatedCharacter() {
@@ -118,15 +135,22 @@ public class PokemonAPI {
                             String skinTone = loggedInResponse.get("skin-tone").getAsString();
                             String hairStyle = loggedInResponse.get("hair-style").getAsString();
                             String hairColour = loggedInResponse.get("hair-colour").getAsString();
-                            playerProfile = new PlayerProfile(uid, username, startedGame, money, gender, skinTone, hairStyle, hairColour);
+                            String mapName = loggedInResponse.get("map_name").getAsString();
+                            int topID = loggedInResponse.get("upper").getAsInt();
+                            int bottomID = loggedInResponse.get("lower").getAsInt();
+                            int xPosition = loggedInResponse.get("x_position").getAsInt();
+                            int yPosition = loggedInResponse.get("y_position").getAsInt();
+                            playerProfile = new PlayerProfile(uid, username, startedGame, money, gender, skinTone, hairStyle, hairColour, mapName, topID, bottomID, xPosition, yPosition);
                         }
+                    } else if (responseCode == 0) {
+                        errorMessage = loggedInResponse.get("message").getAsString();
                     }
 
                 }
 
                 @Override
                 public void failed(Throwable t) {
-                    Gdx.app.log("Failed", t.getMessage());
+                    Gdx.app.log("PokemonAPI::login:failed", t.getMessage());
                     fetchingResponse = false;
                 }
 
