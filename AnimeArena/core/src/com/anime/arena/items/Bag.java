@@ -59,6 +59,29 @@ public class Bag {
         return clothes;
     }
 
+    public int countItems(Item i) {
+        List<BagItem> bagItems;
+        if (i.getItemType() == ItemType.MEDICINE.getValue() || i.getItemType() == ItemType.VITAMIN.getValue()) {
+            bagItems = medicine;
+        } else if (i.getItemType() == ItemType.HOLD_ITEM.getValue() ||
+                i.getItemType() == ItemType.EVOLUTION_STONE.getValue()) {
+            bagItems = items;
+        } else if (i.getItemType() == ItemType.POKEBALL.getValue()) {
+            bagItems = pokeballs;
+        } else if (i.getItemType() == ItemType.CLOTHES.getValue()) {
+            bagItems = clothes;
+        } else {
+            bagItems = new ArrayList<BagItem>();
+        }
+        if (bagItems != null) {
+            BagItem bagItem = getBagItem(i.getItemID(), bagItems);
+            if (bagItem != null) {
+                return bagItem.getAmount();
+            }
+        }
+        return 0;
+    }
+
     public void addItem(ItemFactory itemFactory, int itemID, int amount) {
         Item i = itemFactory.createItem(itemID);
         if (i.getItemType() == ItemType.MEDICINE.getValue() || i.getItemType() == ItemType.VITAMIN.getValue()) {

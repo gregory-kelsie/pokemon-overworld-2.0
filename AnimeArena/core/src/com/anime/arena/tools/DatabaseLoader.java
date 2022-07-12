@@ -28,6 +28,7 @@ public class DatabaseLoader {
     }
 
     public void start() {
+        Gdx.app.log("DatabaseLoader::start", "Start loading resources");
         getPokedex();
     }
 
@@ -86,7 +87,7 @@ public class DatabaseLoader {
     }
 
     private void getAbilities() {
-
+        Gdx.app.log("DatabaseLoader::getAbilities", "Start Loading Abilities");
         Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.GET);
         request.setUrl("http://kelsiegr.com/loadAbilities.php");
 
@@ -112,7 +113,7 @@ public class DatabaseLoader {
                     Gdx.app.log("Success", "Populated abilities from DB");
                     getItems();
                 } else {
-
+                    Gdx.app.log("DatabaseLoader::getAbilities", "basePokemonFactory is null");
                 }
 
             }
@@ -127,13 +128,12 @@ public class DatabaseLoader {
                 Gdx.app.log("Cancelled", "cancelled");
             }
         });
-        Gdx.app.log("next", "line");
         //request.setContent();
 
     }
 
     private void getItems() {
-
+        Gdx.app.log("DatabaseLoader::getItems", "Start Loading Items");
         Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.GET);
         request.setUrl("http://kelsiegr.com/loadItems.php");
 
@@ -196,9 +196,10 @@ public class DatabaseLoader {
                     }
                 }
                 basePokemonFactory = new BasePokemonFactory(pokemonArray.toString(), pokemonList);
+                Gdx.app.log("DatabaseLoader::getPokedex", "" + "Start loading Evolutions");
                 getEvolutions();
                 Gdx.app.log("JSONRESP", pokemonArray.size() + "");
-
+                Gdx.app.log("DatabaseLoader::getPokedex", "Done loading Pokedex");
                 loadedPokemon = 1;
 
             }

@@ -207,6 +207,13 @@ public class NPCFactory {
             index.increment();
             healEvent.setNextEvent(createInteractionEvent(lines, index, screen));
             return healEvent;
+        } else if (lines[index.getCounter()].equals("GIVE_MONEY")) {
+            index.increment();
+            int moneyAmount = Integer.parseInt(lines[index.getCounter()]);
+            index.increment(2);
+            Event moneyEvent = new MoneyEvent(screen, moneyAmount);
+            moneyEvent.setNextEvent(createInteractionEvent(lines, index, screen));
+            return moneyEvent;
         } else if (lines[index.getCounter()].equals("GIVE_ITEM")) {
             index.increment();
             int itemID = Integer.parseInt(lines[index.getCounter()]);

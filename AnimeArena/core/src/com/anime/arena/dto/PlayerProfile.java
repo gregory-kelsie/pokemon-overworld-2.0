@@ -116,6 +116,14 @@ public class PlayerProfile {
         return money;
     }
 
+    public void addMoney(int amount) {
+        money += amount;
+    }
+
+    public void subtractMoney(int amount) {
+        money = Math.max(0, money - amount);
+    }
+
     public void setMoney(int money) {
         this.money = money;
     }

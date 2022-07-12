@@ -1343,15 +1343,18 @@ public class Player {
 
         }
 
-        //Update Camera based on Player Position - The + 16 and + 6 are random offsets to make sure the sprite is center
-        if (getX() >= AnimeArena.V_WIDTH / 2 / AnimeArena.PPM - 16 &&
-                getX() <= (pokemonMap.getMapWidth()) / AnimeArena.PPM - AnimeArena.V_WIDTH / 2 / AnimeArena.PPM - 16) {
-            gameCam.position.x = getX() + 16;
-        }
 
-        if (getY() >= AnimeArena.V_HEIGHT / 2  / AnimeArena.PPM - 6 &&
-                getY() <= ((pokemonMap.getMapHeight()) / AnimeArena.PPM) - AnimeArena.V_HEIGHT / 2 / AnimeArena.PPM - 6) {
-            gameCam.position.y = getY() + 6;
+        if (screen.getEvent() == null || !screen.getEvent().isCameraControllingEvent()) {
+            //Update Camera based on Player Position - The + 16 and + 6 are random offsets to make sure the sprite is center
+            if (getX() >= AnimeArena.V_WIDTH / 2 / AnimeArena.PPM - 16 &&
+                    getX() <= (pokemonMap.getMapWidth()) / AnimeArena.PPM - AnimeArena.V_WIDTH / 2 / AnimeArena.PPM - 16) {
+                gameCam.position.x = getX() + 16;
+            }
+
+            if (getY() >= AnimeArena.V_HEIGHT / 2 / AnimeArena.PPM - 6 &&
+                    getY() <= ((pokemonMap.getMapHeight()) / AnimeArena.PPM) - AnimeArena.V_HEIGHT / 2 / AnimeArena.PPM - 6) {
+                gameCam.position.y = getY() + 6;
+            }
         }
         updateSpritePosition();
         //Update Emojis

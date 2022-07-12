@@ -10,12 +10,17 @@ public abstract class Event {
     protected boolean finishedEvent;
     protected PlayScreen screen;
     protected Event nextEvent;
-
+    protected boolean isCameraControllingEvent;
 
     public Event(PlayScreen screen) {
         this.player = screen.getPlayer();
         this.finishedEvent = false;
         this.screen = screen;
+        this.isCameraControllingEvent = false;
+    }
+
+    public boolean isCameraControllingEvent() {
+        return isCameraControllingEvent;
     }
 
     public void setNextEvent(Event nextEvent) {
@@ -57,6 +62,10 @@ public abstract class Event {
     public abstract void clickedLeft();
 
     public abstract void clickedRight();
+
+    public void clickedX() {
+
+    }
 
     public abstract void render(SpriteBatch batch);
 

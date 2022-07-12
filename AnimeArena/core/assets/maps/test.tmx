@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="32">
+<map version="1.4" tiledversion="1.4.3" orientation="orthogonal" renderorder="right-down" width="40" height="40" tilewidth="16" tileheight="16" infinite="0" nextlayerid="9" nextobjectid="33">
  <properties>
   <property name="mapBGM" value="PalletTown.ogg"/>
   <property name="mapName" value="Test Map"/>
@@ -301,6 +301,13 @@
     <property name="objectType" type="int" value="5"/>
     <property name="x" type="int" value="24"/>
     <property name="y" type="int" value="0"/>
+   </properties>
+  </object>
+  <object id="32" gid="10567" x="272" y="304" width="16" height="16">
+   <properties>
+    <property name="npcID" value="006"/>
+    <property name="objectType" type="int" value="3"/>
+    <property name="overworld" value="NPC_Z42_Team_Skull_Boss_Guzma"/>
    </properties>
   </object>
  </objectgroup>

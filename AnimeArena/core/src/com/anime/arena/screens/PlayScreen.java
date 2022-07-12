@@ -8,6 +8,7 @@ import com.anime.arena.dto.PlayerProfile;
 import com.anime.arena.emojis.EmojiHandler;
 import com.anime.arena.interactions.*;
 import com.anime.arena.items.ItemFactory;
+import com.anime.arena.mart.PokeMart;
 import com.anime.arena.objects.*;
 import com.anime.arena.pokemon.BasePokemonFactory;
 import com.anime.arena.pokemon.Pokemon;
@@ -167,6 +168,8 @@ public class PlayScreen implements Screen {
     private int menuPosition; //0 is top
     private boolean isMenuOpen;
 
+    private PokeMart mart;
+
     public PlayScreen(AnimeArena game) {
         this.game = game;
         texture = new Texture("badlogic.jpg");
@@ -184,6 +187,7 @@ public class PlayScreen implements Screen {
         emojiAtlas = new TextureAtlas("sprites/Emoji.atlas");
         emojiHandler = new EmojiHandler(emojiAtlas);
         tbf = new TextBoxFactory(this);
+
 
 
     }
@@ -206,6 +210,11 @@ public class PlayScreen implements Screen {
         emojiAtlas = new TextureAtlas("sprites/Emoji.atlas");
         emojiHandler = new EmojiHandler(emojiAtlas);
         tbf = new TextBoxFactory(this);
+
+    }
+
+    public Camera getGameCam() {
+        return gameCam;
     }
 
     private void initMenu() {
@@ -720,6 +729,7 @@ public class PlayScreen implements Screen {
             renderer = new OrthogonalTileSpriteRenderer(pokemonMap, AnimeArena.PPM);
             renderer.setPlayer(player);
             gameCam.position.set((AnimeArena.V_WIDTH / 2) / AnimeArena.PPM, (AnimeArena.V_HEIGHT / 2) / AnimeArena.PPM, 0);
+
             bgm.play();
         } else if (loadStatus == 2) {
             loadStatus = 3;
@@ -727,13 +737,22 @@ public class PlayScreen implements Screen {
 
     }
 
+    public Event getEvent() {
+        return event;
+    }
+
     private void handleInput(float dt) {
         //Gdx.app.log("dt", "X: " + player.getX() + "Y: " + player.getYTile() + " mbdt: " + player.getMoveButtonDownTime());
         if (Gdx.input.isTouched()) {
-            gameCam.position.y += 100 * dt;
+            if (event == null) {
+                mart = new PokeMart(this);
+                setEvent(mart);
+            }
+            //gameCam.position.y += 100 * dt;
         }
         if (Gdx.input.isKeyPressed(Input.Keys.X)) {
             if (Gdx.input.isKeyJustPressed(Input.Keys.X)) {
+
                 if (isMenuOpen) {
                     menuCloseSound.play();
                     closeMenu();
@@ -741,6 +760,9 @@ public class PlayScreen implements Screen {
                 if (questPopupState != 0) {
                     questPopupState = 3;
                     questPopupElapsedTime = 0;
+                }
+                if (event != null) {
+                    event.clickedX();
                 }
             }
             player.run();
@@ -946,6 +968,9 @@ public class PlayScreen implements Screen {
                 Gdx.gl.glViewport(0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
                 game.getBatch().setProjectionMatrix(controlsCam.combined);
                 game.getBatch().begin();
+//                if (mart != null) {
+//                    mart.render(game.getBatch());
+//                }
                 if (event != null) {
                     event.render(game.getBatch());
                 } else if (isMenuOpen) {
