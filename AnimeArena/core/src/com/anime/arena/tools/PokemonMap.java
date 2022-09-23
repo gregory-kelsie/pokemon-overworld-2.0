@@ -8,13 +8,18 @@ import com.anime.arena.pokemon.wildpokemon.WildPokemonMap;
 import com.anime.arena.screens.PlayScreen;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.maps.MapLayer;
 import com.badlogic.gdx.maps.MapObject;
 import com.badlogic.gdx.maps.MapObjects;
 import com.badlogic.gdx.maps.objects.TextureMapObject;
-import com.badlogic.gdx.maps.tiled.TiledMap;
-import com.badlogic.gdx.maps.tiled.TiledMapTileLayer;
+import com.badlogic.gdx.maps.tiled.*;
+import com.badlogic.gdx.maps.tiled.tiles.AnimatedTiledMapTile;
+import com.badlogic.gdx.maps.tiled.tiles.StaticTiledMapTile;
+import com.badlogic.gdx.utils.Array;
 
 import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 
 public class PokemonMap {
@@ -59,6 +64,7 @@ public class PokemonMap {
         this.screen = screen;
         initMapObjects();
         initMapVariables();
+        initAnimatedTiles();
     }
 
 
@@ -71,6 +77,71 @@ public class PokemonMap {
             MapObjects objects = map.getLayers().get(OBJECT_LAYER_NAME).getObjects();
             createMapObjects(objects);
         }
+        initAnimatedTiles();
+    }
+
+    private void initAnimatedTiles() {
+        HashMap<String, List<StaticTiledMapTile>> animatedTileHashMap = new HashMap<String, List<StaticTiledMapTile>>();
+        TiledMapTileSets tilesets = map.getTileSets();
+        Iterator<TiledMapTileSet> tilesetIterator = tilesets.iterator();
+        boolean hasAnimationTileset = false;
+        //Check if there's an animation tileset
+        while (tilesetIterator.hasNext()) {
+            String tileSetName = tilesetIterator.next().getName();
+            Gdx.app.log("TileSetName", tileSetName);
+            if (tileSetName.equals("animation")) {
+                hasAnimationTileset = true;
+                break;
+            }
+        }
+        if (hasAnimationTileset) {
+            //Get the animated tileset
+            Iterator<TiledMapTile> tiles = map.getTileSets().getTileSet("animation").iterator();
+            while (tiles.hasNext()) {
+                TiledMapTile tile = tiles.next();
+                //Sort the animation tiles into animationTypes
+                if (tile.getProperties().containsKey("animationType")) {
+                    String animationType = (String) tile.getProperties().get("animationType");
+                    if (!animatedTileHashMap.containsKey(animationType)) {
+                        animatedTileHashMap.put(animationType, new ArrayList<StaticTiledMapTile>());
+                    }
+                    animatedTileHashMap.get(animationType).add((StaticTiledMapTile) tile);
+                }
+            }
+
+            //Convert the animation frames for each animationType into an AnimatedTiledMapTile
+            HashMap<String, AnimatedTiledMapTile> animatedTiles = new HashMap<String, AnimatedTiledMapTile>();
+            for (String key : animatedTileHashMap.keySet()) {
+                Array<StaticTiledMapTile> arr = new Array<StaticTiledMapTile>(animatedTileHashMap.get(key).size());
+                for (StaticTiledMapTile frame : animatedTileHashMap.get(key)) {
+                    arr.add(frame);
+                }
+                animatedTiles.put(key, new AnimatedTiledMapTile(1 / 3f, arr));
+            }
+
+            //Replace the tiles in the TiledMap that match the animationType with the AnimatedTiledMapTile
+            for (int l = 0; l < map.getLayers().size(); l++) {
+                MapLayer layer = map.getLayers().get(l);
+                if (layer instanceof TiledMapTileLayer) {
+                    TiledMapTileLayer currentLayer = (TiledMapTileLayer) layer;
+                    for (int x = 0; x < currentLayer.getWidth(); x++) {
+                        for (int y = 0; y < currentLayer.getHeight(); y++) {
+                            TiledMapTileLayer.Cell cell = currentLayer.getCell(x, y);
+                            if (cell != null && cell.getTile().getProperties().containsKey("animationType")) {
+                                if (animatedTiles.containsKey(cell.getTile().getProperties().get("animationType", String.class))) {
+                                    String cellValue = cell.getTile().getProperties().get("animationType", String.class);
+                                    AnimatedTiledMapTile at = animatedTiles.get(cellValue);
+                                    cell.setTile(at);
+                                }
+                            }
+
+                        }
+                    }
+                }
+
+            }
+        }
+
     }
 
     public String getMapName() {
