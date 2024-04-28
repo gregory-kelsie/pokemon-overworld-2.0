@@ -22,6 +22,10 @@ public class Pokemon {
         return uniqueVariables;
     }
 
+    public boolean isMaxLevel() {
+        return uniqueVariables.getLevel() == 100;
+    }
+
     public int getCurrentHealth() {
         return uniqueVariables.getCurrentHealth();
     }
@@ -53,6 +57,10 @@ public class Pokemon {
 
     public int getTotalExp() {
         return getTotalExp(getUniqueVariables().getLevel()) + (int) Math.round(getUniqueVariables().getCurrentExp());
+    }
+
+    public void levelUp() {
+
     }
 
     /**

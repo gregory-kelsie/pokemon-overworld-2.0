@@ -14,19 +14,28 @@ import java.util.List;
 
 import static com.anime.arena.skill.RecoilDrainType.*;
 
-public class DamageSkill extends Skill {
+public class DamageSkill extends EffectSkill {
     private boolean bindsEnemy;
     private int criticalRate; //Initial Crit Stage
+    private int effectRate; //Effect Rate for Secondary Effect Damaging Moves
     private RecoilDrainType recoilType;
-    protected boolean reverseCategory; //For Secred Sword (calculates user's special attack and hits defense instead of sp def)
+    protected boolean reverseCategory; //For Sacred Sword (calculates user's special attack and hits defense instead of sp def)
     protected boolean usesEnemyAttack; //For moves like Foul play.
     protected double extraMod; //For skills that double damage for certain conditions ex: Brine
     protected boolean facadeEffect;
 
-    public DamageSkill(String name, String description, SkillCategory category, int pp, int currentPP, int accuracy, PokemonType moveType,
+    public DamageSkill(int id, String name, String description, SkillCategory category, int pp, int currentPP, int accuracy, PokemonType moveType,
                        SkillTarget target, int subtype, int speedPriority, int basePower, int criticalRate) {
-        super(name, description, category, pp, currentPP, accuracy, moveType, target, subtype, speedPriority, basePower);
+        super(id, name, description, category, pp, currentPP, accuracy, moveType, target, subtype, speedPriority, basePower);
         this.criticalRate = criticalRate;
+        initMisc();
+    }
+
+    public DamageSkill(int id, String name, String description, SkillCategory category, int pp, int currentPP, int accuracy, PokemonType moveType,
+                       SkillTarget target, int subtype, int speedPriority, int basePower, int criticalRate, int effectRate) {
+        super(id, name, description, category, pp, currentPP, accuracy, moveType, target, subtype, speedPriority, basePower);
+        this.criticalRate = criticalRate;
+        this.effectRate = effectRate;
         initMisc();
     }
 
@@ -46,11 +55,12 @@ public class DamageSkill extends Skill {
      * @return The skill results.
      * */
     @Override
-    public void use(BattlePokemon skillUser, BattlePokemon enemyPokemon,
+    public List<String> use(BattlePokemon skillUser, BattlePokemon enemyPokemon,
                             int skillUserPartyPosition, int enemyPokemonPartyPosition, Field field, SubField userField,
                             SubField enemyField, boolean isFirstAttack,
                             Skill targetSkill, List<BattlePokemon> skillUserParty, List<BattlePokemon> enemyPokemonParty) {
         List<String> results = new ArrayList<String>();
+        refreshMoveCounters(skillUser);
         boolean heldOnWithSturdy = false;
         //TODO: Set battle type ex: Aerialate switch normal moves to flying
         boolean hasCrit = calcCrit(skillUser, enemyPokemon, field);
@@ -89,7 +99,7 @@ public class DamageSkill extends Skill {
         }
         enemyPokemon.subtractHealth(damage);
         damageTally += damage; //Keep record of damage for multi-hit-moves
-        results.add("Dealt " + damage + " damage.");
+        //results.add("Dealt " + damage + " damage.");
 
         //Increase attack if the enemy previously used rage.
         if (enemyPokemon.usedRage()) {
@@ -98,6 +108,10 @@ public class DamageSkill extends Skill {
                 enemyPokemon.increaseAttackStage(1);
                 results.add(enemyPokemon.getName() + "'s attack rose!");
             }
+        }
+
+        if (subtype == 1) { //Secondary Effect Move
+            results.addAll(useEffects(skillUser, enemyPokemon, field, userField, enemyField, isFirstAttack));
         }
 
         if (heldOnWithSturdy) {
@@ -118,6 +132,11 @@ public class DamageSkill extends Skill {
         } else if (recoilType == GAIN_THREE_QUARTERS) {
             skillUser.addHealth((int) Math.ceil(damage * 0.75));
         }
+        return results;
+    }
+
+    public void setEffectRate(int effectRate) {
+        this.effectRate = effectRate;
     }
 
     private void initMisc() {
@@ -127,6 +146,7 @@ public class DamageSkill extends Skill {
         this.extraMod = 1;
         this.facadeEffect = false;
         this.ignoreTargetStatChanges = false;
+        this.damagesEnemy = true;
     }
 
     /**
@@ -608,9 +628,9 @@ public class DamageSkill extends Skill {
         if (moveType == PokemonType.FIRE && field.hasWaterSport()) {
             basePowerModifier = .43;
         }
-
+        Gdx.app.log("DamageMod", "atkStat: " + atkStat + ", defStat: " + defStat);
         //Sub values into the formulas from bulbapedia.
-        double ls = (((((2 * user.getPokemon().getUniqueVariables().getLevel()) / 5) + 2) * (atkStat / defStat) * basePower * basePowerModifier) / 50) + 2;
+        double ls = (((((2 * user.getPokemon().getUniqueVariables().getLevel()) / 5.0) + 2) * (atkStat / defStat) * basePower * basePowerModifier) / 50.0) + 2;
         double mod = getModifier(user, enemy, field, hasCrit);
         double dmg = ls * mod;
         return (int)Math.ceil(dmg);
@@ -634,6 +654,21 @@ public class DamageSkill extends Skill {
 
     public RecoilDrainType getRecoilType() {
         return recoilType;
+    }
+
+
+    public boolean hasRecoil() {
+        if (recoilType == ONE_FOURTH || recoilType == ONE_HALF || recoilType == ONE_FOURTH) {
+            return true;
+        }
+        return false;
+    }
+
+    public boolean hasDrain() {
+        if (recoilType == GAIN_HALF || recoilType == GAIN_THREE_QUARTERS) {
+            return true;
+        }
+        return false;
     }
 
     public void setRecoilType(RecoilDrainType recoilType) {

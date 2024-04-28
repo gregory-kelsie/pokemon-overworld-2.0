@@ -5,7 +5,7 @@ package com.anime.arena.pokemon;
  * STATUS_FREE is when the Pokemon has no condition.
  */
 public enum StatusCondition {
-    STATUS_FREE(0), POISON(1), BURN(2), PARALYSIS(3), FROZEN(4), SLEEP(5), RECOVER(6);
+    STATUS_FREE(0), POISON(1), BURN(2), PARALYSIS(3), FROZEN(4), SLEEP(5), RECOVER(6), FLINCH(7), CONFUSION(8);
     private final int value;
     private StatusCondition(int value) {
         this.value = value;

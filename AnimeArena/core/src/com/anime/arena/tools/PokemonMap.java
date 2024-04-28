@@ -32,6 +32,7 @@ public class PokemonMap {
     private List<ItemObject> items;
     private List<BerryObject> berries;
     private List<NPCObject> npcs;
+    private List <OverworldPokemonObject> overworldPokemon;
     private List<TrainerObject> trainers;
     private List<WarpObject> warps;
     private List<EventObject> eventObjects;
@@ -44,6 +45,8 @@ public class PokemonMap {
     private int tileHeight;
     private String mapName;
     private String mapBGM;
+    private String grassBattleBackground;
+
     private WildPokemonMap wildPokemonInfo;
     
     //Object Types
@@ -55,6 +58,7 @@ public class PokemonMap {
     public static final int TRAINER_OBJECT = 4;
     public static final int WARP_OBJECT = 5;
     public static final int EVENT_OBJECT = 6;
+    public static final int OVERWORLD_POKEMON_OBJECT = 7;
 
     private static final String COLLISION_LAYER_NAME = "Collision";
     private static final String OBJECT_LAYER_NAME = "O2";
@@ -154,11 +158,15 @@ public class PokemonMap {
             BasePokemon bp = factory.createBasePokemon(wp.getPokemonID());
             UniquePokemon up = new UniquePokemon();
             Pokemon p = new Pokemon(bp, up);
-            PokemonUtils.initBlankPokemonData(p, wp.generateLevel());
+            PokemonUtils.initBlankPokemonData(p, wp.generateLevel(), factory);
             Gdx.app.log("WildPokemon Spawn", bp.getName());
             return new Pokemon(bp, up);
         }
         return null;
+    }
+
+    public String getBattleBackground() {
+        return grassBattleBackground;
     }
 
     public String getBGM() {
@@ -178,6 +186,10 @@ public class PokemonMap {
         if (mapBGM == null) {
             mapBGM = "";
         }
+        grassBattleBackground = (String)map.getProperties().get("grassBattleBackground");
+        if (grassBattleBackground == null) {
+            grassBattleBackground = "default";
+        }
         loadWildPokemon();
 
     }
@@ -193,11 +205,15 @@ public class PokemonMap {
      */
     private void loadWildPokemon() {
         wildPokemonInfo = new WildPokemonMap();
-        String dayPokemonChances = (String)map.getProperties().get("dayPokemonChances");
-        String dayPokemonLevels = (String)map.getProperties().get("dayPokemonLevels");
-        if (dayPokemonChances != null && dayPokemonLevels != null) {
-            String[] eachPokemon = dayPokemonChances.split(";");
-            String[] eachLevelRange = dayPokemonLevels.split(";");
+        loadWildPokemon(getDayPokemonChances(), getDayPokemonLevels(), true);
+        wildPokemonInfo.resetProbability();
+        loadWildPokemon(getNightPokemonChances(), getNightPokemonLevels(), false);
+    }
+
+    private void loadWildPokemon(String pokemonProbability, String pokemonLevels, boolean isDay) {
+        if (pokemonProbability != null && pokemonLevels != null) {
+            String[] eachPokemon = pokemonProbability.split(";");
+            String[] eachLevelRange = pokemonLevels.split(";");
             if (eachPokemon.length == eachLevelRange.length) {
                 for (int i = 0; i < eachPokemon.length; i++) {
                     String[] pokemonChances = eachPokemon[i].split(",");
@@ -206,13 +222,29 @@ public class PokemonMap {
                     String[] pokemonLevelRange = eachLevelRange[i].split("-");
                     int lowerLevel = Integer.parseInt(pokemonLevelRange[0]);
                     int higherLevel = Integer.parseInt(pokemonLevelRange[1]);
-                    wildPokemonInfo.addWildPokemon(pokemonID, probability, lowerLevel, higherLevel);
+                    wildPokemonInfo.addWildPokemon(pokemonID, probability, lowerLevel, higherLevel, isDay);
                 }
             } else {
-                Gdx.app.log("loadWildPokemon", "dayPokemonChances and dayPokemonLevels aren't equal array sizes: " +
+                Gdx.app.log("loadWildPokemon", isDay + " - PokemonChances and PokemonLevels aren't equal array sizes: " +
                         eachPokemon.length + ", " + eachLevelRange.length);
             }
         }
+    }
+
+    private String getDayPokemonChances() {
+        return ((String)map.getProperties().get("dayPokemonChances"));
+    }
+
+    private String getDayPokemonLevels() {
+       return (String)map.getProperties().get("dayPokemonLevels");
+    }
+
+    private String getNightPokemonChances() {
+        return (String)map.getProperties().get("nightPokemonChances");
+    }
+
+    private String getNightPokemonLevels() {
+        return (String)map.getProperties().get("nightPokemonLevels");
     }
 
     private void resetMapObjects() {
@@ -234,6 +266,10 @@ public class PokemonMap {
             n.dispose();
         }
         npcs.clear();
+        for (OverworldPokemonObject op : overworldPokemon) {
+            op.dispose();
+        }
+        overworldPokemon.clear();
         for (TrainerObject t : trainers) {
             t.dispose();
         }
@@ -247,6 +283,7 @@ public class PokemonMap {
         items = new ArrayList<ItemObject>();
         berries = new ArrayList<BerryObject>();
         npcs = new ArrayList<NPCObject>();
+        overworldPokemon = new ArrayList<OverworldPokemonObject>();
         trainers = new ArrayList<TrainerObject>();
         warps = new ArrayList<WarpObject>();
         eventObjects = new ArrayList<EventObject>();
@@ -281,6 +318,8 @@ public class PokemonMap {
                         addWarpObject(mapObject);
                     } else if (objectType == EVENT_OBJECT) {
                         addEventObject(mapObject);
+                    } else if (objectType == OVERWORLD_POKEMON_OBJECT) {
+                        addOverworldPokemonObject(npcFactory, mapObject);
                     }
                 }
 
@@ -333,6 +372,15 @@ public class PokemonMap {
         return null;
     }
 
+    public OverworldPokemonObject getOverworldPokemonObject(int x, int y) {
+        for (OverworldPokemonObject po : overworldPokemon) {
+            if (po.isVisible() && po.occupiesCell(x, y)) {
+                return po;
+            }
+        }
+        return null;
+    }
+
     private void addEventObject(TextureMapObject mapObject) {
         String script = (String) mapObject.getProperties().get("script");
         eventObjects.add(new EventObject(script, convertToTile(mapObject.getX()), convertToTile(mapObject.getY()), screen));
@@ -365,6 +413,12 @@ public class PokemonMap {
         String npcId = (String) mapObject.getProperties().get("npcID");
         String npcOverworld = (String) mapObject.getProperties().get("overworld");
         npcs.add(npcFactory.createNPC(npcId, npcOverworld, screen, convertToTile(mapObject.getX()), convertToTile(mapObject.getY())));
+    }
+
+    private void addOverworldPokemonObject(NPCFactory npcFactory, TextureMapObject mapObject) {
+        String npcID = (String) mapObject.getProperties().get("pokemonID");
+        String pokemonOverworld = (String) mapObject.getProperties().get("overworld");
+        overworldPokemon.add(npcFactory.createOverworldPokemon(npcID, pokemonOverworld, screen, convertToTile(mapObject.getX()), convertToTile(mapObject.getY())));
     }
 
     private void addTrainerObject(NPCFactory npcFactory, TextureMapObject mapObject) {
@@ -427,6 +481,8 @@ public class PokemonMap {
 
     public List<NPCObject> getNPCs() { return npcs; }
 
+    public List<OverworldPokemonObject> getAllOverworldPokemon() { return overworldPokemon; }
+
     public List<TrainerObject> getTrainers() { return trainers; }
 
     public List<BerryObject> getBerryTrees() {
@@ -439,6 +495,9 @@ public class PokemonMap {
         }
         for (NPCObject npc : npcs) {
             npc.update(dt);
+        }
+        for (OverworldPokemonObject op : overworldPokemon) {
+            op.update(dt);
         }
         for (TrainerObject trainer : trainers) {
             trainer.update(dt);
@@ -485,6 +544,14 @@ public class PokemonMap {
         }
     }
 
+    public void renderOverworldPokemonAbovePlayer(Batch batch, Player player) {
+        for (OverworldPokemonObject op : overworldPokemon) {
+            if (op.isVisible() && op.getY() >= player.getYTile()) {
+                op.draw(batch);
+            }
+        }
+    }
+
     public void renderTrainersAbovePlayer(Batch batch, Player player) {
         for (TrainerObject npc : trainers) {
             if (npc.isVisible() && npc.getY() >= player.getYTile()) {
@@ -497,6 +564,14 @@ public class PokemonMap {
         for (NPCObject npc : npcs) {
             if (npc.isVisible() && npc.getY() < player.getYTile()) {
                 npc.draw(batch);
+            }
+        }
+    }
+
+    public void renderOverworldPokemonBelowPlayer(Batch batch, Player player) {
+        for (OverworldPokemonObject op : overworldPokemon) {
+            if (op.isVisible() && op.getY() < player.getYTile()) {
+                op.draw(batch);
             }
         }
     }

@@ -582,6 +582,13 @@ public class Player {
                     interactingNPC = trainerObject;
                     return;
                 }
+                OverworldPokemonObject overworldPokemonObject = pokemonMap.getOverworldPokemonObject(xTile, yTile + 1);
+                if (overworldPokemonObject != null) {
+                    overworldPokemonObject.getSprite().setX(xFormula(xTile));
+                    overworldPokemonObject.manualInteract(this, Direction.DOWN);
+                    interactingNPC = overworldPokemonObject;
+                    return;
+                }
 
             }
         } else if (direction == Direction.DOWN) {
@@ -611,6 +618,13 @@ public class Player {
                     trainerObject.getSprite().setX(xFormula(xTile));
                     trainerObject.manualInteract(this, Direction.UP);
                     interactingNPC = trainerObject;
+                    return;
+                }
+                OverworldPokemonObject overworldPokemonObject = pokemonMap.getOverworldPokemonObject(xTile, yTile - 1);
+                if (overworldPokemonObject != null) {
+                    overworldPokemonObject.getSprite().setX(xFormula(xTile));
+                    overworldPokemonObject.manualInteract(this, Direction.UP);
+                    interactingNPC = overworldPokemonObject;
                     return;
                 }
             }
@@ -643,6 +657,13 @@ public class Player {
                     interactingNPC = trainerObject;
                     return;
                 }
+                OverworldPokemonObject overworldPokemonObject = pokemonMap.getOverworldPokemonObject(xTile - 1, yTile);
+                if (overworldPokemonObject != null) {
+                    overworldPokemonObject.getSprite().setY(yFormula(yTile));
+                    overworldPokemonObject.manualInteract(this, Direction.RIGHT);
+                    interactingNPC = overworldPokemonObject;
+                    return;
+                }
             }
         } else if (direction == Direction.RIGHT) {
             if (!swimming && isSwimmingTile(getRightCell2())) {
@@ -671,6 +692,13 @@ public class Player {
                     trainerObject.getSprite().setY(yFormula(yTile));
                     trainerObject.manualInteract(this, Direction.LEFT);
                     interactingNPC = trainerObject;
+                    return;
+                }
+                OverworldPokemonObject overworldPokemonObject = pokemonMap.getOverworldPokemonObject(xTile + 1, yTile);
+                if (overworldPokemonObject != null) {
+                    overworldPokemonObject.getSprite().setY(yFormula(yTile));
+                    overworldPokemonObject.manualInteract(this, Direction.LEFT);
+                    interactingNPC = overworldPokemonObject;
                     return;
                 }
             }
@@ -768,6 +796,11 @@ public class Player {
             }
             for (NPCObject npc : pokemonMap.getNPCs()) {
                 if (npc.isVisible() && npc.occupiesCell(collisionX, collisionY)) {
+                    return true;
+                }
+            }
+            for (OverworldPokemonObject po : pokemonMap.getAllOverworldPokemon()) {
+                if (po.isVisible() && po.occupiesCell(collisionX, collisionY)) {
                     return true;
                 }
             }

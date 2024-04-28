@@ -14,7 +14,7 @@ public class HurtByConfusion extends DamageSkill {
     private static int acc = 100;
     public HurtByConfusion() {
 
-        super(nm, desc, cat, p, -1, acc, PokemonType.NORMAL, SkillTarget.SELF, 0, 1,
+        super(0, nm, desc, cat, p, -1, acc, PokemonType.NORMAL, SkillTarget.SELF, 0, 1,
                 40, -1);
     }
 

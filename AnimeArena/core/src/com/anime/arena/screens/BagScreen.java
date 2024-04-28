@@ -260,7 +260,7 @@ public class BagScreen implements Screen {
                         bag.useItem(i);
                     }
                 } else {
-                    game.setScreen(new PokemonScreen(game, this, player, pokemonAtlas, pokemonIconAtlas,
+                    game.setScreen(new PokemonScreen(game, this, player.getPokemonParty(), pokemonAtlas, pokemonIconAtlas,
                             pokemonTypeAtlas, dbLoader, bag, getCurrentBagItems().get(scrollPosition + bagOffset)));
                 }
             }

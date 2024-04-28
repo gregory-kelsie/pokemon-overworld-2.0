@@ -29,7 +29,7 @@ public class DatabaseLoader {
 
     public void start() {
         Gdx.app.log("DatabaseLoader::start", "Start loading resources");
-        getPokedex();
+        getMoves();
     }
 
     public boolean hasLoadedEssentials() {
@@ -171,11 +171,57 @@ public class DatabaseLoader {
         //request.setContent();
     }
 
+    private void getMoves() {
+        Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.GET);
+        request.setUrl("http://kelsiegr.com/loadCompleteMoves.php");
+        Gdx.net.sendHttpRequest(request, new Net.HttpResponseListener() {
+
+            @Override
+            public void handleHttpResponse(Net.HttpResponse httpResponse) {
+                String jsonResponse = httpResponse.getResultAsString();
+                Gdx.app.log("MSG", jsonResponse);
+                JsonObject jsonObject = new JsonParser().parse(jsonResponse).getAsJsonObject();
+                JsonArray moveResultsArray = jsonObject.get("results").getAsJsonArray();
+                Map<Integer, JsonObject> moveList = new HashMap<Integer, JsonObject>();
+                for (JsonElement obj : moveResultsArray) {
+                    JsonObject jo = obj.getAsJsonObject();
+                    int moveID = jo.get("move_id").getAsInt();
+                    if (moveList.containsKey(moveID)) {
+                        Gdx.app.log("Database Error", "Move Database has MoveID: " + moveID);
+                    } else {
+                        moveList.put(moveID, jo);
+                    }
+                }
+                Gdx.app.log("getMoves()", moveResultsArray.toString());
+                Gdx.app.log("DatabaseLoader::getMoves", "" + "Start loading Pokemon");
+                getPokedex();
+                Gdx.app.log("JSONRESP", moveResultsArray.size() + "");
+                Gdx.app.log("DatabaseLoader::getMoves", "Done loading Pokemon Moves");
+                basePokemonFactory = new BasePokemonFactory();
+                basePokemonFactory.setMoveDatabase(moveList);
+
+            }
+
+            @Override
+            public void failed(Throwable t) {
+                Gdx.app.log("Failed LoadPokemon", t.getMessage());
+                loadedPokemon = -1;
+            }
+
+            @Override
+            public void cancelled() {
+                Gdx.app.log("Cancelled", "cancelled");
+            }
+        });
+    }
+
 
     private void getPokedex() {
         basePokemonFactory = null;
         Net.HttpRequest request = new Net.HttpRequest(Net.HttpMethods.GET);
-        request.setUrl("http://kelsiegr.com/loadDex.php");
+        String basicDex = "http://kelsiegr.com/loadDex.php";
+        String dexWithMoves = "http://kelsiegr.com/loadCompletePokemon.php";
+        request.setUrl(dexWithMoves);
 
         Gdx.net.sendHttpRequest(request, new Net.HttpResponseListener() {
 
@@ -195,7 +241,11 @@ public class DatabaseLoader {
                         pokemonList.put(pid, jo);
                     }
                 }
-                basePokemonFactory = new BasePokemonFactory(pokemonArray.toString(), pokemonList);
+                if (basePokemonFactory != null) {
+                    basePokemonFactory.initDatabase(pokemonArray.toString(), pokemonList);
+                } else {
+                    basePokemonFactory = new BasePokemonFactory(pokemonArray.toString(), pokemonList);
+                }
                 Gdx.app.log("DatabaseLoader::getPokedex", "" + "Start loading Evolutions");
                 getEvolutions();
                 Gdx.app.log("JSONRESP", pokemonArray.size() + "");

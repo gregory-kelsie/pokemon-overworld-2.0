@@ -12,9 +12,11 @@ import com.anime.arena.mart.PokeMart;
 import com.anime.arena.objects.*;
 import com.anime.arena.pokemon.BasePokemonFactory;
 import com.anime.arena.pokemon.Pokemon;
+import com.anime.arena.pokemon.PokemonUtils;
 import com.anime.arena.tools.DatabaseLoader;
 import com.anime.arena.tools.OrthogonalTileSpriteRenderer;
 import com.anime.arena.tools.PokemonMap;
+import com.anime.arena.tools.ScriptParameters;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
@@ -56,6 +58,7 @@ public class PlayScreen implements Screen {
     private int tileHeight;
     private TextureAtlas atlas;
     private TextureAtlas npcAtlas;
+    private TextureAtlas overworldPokemonAtlas;
     private TextureAtlas bodyAtlas;
     private TextureAtlas swimmingAtlas;
     private HashMap<String, TextureAtlas> hairAtlases;
@@ -69,6 +72,7 @@ public class PlayScreen implements Screen {
     private TextureAtlas pokemonAtlas;
     private TextureAtlas pokemonBackAtlas;
     private TextureAtlas pokemonIconAtlas;
+    private TextureAtlas pokemonOverworldAtlas;
 
     private TextureAtlas emojiAtlas;
 
@@ -345,6 +349,7 @@ public class PlayScreen implements Screen {
     private void initOverworldSpriteSheets() {
         atlas = new TextureAtlas("sprites/PlayableCharacters.atlas");
         npcAtlas = new TextureAtlas("sprites/npcs/NPC.atlas");
+        overworldPokemonAtlas = new TextureAtlas("sprites/pokemon-overworld/PokemonOverworld.atlas");
 //        bodyAtlas = new TextureAtlas("sprites/player/compare/Bodies.atlas");
         bodyAtlas = new TextureAtlas("sprites/player/Bodies.atlas");
         swimmingAtlas = new TextureAtlas("sprites/player/swimming.atlas");
@@ -368,6 +373,7 @@ public class PlayScreen implements Screen {
         this.pokemonBackAtlas = new TextureAtlas("sprites/pokemon/PokemonBack.atlas");
         this.pokemonIconAtlas = new TextureAtlas("sprites/pokemon/PokemonIcon.atlas");
         this.pokemonTypeAtlas = new TextureAtlas("sprites/PokemonTypes.atlas");
+        this.pokemonOverworldAtlas = new TextureAtlas("sprites/pokemon-overworld/PokemonOverworld.atlas");
     }
 
     public TextureAtlas getPokemonAtlas() {
@@ -386,6 +392,8 @@ public class PlayScreen implements Screen {
         return pokemonBackAtlas;
     }
 
+    public TextureAtlas getPokemonOverworldAtlas() { return pokemonOverworldAtlas; }
+
     private void initCamera() {
         gameCam = new OrthographicCamera();
         controlsCam = new OrthographicCamera();
@@ -396,6 +404,10 @@ public class PlayScreen implements Screen {
 
     public void toggleBlackScreen() {
         drawBlackScreen = !drawBlackScreen;
+    }
+
+    public void removeBlackScreen() {
+        drawBlackScreen = false;
     }
 
     private void loadPlayerFromDB() {
@@ -458,6 +470,14 @@ public class PlayScreen implements Screen {
         player.setBag(outfitFactory.createBag());
         player.initSpritePositions(0f, 0f);
         initPlayerPosition();
+        if (ScriptParameters.DEBUG_MAP) {
+            addTestPokemon();
+        }
+    }
+
+    private void addTestPokemon() {
+        player.getPokedex().updateObtained(ScriptParameters.TEST_POKEMON);
+        player.getPokemonParty().add(PokemonUtils.createPokemon(ScriptParameters.TEST_POKEMON, 5, getBasePokemonFactory()));
     }
 
     private void initPlayerPosition() {
@@ -477,9 +497,7 @@ public class PlayScreen implements Screen {
         if (pokemonMap != null) {
             pokemonMap.dispose();
         }
-        String testMap = "maps/test.tmx";//"maps/untitled2.tmx";
-        String route1 = "maps/3.0.tmx";
-        String currentMap = "maps/" + playerProfile.getMapName() + ".tmx";
+        String currentMap = ScriptParameters.DEBUG_MAP ? ScriptParameters.TEST_MAP : "maps/" + playerProfile.getMapName() + ".tmx";
         pokemonMap = new PokemonMap(mapLoader.load(currentMap), this);
         if (pokemonMap.getBGM() != "") {
             mapBgm = Gdx.audio.newMusic(Gdx.files.internal("audio/bgm/" + pokemonMap.getBGM()));
@@ -566,7 +584,8 @@ public class PlayScreen implements Screen {
     public void startWildPokemonEvent() {
         setBgm(wildPokemonBgm);
         Pokemon wildPokemon = pokemonMap.getWildPokemon(getBasePokemonFactory());
-        setEvent(new WildPokemonEvent(this, wildPokemon));
+        String battleBackground = pokemonMap.getBattleBackground();
+        setEvent(new WildPokemonEvent(this, wildPokemon, battleBackground));
     }
 
     public void startEncounterEvent(EncounterEvent encounterEvent) {
@@ -633,6 +652,10 @@ public class PlayScreen implements Screen {
 
     public TextureAtlas getNPCAtlas() {
         return npcAtlas;
+    }
+
+    public TextureAtlas getOverworldPokemonAtlas() {
+        return overworldPokemonAtlas;
     }
 
     public TextureAtlas getBodyAtlas() {
@@ -785,7 +808,7 @@ public class PlayScreen implements Screen {
                     } else if (menuPosition == 0) {
                         game.setScreen(new PokedexScreen(game, this, pokemonAtlas, pokemonTypeAtlas, player.getPokedex(), dbLoader));
                     } else if (menuPosition == 1) {
-                        game.setScreen(new PokemonScreen(game, this, player, pokemonAtlas, pokemonIconAtlas, pokemonTypeAtlas, dbLoader));
+                        game.setScreen(new PokemonScreen(game, this, player.getPokemonParty(), pokemonAtlas, pokemonIconAtlas, pokemonTypeAtlas, dbLoader, SourceScreen.MENU));
                     }
                 }
                 if (!player.isJumping() && player.isStopped()) {

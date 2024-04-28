@@ -1,5 +1,6 @@
 package com.anime.arena.skill;
 
+import com.anime.arena.battle.BattleStatePokemon;
 import com.anime.arena.field.Field;
 import com.anime.arena.field.SubField;
 import com.anime.arena.field.WeatherType;
@@ -7,12 +8,26 @@ import com.anime.arena.pokemon.AbilityId;
 import com.anime.arena.pokemon.BattlePokemon;
 import com.anime.arena.pokemon.PokemonType;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import static com.anime.arena.skill.MultiHitType.TRIPLE_KICK;
+import static com.anime.arena.skill.MultiHitType.TWO_TIMES;
 
 public class Skill {
     protected int id;
     protected String name;
     protected String description;
+    /**
+     * Subtype
+     * DamageSkill 0
+     * SecondaryEffect 1
+     * MultiHitMove - 2
+     * BindSkill 3 - Bind - subtype of damageskill
+     * CrushGripSkill 6
+     * EffectSkill 5
+     * FlatDamageSkill 7 (uses a flat damage variable)
+     */
     protected int subtype;
     protected SkillCategory category;
     protected int maxPP;
@@ -22,7 +37,9 @@ public class Skill {
     protected int speedPriority;
     protected SkillTarget target;
     protected PokemonType moveType;
+    protected int strikesLeft;
 
+    protected boolean damagesEnemy;
     protected boolean makesPhysicalContact;
     protected boolean isSoundMove;
     protected boolean isPunchMove;
@@ -41,11 +58,31 @@ public class Skill {
     protected boolean isMultiHitMove;
     protected MultiHitType multiHitType;
 
+    protected boolean continuesThroughNoEffect; //self-destruct, explosion
+    protected boolean requiresFirstMove; //First-Impression, Sucker Punch etc
+    protected boolean isSingleRecoveryMove; //Recover, Heal Order, Moonlight
+    protected boolean isPowderMove; //Powder
+    protected boolean isSpiderWebMove; //Spider Web
+    protected boolean isStickyWebMove; //Sticky Web
+    protected boolean requiresEnemyDamageAttack; //Sucker Punch
+
+    protected boolean requiresSleep; //Nightmare
+    protected boolean requiresNoNightmares; //Nightmare
+    protected boolean requiresNonGrassDefender; //Leech Seed
+    protected boolean requiresNonSeeded;
+    protected boolean isLeechSeedMove;
+
+    protected boolean isThunderMove;
+    protected boolean isHurricaneMove;
+    protected boolean isBlizzardMove;
+
     protected boolean ignoreTargetStatChanges;
     protected int damageTally;
 
-    public Skill(String name, String description, SkillCategory category, int pp, int currentPP, int accuracy, PokemonType moveType,
-                 SkillTarget target, int subtype, int speedPriority, int basePower) {
+
+    public Skill(int id, String name, String description, SkillCategory category, int pp, int currentPP, int accuracy, PokemonType moveType,
+                 SkillTarget target, int subtype, int speedPriority) {
+        this.id = id;
         this.name = name;
         this.description = description;
         this.category = category;
@@ -56,11 +93,18 @@ public class Skill {
         this.target = target;
         this.subtype = subtype;
         this.speedPriority = speedPriority;
-        this.basePower = basePower;
         initMisc();
     }
 
+    public Skill(int id, String name, String description, SkillCategory category, int pp, int currentPP, int accuracy, PokemonType moveType,
+                 SkillTarget target, int subtype, int speedPriority, int basePower) {
+        this(id, name, description, category, pp, currentPP, accuracy, moveType, target, subtype, speedPriority);
+        this.basePower = basePower;
+    }
+
     private void initMisc() {
+        this.strikesLeft = -1;
+        this.damagesEnemy = false;
         this.makesPhysicalContact = false;
         this.isSoundMove = false;
         this.isPunchMove = false;
@@ -79,6 +123,14 @@ public class Skill {
         this.isMultiHitMove = false;
         this.multiHitType = MultiHitType.ONE;
         this.damageTally = 0;
+
+        this.continuesThroughNoEffect = false;
+        this.requiresFirstMove = false;
+        this.isSingleRecoveryMove = false;
+        this.isPowderMove = false;
+        this.isSpiderWebMove = false;
+        this.isStickyWebMove = false;
+        this.requiresEnemyDamageAttack = false;
     }
 
     /**
@@ -97,11 +149,19 @@ public class Skill {
      * @return List of Strings that display the result of using the move. The first list
      * displays misses, and the second
      */
-    public void use(BattlePokemon skillUser, BattlePokemon enemyPokemon,
+    public List<String> use(BattlePokemon skillUser, BattlePokemon enemyPokemon,
                     int skillUserPartyPosition, int enemyPokemonPartyPosition, Field field, SubField userField,
                     SubField enemyField, boolean isFirstAttack,
                     Skill targetSkill, List<BattlePokemon> skillUserParty, List<BattlePokemon> enemyPokemonParty) {
+        refreshMoveCounters(skillUser);
+        return new ArrayList<String>();
+    }
+
+    protected void refreshMoveCounters(BattlePokemon skillUser) {
         skillUser.removeRage();
+        if (strikesLeft > 0) {
+            strikesLeft--;
+        }
     }
 
     /**
@@ -116,6 +176,7 @@ public class Skill {
      */
     public boolean willHitEnemy(BattlePokemon skillUser, BattlePokemon enemyPokemon,
                                 Field field, SubField userField, SubField enemyField, boolean isFirstAttack) {
+        int currentAccuracy = accuracy;
         if (accuracy != -1) {
             if (skillUser.isSkyDropped() && !hitFlyingPokemon) {
                 return false;
@@ -150,8 +211,34 @@ public class Skill {
                     evasionStage = Math.min(6, evasionStage);
                 }
             }
+
+            if (isThunderMove && (field.getWeatherType() == WeatherType.RAIN ||
+                    field.getWeatherType() == WeatherType.HEAVY_RAIN)) {
+                currentAccuracy = 100;
+            }
+            if (isHurricaneMove) {
+                if (field.getWeatherType() == WeatherType.RAIN) {
+                    currentAccuracy = 100;
+                } else if (field.getWeatherType() == WeatherType.SUN) {
+                    currentAccuracy = 50;
+                }
+            }
+            if (isBlizzardMove) {
+                if (enemyPokemon.isUnderwater() || enemyPokemon.isUnderground() ||
+                        enemyPokemon.isFlying()) {
+                    //Misses when enemy is semi-invulnerable, even if there is
+                    //an accuracy bypass.
+                    return false;
+                } else {
+                    if (field.getWeatherType() == WeatherType.HAIL) {
+                        //Bypass accuracy check
+                        return true;
+                    }
+                }
+            }
+
             double enemyEvasionMod = enemyPokemon.getEvasionModifier(evasionStage);
-            double result = getAccuracyMod() * attackerAccuracyMod * enemyEvasionMod;
+            double result = getAccuracyMod(currentAccuracy) * attackerAccuracyMod * enemyEvasionMod;
 
             //Check if hit.
             double rand = Math.random();
@@ -164,13 +251,14 @@ public class Skill {
         return true;
     }
 
+
     /**
      * Return the accuracy modifier for the skill.
      * Ex: Accuracy 95 has a modifier of 0.95
      * @return The accuracy modifier for the skill.
      */
-    public double getAccuracyMod() {
-        return accuracy / 100.0;
+    public double getAccuracyMod(int newAccuracy) {
+        return newAccuracy / 100.0;
     }
 
 
@@ -438,5 +526,124 @@ public class Skill {
 
     public void setMultiHitType(MultiHitType multiHitType) {
         this.multiHitType = multiHitType;
+    }
+
+    public void setRequiresFirstMove(boolean requiresFirstMove) {
+        this.requiresFirstMove = requiresFirstMove;
+    }
+
+    public boolean requiresFirstMove() {
+        return requiresFirstMove;
+    }
+
+    public boolean isSingleRecoveryMove() {
+        return isSingleRecoveryMove;
+    }
+
+    public void setIsSingleRecoveryMove(boolean isSingleRecoveryMove) {
+        this.isSingleRecoveryMove = isSingleRecoveryMove;
+    }
+
+    public boolean isPowderMove() {
+        return isPowderMove;
+    }
+
+    public void setIsPowderMove(boolean isPowderMove) {
+        this.isPowderMove = isPowderMove;
+    }
+
+    public boolean isSpiderWebMove() {
+        return isSpiderWebMove;
+    }
+
+    public boolean requiresSleep() {
+        return requiresSleep;
+    }
+
+    public boolean requiresNoNightmares() {
+        return requiresNoNightmares;
+    }
+
+    public boolean isStickyWeb() {
+        return isStickyWebMove;
+    }
+
+    public boolean requiresEnemyDamageAttack() {
+        return requiresEnemyDamageAttack;
+    }
+
+    public boolean damagesEnemy() {
+        return damagesEnemy;
+    }
+
+    public boolean requiresNonGrassDefender() {
+        return requiresNonGrassDefender;
+    }
+
+    public boolean isLeechSeedMove() {
+        return isLeechSeedMove;
+    }
+
+    public boolean isContinuingThroughNoEffect() { return continuesThroughNoEffect; }
+
+    public boolean hasRecoil() {
+        return false;
+    }
+
+    public boolean hasDrain() {
+        return false;
+    }
+
+    public boolean isTargetingEnemy() {
+        if (target == SkillTarget.ENEMY) {
+            return true;
+        }
+        return false;
+    }
+
+    public void setTotalStrikes(BattleStatePokemon attackingPokemon, BattleStatePokemon defendingPokemon, Field field,
+                                SubField attackerField, SubField defenderField, boolean isFirstMove) {
+        if (multiHitType == MultiHitType.STANDARD_FIVE) {
+            double rand = Math.random();
+            if (rand <= .375) {
+                strikesLeft = 2;
+            } else if (rand <= .75) {
+                strikesLeft = 3;
+            } else if (rand <= .875) {
+                strikesLeft = 4;
+            } else {
+                strikesLeft = 5;
+            }
+        } else if (multiHitType == TWO_TIMES) {
+            strikesLeft = 2;
+        } else if (multiHitType == TRIPLE_KICK) {
+            strikesLeft = 1;
+            if (this.willHitEnemy(attackingPokemon.getPokemon(), defendingPokemon.getPokemon(), field, attackerField,
+                    defenderField, isFirstMove)) {
+                strikesLeft++;
+                if (this.willHitEnemy(attackingPokemon.getPokemon(), defendingPokemon.getPokemon(), field, attackerField,
+                        defenderField, isFirstMove)) {
+                    strikesLeft++;
+                }
+            }
+        }
+    }
+
+    public void resetStrikes() {
+        strikesLeft = -1;
+    }
+
+    public int getStrikesLeft() {
+        return strikesLeft;
+    }
+
+    public boolean isChargingSkill() {
+        //TODO: Create boolean variables for the charging moves (fly, dig, dive, sky drop etc) and then check if any are set to true.
+        return false;
+    }
+
+    public boolean isSolarBeam() {
+        //TODO: Create boolean variable for solar beam and check if true.
+        return false;
     }
 }

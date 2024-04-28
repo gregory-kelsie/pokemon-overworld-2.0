@@ -1,6 +1,7 @@
 package com.anime.arena;
 
 import com.anime.arena.screens.*;
+import com.anime.arena.test.BattleTest;
 import com.badlogic.gdx.ApplicationAdapter;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.Gdx;
@@ -31,11 +32,15 @@ public class AnimeArena extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
+		//setScreen(new BattleTestScreen(this));
+		setScreen(new TitleScreen(this));
+
 		//setScreen(new PokemonTestScreen(this));
+
 		//setScreen(new AnimationScreen(this));
 		//setScreen(new BagTestScreen(this));
 		//setScreen(new PlayScreen(this));
-		setScreen(new TitleScreen(this));
+
 		//setScreen(new WildPokemonTransitionTestScreen(this));
 	}
 

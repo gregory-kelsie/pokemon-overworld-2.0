@@ -1,0 +1,83 @@
+
+Confused.png
+size: 2048, 512
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+confused1
+  rotate: false
+  xy: 196, 196
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused10
+  rotate: false
+  xy: 2, 2
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused11
+  rotate: false
+  xy: 584, 2
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused2
+  rotate: false
+  xy: 778, 196
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused3
+  rotate: false
+  xy: 390, 196
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused4
+  rotate: false
+  xy: 972, 196
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused5
+  rotate: false
+  xy: 584, 196
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused6
+  rotate: false
+  xy: 196, 2
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused7
+  rotate: false
+  xy: 778, 2
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused8
+  rotate: false
+  xy: 390, 2
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1
+confused9
+  rotate: false
+  xy: 2, 196
+  size: 192, 192
+  orig: 192, 192
+  offset: 0, 0
+  index: -1

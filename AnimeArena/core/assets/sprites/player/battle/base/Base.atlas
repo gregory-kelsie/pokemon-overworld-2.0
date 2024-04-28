@@ -1,0 +1,62 @@
+
+Base.png
+size: 2048,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+base-dark
+  rotate: false
+  xy: 2, 200
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+base-dark-f
+  rotate: false
+  xy: 2, 596
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+base-light
+  rotate: false
+  xy: 879, 794
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+base-light-f
+  rotate: false
+  xy: 879, 398
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+base-medium
+  rotate: false
+  xy: 879, 596
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+base-medium-f
+  rotate: false
+  xy: 2, 794
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+base-pale
+  rotate: false
+  xy: 2, 398
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+base-pale-f
+  rotate: false
+  xy: 2, 2
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1

@@ -1,11 +1,12 @@
 package com.anime.arena.pokemon;
 
-import com.anime.arena.skill.DamageSkill;
-import com.anime.arena.skill.Skill;
-import com.anime.arena.skill.SkillCategory;
-import com.anime.arena.skill.SkillTarget;
+import com.anime.arena.field.Field;
+import com.anime.arena.field.SubField;
+import com.anime.arena.skill.*;
+import com.anime.arena.skill.effect.*;
 
 import java.util.List;
+import java.util.Map;
 
 public class PokemonUtils {
 
@@ -54,6 +55,37 @@ public class PokemonUtils {
             cry = dexNumber + ".wav";
         }
         return cry;
+    }
+
+    public static boolean isSendOutAbility(AbilityId ability) {
+        AbilityId[] sendOutAbilities = new AbilityId[] {
+                AbilityId.INTIMIDATE,
+                AbilityId.TRACE,
+                AbilityId.DRIZZLE,
+                AbilityId.SAND_STREAM,
+                AbilityId.PRESSURE,
+                AbilityId.DROUGHT,
+                AbilityId.FOREWARN,
+                AbilityId.SNOW_WARNING,
+                AbilityId.FRISK,
+                AbilityId.ELECTRIC_SURGE,
+                AbilityId.PSYCHIC_SURGE,
+                AbilityId.GRASSY_SURGE,
+                AbilityId.MISTY_SURGE
+        };
+        for (AbilityId id : sendOutAbilities) {
+            if (ability == id) {
+                return true;
+            }
+        }
+        return false;
+    }
+
+    public void useSendOutAbility(AbilityId ability, BattlePokemon skillUser, BattlePokemon enemyPokemon, Field field, SubField userField, SubField enemyField) {
+        if (ability == AbilityId.INTIMIDATE) {
+            Effect intimidateEffect = new AttackEffect(SkillTarget.ENEMY, StatDirection.DECREASE, 1);
+            intimidateEffect.use(skillUser, enemyPokemon, field, userField, enemyField, false);
+        }
     }
 
     public static List<String> getAbilityInformation(BasePokemonFactory basePokemonFactory, int abilityID) {
@@ -133,11 +165,44 @@ public class PokemonUtils {
         }
     }
 
-    public static void initBlankPokemonData(Pokemon p, int level) {
+    public static void initBlankPokemonData(Pokemon p, int level, BasePokemonFactory factory) {
         p.getUniqueVariables().initBlankData(level);
         initRandomAbility(p);
         p.getUniqueVariables().setGender(createGender(0.5));
-        //TODO: Init Moves
+        //add moves
+        List<Integer> defaultMoves = p.getConstantVariables().getDefaultMoves();
+        int numberOfDefaultMoves = defaultMoves.size();
+        Map<Integer, List<Integer>> levelUpSkills =p.getConstantVariables().getLevelUpMoves();
+        if (defaultMoves.size() > 0) {
+            int currentSkill = 0;
+            List<Skill> moves = p.getUniqueVariables().getMoves();
+            for (int i = 0; i <= p.getUniqueVariables().getLevel(); i++) {
+                //Check if the Pokemon learns a move at the level i
+                if (levelUpSkills.containsKey(i)) {
+                    for (int j = 0; j < levelUpSkills.get(i).size(); j++) {
+                        if (!p.getUniqueVariables().hasMove(levelUpSkills.get(i).get(j))) {
+                            if (moves.size() > currentSkill) {
+                                moves.set(currentSkill, factory.getMove(levelUpSkills.get(i).get(j)));
+                            } else {
+                                moves.add(factory.getMove(levelUpSkills.get(i).get(j)));
+                            }
+                            currentSkill++;
+                        }
+                        if (currentSkill == 4) {
+                            //Start adding moves from the oldest to the newest since the
+                            //move list is full.
+                            currentSkill = 0;
+                        }
+                    }
+                }
+            }
+//            for (int i = 0; i < Math.min(numberOfDefaultMoves, 4); i++) {
+//                p.getUniqueVariables().getMoves().add(factory.getMove(defaultMoves.get(i)));
+//            }
+        } else {
+            //Create default hail when there are no moves
+            p.getUniqueVariables().getMoves().add(PokemonUtils.createHail());
+        }
         p.setCurrentHealth(p.getHealthStat());
     }
 
@@ -145,7 +210,19 @@ public class PokemonUtils {
         BasePokemon pansage = factory.createBasePokemon(dexNum);
         UniquePokemon unique = new UniquePokemon();
         Pokemon p = new Pokemon(pansage, unique);
-        PokemonUtils.initBlankPokemonData(p, level);
+        PokemonUtils.initBlankPokemonData(p, level, factory);
+        return p;
+    }
+
+    public static Pokemon createTestPokemon(String filename, BasePokemonFactory factory) {
+        return createTestPokemon(filename, factory, 5);
+    }
+
+    public static Pokemon createTestPokemon(String filename, BasePokemonFactory factory, int level) {
+        BasePokemon pansage = factory.createBasePokemonFromTestFile(filename);
+        UniquePokemon unique = new UniquePokemon();
+        Pokemon p = new Pokemon(pansage, unique);
+        PokemonUtils.initBlankPokemonData(p, level, factory);
         return p;
     }
 
@@ -174,6 +251,11 @@ public class PokemonUtils {
         }
     }
 
+    public static void setFirstAbility(Pokemon pokemon) {
+        pokemon.getUniqueVariables().setAbilityPosition(0);
+        pokemon.getUniqueVariables().setAbility(pokemon.getConstantVariables().getFirstAbility());
+    }
+
 
     /**
      * Set a random nature for the Pokemon.
@@ -194,8 +276,222 @@ public class PokemonUtils {
         PokemonType type = PokemonType.NORMAL;
         int accuracy = 100;
         SkillTarget target = SkillTarget.ENEMY;
-        DamageSkill damageSkill = new DamageSkill(name, description, cat, pp, pp,accuracy, type, target, 0, 1, basePower, 1);
+        DamageSkill damageSkill = new DamageSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0, basePower, 1);
         damageSkill.setMakesPhysicalContact(true);
         return damageSkill;
+    }
+
+    public static Skill createGustMove() {
+        String name = "Gust";
+        String description = "A gust of wind is whipped up by wings and launched at the target to inflict damage.";
+        int basePower = 40;
+        int pp = 35;
+        SkillCategory cat = SkillCategory.SPECIAL;
+        PokemonType type = PokemonType.FLYING;
+        int accuracy = 100;
+        SkillTarget target = SkillTarget.ENEMY;
+        DamageSkill damageSkill = new DamageSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0, basePower, 1);
+        return damageSkill;
+    }
+
+    public static Skill createBulkUpMove() {
+        String name = "Bulk Up";
+        String description = "The user tenses its muscles to bulk up its body, raising both its Attack and Defense stats.";
+        int pp = 20;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.FIGHTING;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.SELF;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new AttackEffect(SkillTarget.SELF, StatDirection.INCREASE, 1));
+        effectSkill.addEffect(new DefenseEffect(SkillTarget.SELF, StatDirection.INCREASE, 1));
+        return effectSkill;
+    }
+
+
+    public static Skill createCalmMindMove() {
+        String name = "Calm Mind";
+        String description = "The user quietly focuses its mind and calms its spirit to raise its Sp. Atk and Sp. Def stats.";
+        int pp = 20;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.PSYCHIC;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.SELF;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new SpecialAttackEffect(SkillTarget.SELF, StatDirection.INCREASE, 1));
+        effectSkill.addEffect(new SpecialDefenseEffect(SkillTarget.SELF, StatDirection.INCREASE, 1));
+        return effectSkill;
+    }
+
+    public static Skill createAgilityMove() {
+        String name = "Agility";
+        String description = "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.";
+        int pp = 30;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.PSYCHIC;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.SELF;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new SpeedEffect(SkillTarget.SELF, StatDirection.INCREASE, 2));
+        return effectSkill;
+    }
+
+    public static Skill createWillOWispMove() {
+        String name = "Will-O-Wisp";
+        String description = "The user relaxes and lightens its body to move faster. This sharply raises the Speed stat.";
+        int pp = 15;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.FIRE;
+        int accuracy = 100;
+        SkillTarget target = SkillTarget.ENEMY;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new BurnEffect(target));
+        return effectSkill;
+    }
+
+    public static Skill createPoisonpowder() {
+        String name = "Poison Powder";
+        String description = "The user scatters a cloud of poisonous dust that poisons the target.";
+        int pp = 35;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.POISON;
+        int accuracy = 100;
+        SkillTarget target = SkillTarget.ENEMY;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp, accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new PoisonEffect(target));
+        return effectSkill;
+    }
+
+    public static Skill createThunderWave() {
+        String name = "Thunder Wave";
+        String description = "The user launches a weak jolt of electricity that paralyzes the target.";
+        int pp = 20;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.ELECTRIC;
+        int accuracy = 100;
+        SkillTarget target = SkillTarget.ENEMY;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp, accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new ParalysisEffect(target));
+        return effectSkill;
+    }
+
+    public static Skill createDarkVoid() {
+        String name = "Dark Void";
+        String description = "Opposing Pokémon are dragged into a world of total darkness that makes them sleep.";
+        int pp = 10;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.DARK;
+        int accuracy = 100;
+        SkillTarget target = SkillTarget.ENEMY;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp, accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new SleepEffect(target));
+        return effectSkill;
+    }
+
+    public static Skill createRainDance() {
+        String name = "Rain Dance";
+        String description = "The user summons a heavy rain that falls for five turns, powering up Water-type moves. It lowers the power of Fire-type moves.";
+        int pp = 5;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.WATER;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.FIELD;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp, accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new RainEffect());
+        return effectSkill;
+    }
+
+    public static Skill createSunnyDay() {
+        String name = "Sunny Day";
+        String description = "The user intensifies the sun for five turns, powering up Fire-type moves. It lowers the power of Water-type moves.";
+        int pp = 5;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.FIRE;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.FIELD;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp, accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new SunEffect());
+        return effectSkill;
+    }
+
+    public static Skill createSandstorm() {
+        String name = "Sandstorm";
+        String description = "A five-turn sandstorm is summoned to hurt all combatants except Rock, Ground, and Steel types. It raises the Sp. Def stat of Rock types.";
+        int pp = 5;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.GROUND;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.FIELD;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp, accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new SandstormEffect());
+        return effectSkill;
+    }
+
+    public static Skill createHail() {
+        String name = "Hail";
+        String description = "The user summons a hailstorm lasting five turns. It damages all Pokémon except Ice types.";
+        int pp = 5;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.ICE;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.FIELD;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp, accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new HailEffect());
+        return effectSkill;
+    }
+
+    public static Skill createGrowlMove() {
+        String name = "Growl";
+        String description = "The user growls in an endearing way, making opposing Pokémon less wary. This lowers their Attack stats.";
+        int pp = 35;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.NORMAL;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.ENEMY;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new AttackEffect(SkillTarget.ENEMY, StatDirection.DECREASE, 1));
+        return effectSkill;
+    }
+
+    public static Skill createSandAttackMove() {
+        String name = "Sand Attack";
+        String description = "Sand is hurled in the foe's face, reducing its accuracy.";
+        int pp = 15;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.GROUND;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.ENEMY;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new AccuracyEffect(SkillTarget.ENEMY, StatDirection.DECREASE, 1));
+        return effectSkill;
+    }
+
+    public static Skill createLeerMove() {
+        String name = "Leer";
+        String description = "The user gives opposing Pokémon an intimidating leer that lowers the Defense stat.";
+        int pp = 30;
+        SkillCategory cat = SkillCategory.MISC;
+        PokemonType type = PokemonType.NORMAL;
+        int accuracy = -1;
+        SkillTarget target = SkillTarget.ENEMY;
+        EffectSkill effectSkill = new EffectSkill(0, name, description, cat, pp, pp,accuracy, type, target, 0, 0);
+        effectSkill.addEffect(new DefenseEffect(SkillTarget.ENEMY, StatDirection.DECREASE, 1));
+        return effectSkill;
+    }
+
+    public static Skill createTackleMove() {
+        String name = "Tackle";
+        String description = "A physical attack in which the user charges and slams into the target with its whole body.";
+        SkillCategory category = SkillCategory.PHYSICAL;
+        int tacklePP = 35;
+        int accuracy = 100;
+        PokemonType moveType = PokemonType.NORMAL;
+        SkillTarget target = SkillTarget.ENEMY;
+        int subtype = 0;
+        int speedPriority = 0;
+        int basePower = 40;
+        int criticalRate = 1;
+        return new DamageSkill(0, name, description, category, tacklePP, tacklePP, accuracy, moveType, target, subtype,
+                speedPriority, basePower, criticalRate);
     }
 }

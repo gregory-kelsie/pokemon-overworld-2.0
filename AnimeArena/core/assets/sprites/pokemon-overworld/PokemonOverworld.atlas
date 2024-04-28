@@ -1,0 +1,8491 @@
+
+PokemonOverworld.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ARCEUS
+  rotate: false
+  xy: 2, 1420
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 15
+ARCEUS
+  rotate: false
+  xy: 2, 906
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 5
+ARCEUS
+  rotate: false
+  xy: 516, 392
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 12
+CELESTEELA
+  rotate: false
+  xy: 646, 70
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+ETERNATUS
+  rotate: false
+  xy: 516, 906
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+EXEGGUTOR
+  rotate: false
+  xy: 2, 392
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 1
+FALINKS
+  rotate: false
+  xy: 1612, 324
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+KYOGRE
+  rotate: false
+  xy: 1030, 392
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+KYUREM
+  rotate: false
+  xy: 1544, 646
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 1
+KYUREM
+  rotate: false
+  xy: 1290, 70
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+LUGIA
+  rotate: false
+  xy: 516, 1420
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+LUNALA
+  rotate: false
+  xy: 1544, 968
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+NECROZMA
+  rotate: false
+  xy: 1544, 1612
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 2
+NECROZMA
+  rotate: false
+  xy: 1612, 2
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+PHEROMOSA
+  rotate: false
+  xy: 1544, 1290
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+REGIGIGAS
+  rotate: false
+  xy: 1030, 906
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+STAKATAKA
+  rotate: false
+  xy: 968, 70
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+TORNADUS
+  rotate: false
+  xy: 324, 70
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 1
+WAILORD
+  rotate: false
+  xy: 1030, 1420
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+ZYGARDE
+  rotate: false
+  xy: 2, 70
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld2.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ARCEUS
+  rotate: false
+  xy: 2, 1510
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 2
+ARCEUS
+  rotate: false
+  xy: 2, 482
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 17
+ARCEUS
+  rotate: false
+  xy: 516, 996
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 7
+ARCEUS
+  rotate: false
+  xy: 1030, 1510
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+ARCEUS
+  rotate: false
+  xy: 516, 482
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 14
+ARCEUS
+  rotate: false
+  xy: 1030, 482
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 4
+ARROKUDA
+  rotate: false
+  xy: 1508, 224
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BLISSEY
+  rotate: false
+  xy: 1250, 224
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CALYREX
+  rotate: false
+  xy: 968, 200
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: 2
+CALYREX
+  rotate: false
+  xy: 1544, 776
+  size: 280, 280
+  orig: 280, 280
+  offset: 0, 0
+  index: 1
+DRACOVISH
+  rotate: false
+  xy: 1766, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FERROTHORN
+  rotate: false
+  xy: 324, 160
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+KYUREM
+  rotate: false
+  xy: 1544, 1058
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 2
+MRRIME
+  rotate: false
+  xy: 1766, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RESHIRAM
+  rotate: false
+  xy: 1544, 1380
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+STEELIX
+  rotate: false
+  xy: 516, 1510
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+STEELIX_female
+  rotate: false
+  xy: 1030, 996
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+THUNDURUS
+  rotate: false
+  xy: 2, 160
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 1
+WEEZING
+  rotate: false
+  xy: 1544, 1702
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: 1
+WORMADAM
+  rotate: false
+  xy: 1544, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+YVELTAL
+  rotate: false
+  xy: 2, 996
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+ZEKROM
+  rotate: false
+  xy: 646, 160
+  size: 320, 320
+  orig: 320, 320
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld3.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 11
+ALCREMIE
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+ALCREMIE
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 24
+ALCREMIE
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 50
+ALCREMIE
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 37
+ARTICUNO
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BELLOSSOM
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BELLSPROUT
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHESPIN
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHIKORITA
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLAWITZER
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CORSOLA
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CORVIKNIGHT
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DOUBLADE
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FARFETCHD
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+FLOETTE
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+FURFROU
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 9
+GARDEVOIR
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GIGALITH
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRAVELER
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRIMER
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HATTERENE
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HORSEA
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+IGGLYBUFF
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KADABRA
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KRICKETUNE
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LANDORUS
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+LILEEP
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEGANIUM_female
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MELTAN
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MESPRIT
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MISMAGIUS
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ORBEETLE
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ORICORIO
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+PANGORO
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PANPOUR
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PARASECT
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIPLUP
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PUPITAR
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RHYHORN
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SANDSLASH
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SERPERIOR
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHAYMIN
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SLIGGOO
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TREVENANT
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+URSHIFU
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 15
+VOLBEAT
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZUBAT
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld4.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+AMAURA
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AVALUGG
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BASCULIN
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+BLIPBUG
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BRONZOR
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CARBINK
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHEWTLE
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CUTIEFLY
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DELPHOX
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRAGONITE
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DREDNAW
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DREEPY
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ESPURR
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOLISOPOD
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOOMY
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HOOPA
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LATIOS
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LEAFEON
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MACHOKE
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGNEZONE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAROWAK
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MIMIKYU
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MORPEKO
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MUNCHLAX
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NIDORANmA
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NOSEPASS
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PASSIMIAN
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PHANTUMP
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIGNITE
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+RAICHU
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+REUNICLUS
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RILLABOOM
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROOKIDEE
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 6
+SIMISAGE
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SKWOVET
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SMEARGLE
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPIRITOMB
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STANTLER
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWANNA
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOGEDEMARU
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 18
+UNOWN
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 9
+VIVILLON
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+WARTORTLE
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WHISMUR
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WOOBAT
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZAPDOS
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+
+PokemonOverworld5.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ABOMASNOW
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ACCELGOR
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALCREMIE
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 16
+ALCREMIE
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 42
+ALCREMIE
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+ALCREMIE
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 29
+ALCREMIE
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 55
+ARCTOZOLT
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BEWEAR
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BLAZIKEN
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BLITZLE
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BOUNSWEET
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BURMY
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COBALION
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COTTONEE
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CYNDAQUIL
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DURANT
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUSKNOIR
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLETCHLING
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FURFROU
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+GALLADE
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GASTRODON
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+GRAVELER
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+GURDURR
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HERACROSS
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ILLUMISE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KOMMOO
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LANDORUS
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEOWTH
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+PANSEAR
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PERRSERKER
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKIPEK
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+POIPOLE
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PRIMEAPE
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+QUILLADIN
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RAIKOU
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RATICATE
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+ROSERADE
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROTOM
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SCORBUNNY
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 12
+SWALOT
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TAPUFINI
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOXICROAK
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TRUMBEAK
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+VAPOREON
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+VULPIX
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld6.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 21
+APPLIN
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CATERPIE
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DELCATTY
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEOXYS
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+EXEGGUTOR
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FERROSEED
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLABEBE
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+FLORGES
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+FURFROU
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 6
+GENESECT
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOLDEEN
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOTHORITA
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRIMER
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+HIPPOPOTAS
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LEAVANNY
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LIEPARD
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LUDICOLO
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MACHAMP
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGBY
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGMORTAR
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MARACTUS
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEDICHAM
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NIDORINA
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PANCHAM
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 10
+PIKACHU
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+PINSIR
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+POOCHYENA
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PORYGON2
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PRIMARINA
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+QUILAVA
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RELICANTH
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SCEPTILE
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SNOVER
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPECTRIER
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TAPUKOKO
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TERRAKION
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TORRACAT
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 23
+VILEPLUME
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIRIZION
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 12
+VOLCANION
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WURMPLE
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WYNAUT
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZAMAZENTA
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZAMAZENTA
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+
+PokemonOverworld7.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 34
+ALCREMIE
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 60
+ALCREMIE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 47
+CHESNAUGHT
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COFAGRIGUS
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CONKELDURR
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEOXYS
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUSCLOPS
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ELECTRIKE
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FEEBAS
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FROSMOTH
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GENESECT
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+GOODRA
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRENINJA
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GROOKEY
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+INCINEROAR
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+IVYSAUR
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JANGMOO
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LARVITAR
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LICKILICKY
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LOPUNNY
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MACHOP
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MANTINE
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINIOR
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+MINIOR
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 11
+MONFERNO
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NIHILEGO
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIDGEY
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+POLIWAG
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PONYTA
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PSYDUCK
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+REGICE
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 17
+SILVALLY
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+SKIDDO
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SKUNTANK
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SLOWBRO
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SPEAROW
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STARLY
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SUNFLORA
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TORNADUS
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TORTERRA
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYPENULL
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYRANTRUM
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNFEZANT
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 15
+UNOWN
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 6
+WOBBUFFET_female
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZOROARK
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld8.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 13
+ALCREMIE
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+ALCREMIE
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 26
+ALCREMIE
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 52
+AZUMARILL
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BASTIODON
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BINACLE
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BONSLY
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHANSEY
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHARMELEON
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CORSOLA
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+DRILBUR
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUSTOX
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ESPEON
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLABEBE
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLOETTE
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+FURRET
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GALVANTULA
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GASTLY
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GENGAR
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HAXORUS
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HOUNDOOM
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KANGASKHAN
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGMAR
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEOWSTIC_female
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MUDKIP
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NINETALES
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+PALOSSAND
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PERSIAN
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+RABOOT
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RAPIDASH
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SANDILE
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SAWSBUCK
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SLAKING
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STOUTLAND
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STUNFISK
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+TENTACRUEL
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+THWACKEY
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TIRTOUGA
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TORKOAL
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 17
+VOLTORB
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WEEDLE
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WHIMSICOTT
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WHISCASH
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+XATU
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+YAMASK
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+ZORUA
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZYGARDE_1
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+
+PokemonOverworld9.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 39
+AURORUS
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BURMY
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+CACTURNE
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHATOT
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CORPHISH
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DARKRAI
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DARMANITAN
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+DEWGONG
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DIGGERSBY
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DONPHAN
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRACOZOLT
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRAMPA
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRIZZILE
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EELEKTRIK
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ELECTIVIRE
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLAAFFY
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FOONGUS
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FORRETRESS
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FRILLISH_female
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FURFROU
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+GASTRODON
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HATENNA
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HOUNDOUR
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+INKAY
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JELLICENT_female
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KRICKETOT
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MANKEY
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+METAGROSS
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MIMEJR
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MRMIME
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MUSHARNA
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+OMANYTE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PANSAGE
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+PROBOPASS
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RATICATE
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SALAZZLE
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SAWK
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+SKARMORY
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SNORUNT
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STUNKY
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYPHLOSION
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 20
+VIVILLON
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+ZEBSTRIKA
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZERAORA
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZIGZAGOON
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld10.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 31
+ALCREMIE
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 18
+ALCREMIE
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 44
+ALCREMIE
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 57
+AMOONGUSS
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+APPLETUN
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BARBARACLE
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BRELOOM
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BRIONNE
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CURSOLA
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DARUMAKA
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEERLING
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+DRAKLOAK
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EKANS
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ELDEGOSS
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLOATZEL
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GIBLE
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRANBULL
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HEATRAN
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HERACROSS_female
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HITMONCHAN
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KLEFKI
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LYCANROC
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MAGNETON
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NINJASK
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PATRAT
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PERSIAN
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIDGEOTTO
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PINCURCHIN
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PINECO
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PURRLOIN
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PYUKUMUKU
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RATTATA
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+RIOLU
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROTOM
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+SAWSBUCK
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SCIZOR
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHELMET
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 14
+SINISTEA
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SLUGMA
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SNOM
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SNORLAX
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOXTRICITY
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+VENONAT
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WEAVILE
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WISHIWASHI
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WORMADAM
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+XURKITREE
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld11.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 10
+ALCREMIE
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+ARON
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AUDINO
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BAGON
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BRUXISH
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BULBASAUR
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CALYREX
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHIMCHAR
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEWPIDER
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EMOLGA
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FARFETCHD
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FEAROW
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLABEBE
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+FLORGES
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+GABITE_female
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GLOOM
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HAPPINY
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HEATMOR
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HELIOPTILE
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JIGGLYPUFF
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LILLIGANT
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGCARGO
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGNEMITE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MILCERY
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NIDORANfE
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ORANGURU
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 12
+PIKACHU
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 9
+RAMPARDOS
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+REGISTEEL
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SALANDIT
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SANDYGAST
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHELLOS
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHIFTRY
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILCOON
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILICOBRA
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SNUBBULL
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TAUROS
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 12
+UNOWN
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+UNOWN
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 25
+VIVILLON
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 14
+VULLABY
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WATCHOG
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WINGULL
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WOBBUFFET
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+YAMASK
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZIGZAGOON
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+
+PokemonOverworld12.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+AEGISLASH
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALCREMIE
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 23
+ALCREMIE
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 36
+ALCREMIE
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 62
+ALCREMIE
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 49
+BASCULIN
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BOLTUND
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHARIZARD
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHARMANDER
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHERRIM
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CINDERACE
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COMBUSKEN
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRADILY
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRUSTLE
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DITTO
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ELGYEM
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FURFROU
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+FURFROU
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GABITE
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GARBODOR
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOSSIFLEUR
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HIPPOWDON_female
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HOPPIP
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+IMPIDIMP
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+INDEEDEE
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LARVESTA
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAROWAK
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MEOWSTIC
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEW
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MIENFOO
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINIOR
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 9
+MUDSDALE
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MURKROW
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NOCTOWL
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+OCTILLERY
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ORICORIO
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+PETILIL
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SALAMENCE
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SEEDOT
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SEVIPER
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHUPPET
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SIGILYPH
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SLAKOTH
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SYLVEON
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIKAVOLT
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+YAMPER
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+YANMEGA
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZAPDOS
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld13.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 15
+ALCREMIE
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 41
+ARCHEN
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BEARTIC
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CAMERUPT
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COMBEE
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRABRAWLER
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CUBCHOO
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DARTRIX
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEDENNE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEWOTT
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRUDDIGON
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EELEKTROSS
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FERALIGATR
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLAREON
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLOETTE
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+GENESECT
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+HELIOLISK
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JUMPLUFF
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LUCARIO
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEOWTH
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MINIOR
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 13
+MOLTRES
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NAGANADEL
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NECROZMA
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+NOIBAT
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NOIVERN
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+POLTEAGEIST
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PYROAR
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RHYDON
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RUNERIGUS
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SANDSHREW
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SAWSBUCK
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+SHINX
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+SLOWKING
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SNIVY
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+THROH
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TIMBURR
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOGEKISS
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOGEPI
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOGETIC
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOTODILE
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 17
+UNOWN
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+UXIE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VESPIQUEN
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIGOROTH
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 19
+
+PokemonOverworld14.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+ALCREMIE
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 28
+ALCREMIE
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 54
+ALCREMIE
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ARCANINE
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BOLDORE
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BOUFFALANT
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CACNEA
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CASTFORM
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLAMPERL
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLEFAIRY
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLOYSTER
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CROAGUNK
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CUFANT
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DIANCIE
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EXEGGCUTE
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GARCHOMP
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HAKAMOO
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HUNTAIL
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JIRACHI
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LINOONE
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+LYCANROC
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MANECTRIC
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEWTWO
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MILOTIC
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINCCINO
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MOLTRES
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MUK
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ODDISH
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PHANPY
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RAPIDASH
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+REGIROCK
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SAMUROTT
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHIINOTIC
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 11
+SLURPUFF
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STARAPTOR
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STUNFISK
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWOOBAT
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TEPIG
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TROPIUS
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 22
+VIBRAVA
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+VULPIX
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+WIMPOD
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WOOLOO
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WOOPER
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZARUDE
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld15.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+AIPOM
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALAKAZAM
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALCREMIE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 20
+ALCREMIE
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 33
+ALCREMIE
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 46
+BIDOOF
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BUDEW
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BUIZEL
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CARNIVINE
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CARRACOSTA
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COMFEY
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEERLING
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+DEOXYS
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+FLABEBE
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+FLORGES
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+FLYGON
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FROAKIE
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FROGADIER
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FURFROU
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+GEODUDE
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOLEM
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRIMMSNARL
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HAWLUCHA
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HIPPOPOTAS_female
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JYNX
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LANTURN
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LITTEN
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LOMBRE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LUMINEON
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LUXIO
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAKUHITA
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAREEP
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NUMEL
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+OSHAWOTT
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 6
+RAICHU
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+REGIELEKI
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RIBOMBEE
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SANDACONDA
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SEAKING
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SEISMITOAD
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHUCKLE
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPEWPA
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+THUNDURUS
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNFEZANT_female
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VANILLISH
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VENUSAUR
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 11
+
+PokemonOverworld16.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 59
+ALTARIA
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ARAQUANID
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ARTICUNO
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+BERGMITE
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BUNNELBY
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CENTISKORCH
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHANDELURE
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COSMOEM
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DROWZEE
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUNSPARCE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DURALUDON
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EXPLOUD
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GENESECT
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+GLIGAR
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOTHITA
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRAPPLOCT
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HONEDGE
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HYDREIGON
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KELDEO
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KIRLIA
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LEDIAN
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LEDYBA
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LINOONE
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGEARNA
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MANTYKE
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEDITITE
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINIOR
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 10
+MUDBRAY
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PHIONE
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 14
+POLIWRATH
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+POPPLIO
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROTOM
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+SHARPEDO
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 16
+SILVALLY
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+SLOWPOKE
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SLOWPOKE
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWAMPERT
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWINUB
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TANGELA
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYNAMO
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 14
+UNOWN
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+UNOWN
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 27
+VENIPEDE
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZANGOOSE
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld17.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 12
+ALCREMIE
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+ALCREMIE
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 25
+ALCREMIE
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 51
+ARMALDO
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BANETTE
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BEHEEYEM
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHERUBI
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CORVISQUIRE
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DARMANITAN
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DECIDUEYE
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUBWOOL
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUGTRIO
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EISCUE
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLOETTE
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+GOLETT
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOLURK
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOURGEIST
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GREEDENT
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GULPIN
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GUMSHOOS
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HONCHKROW
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+INFERNAPE
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KELDEO
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+KINGLER
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LICKITUNG
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LURANTIS
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LUXRAY
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGIKARP
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MARSHTOMP
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINIOR
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MISDREAVUS
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ORICORIO
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+PARAS
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU_female
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PRINPLUP
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+REGIDRAGO
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROTOM
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SANDSHREW
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SHELGON
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHELLDER
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SIZZLIPEDE
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SMOOCHUM
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPINARAK
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TAILLOW
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TORCHIC
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYRANITAR
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 16
+WORMADAM
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+
+PokemonOverworld18.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 38
+BARBOACH
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BEAUTIFLY
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BURMY
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+CARVANHA
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHIMECHO
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLEFABLE
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COALOSSAL
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COMBEE
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+COPPERAJAH
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+COSMOG
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DELIBIRD
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUOSION
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ELECTRODE
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EMBOAR
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FINNEON
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLETCHINDER
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GIRAFARIG
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GLALIE
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOGOAT
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOLEM
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+GOTHITELLE
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+INTELEON
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KROKOROK
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LOTAD
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LUNATONE
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEOWTH
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MORPEKO
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PLUSLE
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PORYGON
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+REMORAID
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROCKRUFF
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROLYCOLY
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SCRAGGY
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SCYTHER
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+SKORUPI
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SKRELP
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SLOWBRO
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPINDA
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWELLOW
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TALONFLAME
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TEDDIURSA
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TSAREENA
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+URSHIFU
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+VANILLUXE
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+WEEPINBELL
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZACIAN
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld19.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+AGGRON
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALCREMIE
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 30
+ALCREMIE
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 17
+ALCREMIE
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 43
+ALCREMIE
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 9
+ALCREMIE
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 56
+AMBIPOM
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AMPHAROS
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ANORITH
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BRAIXEN
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BRAVIARY
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BUNEARY
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DHELMISE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DOTTLER
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRIFLOON
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EEVEE
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FRAXURE
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FRILLISH
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FURFROU
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+GIBLE_female
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GLACEON
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GROTLE
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HERDIER
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KINGDRA
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LITLEO
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAGEARNA
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MANDIBUZZ
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MASQUERAIN
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MIENSHAO
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINUN
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NATU
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+POLITOED
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+POLIWHIRL
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PONYTA
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+RHYPERIOR
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROSELIA
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROTOM
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+RUFFLET
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHEDINJA
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHIELDON
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 13
+SOLROCK
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STEENEE
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TAPULELE
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOXTRICITY
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UMBREON
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 19
+VICTINI
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld20.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALOMOMOLA
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AZURILL
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BEEDRILL
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CELEBI
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CINCCINO
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLAYDOL
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRABOMINABLE
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRYOGONAL
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEOXYS
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+DIGLETT
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+DRAGAPULT
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DWEBBLE
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ELECTABUZZ
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ELEKID
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EXCADRILL
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLABEBE
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+FLOETTE
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLORGES
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+GOREBYSS
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KARRABLAST
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KARTANA
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MRMIME
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MUK
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MUNNA
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PACHIRISU
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PALPITOAD
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIDGEOT
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 11
+PIKACHU
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+PUMPKABOO
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PYROAR_female
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SCATTERBUG
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SCOLIPEDE
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SEADRA
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SEEL
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SOLGALEO
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SOLOSIS
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPHEAL
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STARYU
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SUNKERN
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TANGROWTH
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TRAPINCH
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 11
+UNOWN
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+UNOWN
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 24
+VIVILLON
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 9
+WEEZING
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+YUNGOOS
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZWEILOUS
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld21.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ABSOL
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALCREMIE
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+ALCREMIE
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 22
+ALCREMIE
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 35
+ALCREMIE
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 61
+ALCREMIE
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 48
+BALTOY
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BLACEPHALON
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHARJABUG
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DODUO
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUSKULL
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FURFROU
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+GEODUDE
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+GLAMEOW
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRUBBIN
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HATTREM
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HITMONTOP
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JELLICENT
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KLINKLANG
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KOMALA
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LAPRAS
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LATIAS
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LUVDISC
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAREANIE
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MILTANK
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINIOR
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 8
+NIDORINO
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NINCADA
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NINETALES
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ONIX
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PICHU
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+QWILFISH
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RALTS
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SCRAFTY
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SEALEO
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SIMIPOUR
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SKITTY
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPRITZEE
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SQUIRTLE
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STARAVIA
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SUDOWOODO
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SUICUNE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOUCANNON
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TREECKO
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TRUBBISH
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 13
+VIVILLON
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+WALREIN
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ZACIAN
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+
+PokemonOverworld22.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 14
+ALCREMIE
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 40
+ARCTOVISH
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BUTTERFREE
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHINCHOU
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLAUNCHER
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRANIDOS
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRESSELIA
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CUBONE
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEINO
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRAPION
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRIFBLIM
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUGTRIO
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+FLOETTE
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+FOMANTIS
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GENESECT
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 3
+GOLBAT
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GRUMPIG
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GUZZLORD
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HARIYAMA
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HOOTHOOT
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HYPNO
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+INDEEDEE
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+KABUTO
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KRABBY
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MARSHADOW
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAWILE
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MEGANIUM
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+METAPOD
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MINIOR
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 12
+NICKIT
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NUZLEAF
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ORICORIO
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PORYGONZ
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SAWSBUCK
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+SEWADDLE
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHAYMIN
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 18
+SILVALLY
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+SLOWKING
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+STUFFUL
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+THIEVUL
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TURTWIG
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 16
+UNOWN
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 7
+URSARING
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 18
+WAILMER
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld23.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ALCREMIE
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 6
+ALCREMIE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 27
+ALCREMIE
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 53
+BAYLEEF
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BLASTOISE
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CARKOL
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CASCOON
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CHINGLING
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLOBBOPUS
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRAMORANT
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CRAWDAUNT
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CROCONAW
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRAGONAIR
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DUCKLETT
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+EMPOLEON
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ESCAVALIER
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FENNEKIN
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GLISCOR
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GOLDUCK
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JOLTEON
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KABUTOPS
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KAKUNA
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KECLEON
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KLINK
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LOUDRED
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+METANG
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MORGREM
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NIDOKING
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+OMASTAR
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PELIPPER
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROGGENROLA
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROWLET
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SANDSLASH
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SERVINE
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHELLOS
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SILVALLY
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 10
+SIMISEAR
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SIRFETCHD
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SKIPLOOM
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SPOINK
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SURSKIT
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWIRLIX
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOXEL
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYRUNT
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 21
+VANILLITE
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VICTREEBEL
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 6
+WIGGLYTUFF
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld24.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ABRA
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALCREMIE
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 32
+ALCREMIE
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 19
+ALCREMIE
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 45
+ARIADOS
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AXEW
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BELDUM
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BISHARP
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BRONZONG
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CROBAT
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DEERLING
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+DIGLETT
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DODRIO
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ENTEI
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FROSLASS
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FURFROU
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+GARCHOMP_female
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GROVYLE
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GROWLITHE
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GYARADOS
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+JOLTIK
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KROOKODILE
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KUBFU
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LILLIPUP
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MAMOSWINE
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MANAPHY
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MARILL
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MELMETAL
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MELOETTA
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MIGHTYENA
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MORELULL
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+OBSTAGOON
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 5
+PURUGLY
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+QUAGSIRE
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+RATTATA
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SENTRET
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SHROOMISH
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SNEASEL
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SOBBLE
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWABLU
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TENTACOOL
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TOXAPEX
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TRANQUILL
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TURTONATOR
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYROGUE
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VENOMOTH
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+VIVILLON
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 10
+VOLCARONA
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld25.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+000
+  rotate: false
+  xy: 1292, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AERODACTYL
+  rotate: false
+  xy: 1292, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ALCREMIE
+  rotate: false
+  xy: 1034, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 58
+ARBOK
+  rotate: false
+  xy: 776, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ARCHEOPS
+  rotate: false
+  xy: 776, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AROMATISSE
+  rotate: false
+  xy: 518, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+AZELF
+  rotate: false
+  xy: 1292, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BARRASKEWDA
+  rotate: false
+  xy: 1550, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BIBAREL
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+BUZZWOLE
+  rotate: false
+  xy: 1550, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+CLEFFA
+  rotate: false
+  xy: 776, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DARUMAKA
+  rotate: false
+  xy: 2, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+DEERLING
+  rotate: false
+  xy: 518, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRAGALGE
+  rotate: false
+  xy: 518, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+DRATINI
+  rotate: false
+  xy: 2, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLAPPLE
+  rotate: false
+  xy: 518, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+FLORGES
+  rotate: false
+  xy: 1292, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+GLASTRIER
+  rotate: false
+  xy: 260, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HAUNTER
+  rotate: false
+  xy: 1292, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HIPPOWDON
+  rotate: false
+  xy: 1550, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+HITMONLEE
+  rotate: false
+  xy: 518, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KLANG
+  rotate: false
+  xy: 776, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+KOFFING
+  rotate: false
+  xy: 776, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LAIRON
+  rotate: false
+  xy: 1034, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LAMPENT
+  rotate: false
+  xy: 1292, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+LYCANROC
+  rotate: false
+  xy: 1034, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 2
+MALAMAR
+  rotate: false
+  xy: 2, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+MELOETTA
+  rotate: false
+  xy: 776, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+MOTHIM
+  rotate: false
+  xy: 1034, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+NIDOQUEEN
+  rotate: false
+  xy: 2, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PAWNIARD
+  rotate: false
+  xy: 1550, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIDOVE
+  rotate: false
+  xy: 1550, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PIKACHU
+  rotate: false
+  xy: 518, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 13
+PILOSWINE
+  rotate: false
+  xy: 1550, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+ROTOM
+  rotate: false
+  xy: 1550, 1034
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+SABLEYE
+  rotate: false
+  xy: 1034, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SILVALLY
+  rotate: false
+  xy: 260, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 1
+SILVALLY
+  rotate: false
+  xy: 1292, 776
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 15
+STARMIE
+  rotate: false
+  xy: 2, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+STONJOURNER
+  rotate: false
+  xy: 260, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+SWADLOON
+  rotate: false
+  xy: 1034, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TAPUBULU
+  rotate: false
+  xy: 260, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+TYMPOLE
+  rotate: false
+  xy: 260, 1292
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+UNOWN
+  rotate: false
+  xy: 776, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 13
+UNOWN
+  rotate: false
+  xy: 1034, 518
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 4
+UNOWN
+  rotate: false
+  xy: 260, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: 26
+VENUSAUR_female
+  rotate: false
+  xy: 518, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+WHIRLIPEDE
+  rotate: false
+  xy: 2, 1550
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+YANMA
+  rotate: false
+  xy: 260, 260
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld26.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ARCEUS
+  rotate: false
+  xy: 2, 260
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 11
+ARCEUS
+  rotate: false
+  xy: 516, 260
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 1
+ARCEUS
+  rotate: false
+  xy: 1030, 260
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 16
+DIALGA
+  rotate: false
+  xy: 1030, 774
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+GIRATINA
+  rotate: false
+  xy: 516, 1288
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 1
+GROUDON
+  rotate: false
+  xy: 516, 774
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+LITWICK
+  rotate: false
+  xy: 2, 2
+  size: 256, 256
+  orig: 256, 256
+  offset: 0, 0
+  index: -1
+PALKIA
+  rotate: false
+  xy: 1030, 1288
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+XERNEAS
+  rotate: false
+  xy: 2, 1288
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+XERNEAS
+  rotate: false
+  xy: 2, 774
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 1
+
+PokemonOverworld27.png
+size: 2048, 2048
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+ARCEUS
+  rotate: false
+  xy: 2, 1030
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 6
+ARCEUS
+  rotate: false
+  xy: 2, 516
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 13
+ARCEUS
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 3
+ARCEUS
+  rotate: false
+  xy: 1030, 1030
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 18
+ARCEUS
+  rotate: false
+  xy: 516, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 8
+ARCEUS
+  rotate: false
+  xy: 1030, 516
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 10
+GIRATINA
+  rotate: false
+  xy: 516, 1030
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+HOOH
+  rotate: false
+  xy: 516, 516
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+RAYQUAZA
+  rotate: false
+  xy: 1030, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: -1
+
+PokemonOverworld28.png
+size: 1024, 1024
+format: RGBA8888
+filter: Nearest, Nearest
+repeat: none
+HOOPA
+  rotate: false
+  xy: 2, 2
+  size: 512, 512
+  orig: 512, 512
+  offset: 0, 0
+  index: 1

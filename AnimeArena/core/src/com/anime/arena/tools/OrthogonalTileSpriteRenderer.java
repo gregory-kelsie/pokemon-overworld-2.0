@@ -49,11 +49,13 @@ public class OrthogonalTileSpriteRenderer extends OrthogonalTiledMapRenderer {
                 pokemonMap.renderItems(this.getBatch());
                 pokemonMap.renderBerriesAbovePlayer(this.getBatch(), player);
                 pokemonMap.renderNPCsAbovePlayer(this.getBatch(), player);
+                pokemonMap.renderOverworldPokemonAbovePlayer(this.getBatch(), player);
                 pokemonMap.renderTrainersAbovePlayer(this.getBatch(), player);
                 player.draw(this.getBatch());
                 pokemonMap.renderTreesBelowPlayer(this.getBatch(), player);
                 pokemonMap.renderBerriesBelowPlayer(this.getBatch(), player);
                 pokemonMap.renderNPCsBelowPlayer(this.getBatch(), player);
+                pokemonMap.renderOverworldPokemonBelowPlayer(this.getBatch(), player);
                 pokemonMap.renderTrainersBelowPlayer(this.getBatch(), player);
 
                 hasDrawnPlayer = true;
@@ -73,11 +75,13 @@ public class OrthogonalTileSpriteRenderer extends OrthogonalTiledMapRenderer {
             pokemonMap.renderItems(this.getBatch());
             pokemonMap.renderBerriesAbovePlayer(this.getBatch(), player);
             pokemonMap.renderNPCsAbovePlayer(this.getBatch(), player);
+            pokemonMap.renderOverworldPokemonAbovePlayer(this.getBatch(), player);
             pokemonMap.renderTrainersAbovePlayer(this.getBatch(), player);
             player.draw(this.getBatch());
             pokemonMap.renderTreesBelowPlayer(this.getBatch(), player);
             pokemonMap.renderBerriesBelowPlayer(this.getBatch(), player);
             pokemonMap.renderNPCsBelowPlayer(this.getBatch(), player);
+            pokemonMap.renderOverworldPokemonBelowPlayer(this.getBatch(), player);
             pokemonMap.renderTrainersBelowPlayer(this.getBatch(), player);
 
             hasDrawnPlayer = true;

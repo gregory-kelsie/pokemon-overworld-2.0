@@ -29,7 +29,6 @@ import java.util.List;
 public class PokemonScreen implements Screen {
 
     private AnimeArena game;
-    private Player player;
     private Texture black;
     private OrthographicCamera gameCam;
     private OrthographicCamera controlsCam;
@@ -49,11 +48,19 @@ public class PokemonScreen implements Screen {
     private BitmapFont partyHealthFont;
     private BitmapFont partyLevelFont;
 
-    private int screenPosition;
+    private MainScreens screenPosition;
     private boolean inMiniMenu;
     private boolean inItemMenu;
-    private int miniMenuPosition; //0 is summary, 1 is switch, 2 is item, 3 is quit
-    private int summaryPosition; //0 is summary, 1 is stats, 2 is moves, 3 is ribbons
+
+
+
+    private enum MainScreens {POKEMON, SUMMARY, ITEM}
+    private enum SummaryScreens {SUMMARY, STATS, MOVES, RIBBONS};
+    private enum HamburgerMenuOptions {SUMMARY, SWITCH, ITEM, QUIT}
+
+
+    private SummaryScreens summaryPosition;
+    private HamburgerMenuOptions miniMenuPosition;
 
     //Textures
     private Texture partyBackground;
@@ -115,6 +122,7 @@ public class PokemonScreen implements Screen {
     private int mode; //0 is regular mode from the main menu, 1 is item mode from the bag (we're using an item on a pokemon)
     private int selectPosition;
     private int switchPokemon;
+    private boolean isForcingSwitchPokemon;
     private String abilityName;
     private String abilityDescription;
 
@@ -130,9 +138,84 @@ public class PokemonScreen implements Screen {
     private Bag bag;
     private BagItem item;
 
-    public PokemonScreen(AnimeArena game, Screen previousScreen, Player player, TextureAtlas pokemonAtlas, TextureAtlas pokemonIconAtlas, TextureAtlas pokemonTypeAtlas, DatabaseLoader dbLoader) {
+    private List<Pokemon> party;
+    private SourceScreen sourceScreen;
+    private int battlePokemonPosition;
+
+    public PokemonScreen(AnimeArena game, Screen previousScreen, List<Pokemon> party, TextureAtlas pokemonAtlas, TextureAtlas pokemonIconAtlas, TextureAtlas pokemonTypeAtlas,
+                         BasePokemonFactory basePokemonFactory, SourceScreen sourceScreen) {
         this.game = game;
-        this.player = player;
+        this.party = party;
+        this.pokemonAtlas = pokemonAtlas;
+        this.pokemonIconAtlas = pokemonIconAtlas;
+        this.pokemonTypeAtlas = pokemonTypeAtlas;
+        this.previousScreen = previousScreen;
+        this.pokemonFactory = basePokemonFactory;
+        this.pokemonList = new ArrayList<BasePokemon>();
+
+        this.vertexShader = Gdx.files.internal("shaders/default.vs").readString();
+        this.fragmentShader = Gdx.files.internal("shaders/white.fs").readString();
+        this.shaderProgram = new ShaderProgram(vertexShader, fragmentShader);
+
+        this.black = new Texture("animation/black.png");
+        this.partyBackground = new Texture("hud/party/bg_B2W2.png");
+        this.partyWhiteTextBackground = new Texture("hud/party/bw_choice.png");
+        this.partyCancelButton = new Texture("hud/party/icon_cancel.png");
+        this.emptyPanel = new Texture("hud/party/panel_rect.png");
+        this.blankPanel = new Texture("hud/party/panel_blank.png");
+        this.selectedPanel = new Texture("hud/party/panel_rect_sel.png");
+        this.switchPanel = new Texture("hud/party/panel_round.png");
+        this.switchSelectedPanel = new Texture("hud/party/panel_round_sel.png");
+        this.switchFaintPanel = new Texture("hud/party/panel_round_faint.png");
+        this.switchFaintSelectedPanel = new Texture("hud/party/panel_round_faint_sel.png");
+        this.selectedFaintPanel = new Texture("hud/party/panel_rect_faint_sel.png");
+        this.faintPanel = new Texture("hud/party/panel_rect_faint.png");
+        this.partyHealthBar = new Texture("hud/party/overlay_hp_back.png");
+        this.partyLevel = new Texture("hud/party/overlay_lv.png");
+        this.greenHealthTexture = new Texture("hud/party/greenhealth.png");
+        this.yellowHealthTexture = new Texture("hud/party/yellowhealth.png");
+        this.redHealthTexture = new Texture("hud/party/redhealth.png");
+        this.itemTexture = new Texture("hud/party/icon_item.png");
+        this.poisonedTexture = new Texture("hud/party/poisoned.png");
+        this.paralyzedTexture = new Texture("hud/party/paralyzed.png");
+        this.burnedTexture = new Texture("hud/party/burned.png");
+        this.frozenTexture = new Texture("hud/party/frozen.png");
+        this.faintedTexture = new Texture("hud/party/fainted.png");
+        this.sleepTexture = new Texture("hud/party/sleep.png");
+        this.maleTexture = new Texture("hud/party/male.png");
+        this.femaleTexture = new Texture("hud/party/female.png");
+        this.miniMenuOption = new Texture("hud/party/icon_cancel_narrow.png");
+        this.miniMenuSelOption = new Texture("hud/party/icon_cancel_narrow_sel.png");
+        this.white = new Texture("animation/white.png");
+        this.summaryBackground = new Texture("hud/party/background.png");
+        this.statusBackground = new Texture("hud/party/status.png");
+        this.bottomBorder = new Texture("hud/party/bottomBorder.png");
+        this.expTexture = new Texture("hud/party/overlay_exp.png");
+        this.statsBackground = new Texture("hud/party/stats.png");
+        this.ratingS = new Texture("hud/party/RatingS.png");
+        this.ratingA = new Texture("hud/party/RatingA.png");
+        this.ratingB = new Texture("hud/party/RatingB.png");
+        this.ratingC = new Texture("hud/party/RatingC.png");
+        this.ratingD = new Texture("hud/party/RatingD.png");
+        this.ratingF = new Texture("hud/party/RatingF.png");
+
+        //Pokemon Screens
+        this.sourceScreen = sourceScreen;
+
+        initFont();
+
+        initCamera();
+
+        initVariables();
+
+        refreshIconSprites();
+        gameCam.position.set((AnimeArena.V_WIDTH / 2) / AnimeArena.PPM, (AnimeArena.V_HEIGHT / 2) / AnimeArena.PPM, 0);
+    }
+
+    public PokemonScreen(AnimeArena game, Screen previousScreen, List<Pokemon> party, TextureAtlas pokemonAtlas, TextureAtlas pokemonIconAtlas, TextureAtlas pokemonTypeAtlas,
+                         DatabaseLoader dbLoader, SourceScreen sourceScreen) {
+        this.game = game;
+        this.party = party;
         this.pokemonAtlas = pokemonAtlas;
         this.pokemonIconAtlas = pokemonIconAtlas;
         this.pokemonTypeAtlas = pokemonTypeAtlas;
@@ -186,11 +269,8 @@ public class PokemonScreen implements Screen {
         this.ratingD = new Texture("hud/party/RatingD.png");
         this.ratingF = new Texture("hud/party/RatingF.png");
 
-
         //Pokemon Screens
-
-
-
+        this.sourceScreen = sourceScreen;
 
         initFont();
 
@@ -199,55 +279,52 @@ public class PokemonScreen implements Screen {
         initVariables();
 
         refreshIconSprites();
-
-
         gameCam.position.set((AnimeArena.V_WIDTH / 2) / AnimeArena.PPM, (AnimeArena.V_HEIGHT / 2) / AnimeArena.PPM, 0);
-
     }
 
-    private void refreshIconSprites() {
-        if (hasPokemon(0)) {
-            firstPokemon = new Sprite(pokemonIconAtlas.findRegion(player.getPokemonParty().get(0).getConstantVariables().getFormattedImage()));
-            firstPokemon.setPosition(80, 1750);
-            firstPokemon.setSize(firstPokemon.getWidth() * 4, firstPokemon.getHeight() * 4);
-        }
-        if (hasPokemon(1)) {
-            secondPokemon = new Sprite(pokemonIconAtlas.findRegion(player.getPokemonParty().get(1).getConstantVariables().getFormattedImage()));
-            secondPokemon.setPosition(602, 1710);
-            secondPokemon.setSize(secondPokemon.getWidth() * 4, secondPokemon.getHeight() * 4);
-        }
-        if (hasPokemon(2)) {
-            thirdPokemon = new Sprite(pokemonIconAtlas.findRegion(player.getPokemonParty().get(2).getConstantVariables().getFormattedImage()));
-            thirdPokemon.setPosition(80, 1514);
-            thirdPokemon.setSize(thirdPokemon.getWidth() * 4, thirdPokemon.getHeight() * 4);
-        }
-        if (hasPokemon(3)) {
-            fourthPokemon = new Sprite(pokemonIconAtlas.findRegion(player.getPokemonParty().get(3).getConstantVariables().getFormattedImage()));
-            fourthPokemon.setPosition(602, 1474);
-            fourthPokemon.setSize(fourthPokemon.getWidth() * 4, fourthPokemon.getHeight() * 4);
-        }
-        if (hasPokemon(4)) {
-            fifthPokemon = new Sprite(pokemonIconAtlas.findRegion(player.getPokemonParty().get(4).getConstantVariables().getFormattedImage()));
-            fifthPokemon.setPosition(80, 1272);
-            fifthPokemon.setSize(fifthPokemon.getWidth() * 4, fifthPokemon.getHeight() * 4);
-        }
-        if (hasPokemon(5)) {
-            sixthPokemon = new Sprite(pokemonIconAtlas.findRegion(player.getPokemonParty().get(5).getConstantVariables().getFormattedImage()));
-            sixthPokemon.setPosition(602, 1232);
-            sixthPokemon.setSize(sixthPokemon.getWidth() * 4, sixthPokemon.getHeight() * 4);
-        }
-    }
-
-    public PokemonScreen(AnimeArena game, Screen previousScreen, Player player, TextureAtlas pokemonAtlas, TextureAtlas pokemonIconAtlas,
+    public PokemonScreen(AnimeArena game, Screen previousScreen, List<Pokemon> party, TextureAtlas pokemonAtlas, TextureAtlas pokemonIconAtlas,
                          TextureAtlas pokemonTypeAtlas, DatabaseLoader dbLoader, Bag bag, BagItem item) {
-        this(game, previousScreen, player, pokemonAtlas, pokemonIconAtlas, pokemonTypeAtlas, dbLoader);
+        this(game, previousScreen, party, pokemonAtlas, pokemonIconAtlas, pokemonTypeAtlas, dbLoader, SourceScreen.BAG);
         this.mode = 1;
         this.bag = bag;
         this.item = item;
     }
 
+    private void refreshIconSprites() {
+        if (hasPokemon(0)) {
+            firstPokemon = new Sprite(pokemonIconAtlas.findRegion(party.get(0).getConstantVariables().getFormattedImage()));
+            firstPokemon.setPosition(80, 1750);
+            firstPokemon.setSize(firstPokemon.getWidth() * 4, firstPokemon.getHeight() * 4);
+        }
+        if (hasPokemon(1)) {
+            secondPokemon = new Sprite(pokemonIconAtlas.findRegion(party.get(1).getConstantVariables().getFormattedImage()));
+            secondPokemon.setPosition(602, 1710);
+            secondPokemon.setSize(secondPokemon.getWidth() * 4, secondPokemon.getHeight() * 4);
+        }
+        if (hasPokemon(2)) {
+            thirdPokemon = new Sprite(pokemonIconAtlas.findRegion(party.get(2).getConstantVariables().getFormattedImage()));
+            thirdPokemon.setPosition(80, 1514);
+            thirdPokemon.setSize(thirdPokemon.getWidth() * 4, thirdPokemon.getHeight() * 4);
+        }
+        if (hasPokemon(3)) {
+            fourthPokemon = new Sprite(pokemonIconAtlas.findRegion(party.get(3).getConstantVariables().getFormattedImage()));
+            fourthPokemon.setPosition(602, 1474);
+            fourthPokemon.setSize(fourthPokemon.getWidth() * 4, fourthPokemon.getHeight() * 4);
+        }
+        if (hasPokemon(4)) {
+            fifthPokemon = new Sprite(pokemonIconAtlas.findRegion(party.get(4).getConstantVariables().getFormattedImage()));
+            fifthPokemon.setPosition(80, 1272);
+            fifthPokemon.setSize(fifthPokemon.getWidth() * 4, fifthPokemon.getHeight() * 4);
+        }
+        if (hasPokemon(5)) {
+            sixthPokemon = new Sprite(pokemonIconAtlas.findRegion(party.get(5).getConstantVariables().getFormattedImage()));
+            sixthPokemon.setPosition(602, 1232);
+            sixthPokemon.setSize(sixthPokemon.getWidth() * 4, sixthPokemon.getHeight() * 4);
+        }
+    }
+
     private boolean hasPokemon(int panelNumber) {
-        if (player.getPokemonParty().size() > panelNumber) {
+        if (party.size() > panelNumber) {
             return true;
         }
         return false;
@@ -257,13 +334,24 @@ public class PokemonScreen implements Screen {
 
 
     private void initVariables() {
-        screenPosition = 0;
+        screenPosition = MainScreens.POKEMON;
         selectPosition = 0;
         inMiniMenu = false;
-        miniMenuPosition = 0;
+        initMiniMenuVariables();
         inItemMenu = false;
-        summaryPosition = 0;
+        summaryPosition = SummaryScreens.SUMMARY;
         switchPokemon = -1;
+        isForcingSwitchPokemon = false;
+    }
+
+    private void initMiniMenuVariables() {
+        if (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition) {
+            miniMenuPosition = HamburgerMenuOptions.SWITCH;
+        } else if (sourceScreen == SourceScreen.BATTLE) {
+            miniMenuPosition = HamburgerMenuOptions.ITEM;
+        } else {
+            miniMenuPosition = HamburgerMenuOptions.SUMMARY;
+        }
     }
 
     private void initFont() {
@@ -364,7 +452,7 @@ public class PokemonScreen implements Screen {
 
         if (Gdx.input.isKeyJustPressed(Input.Keys.UP)) {
             if (!hasUsedAnItem()) {
-                if (screenPosition == 0 && !inMiniMenu) {
+                if (screenPosition == MainScreens.POKEMON && !inMiniMenu) {
                     if (selectPosition == 2) {
                         selectPosition = 0;
                     } else if (selectPosition == 3) {
@@ -374,17 +462,27 @@ public class PokemonScreen implements Screen {
                     } else if (selectPosition == 5) {
                         selectPosition = 3;
                     }
-                } else if (screenPosition == 0 && inMiniMenu) {
-                    if (miniMenuPosition == 0) {
-                        miniMenuPosition = 3; // QUIT
+                } else if (screenPosition == MainScreens.POKEMON && inMiniMenu) {
+                    if (miniMenuPosition == HamburgerMenuOptions.SUMMARY && sourceScreen == SourceScreen.MENU) {
+                        miniMenuPosition = HamburgerMenuOptions.QUIT;
+                    }  else if (miniMenuPosition == HamburgerMenuOptions.SWITCH && sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition) {
+                        miniMenuPosition = HamburgerMenuOptions.QUIT;
+                    } else if (miniMenuPosition == HamburgerMenuOptions.ITEM && sourceScreen == SourceScreen.BATTLE && battlePokemonPosition == selectPosition) {
+                        miniMenuPosition = HamburgerMenuOptions.QUIT;
                     } else {
-                        miniMenuPosition--;
+                        if (miniMenuPosition == HamburgerMenuOptions.SWITCH) {
+                            miniMenuPosition = HamburgerMenuOptions.SUMMARY;
+                        } else if (miniMenuPosition == HamburgerMenuOptions.ITEM) {
+                            miniMenuPosition = HamburgerMenuOptions.SWITCH;
+                        } else if (miniMenuPosition == HamburgerMenuOptions.QUIT) {
+                            miniMenuPosition = HamburgerMenuOptions.ITEM;
+                        }
                     }
                 }
             }
         } else if (Gdx.input.isKeyJustPressed(Input.Keys.DOWN)) {
             if (!hasUsedAnItem()) {
-                if (screenPosition == 0 && !inMiniMenu) {
+                if (screenPosition == MainScreens.POKEMON && !inMiniMenu) {
                     if (selectPosition == 0 && hasPokemon(2)) {
                         selectPosition = 2;
                     } else if (selectPosition == 1 && hasPokemon(3)) {
@@ -394,17 +492,27 @@ public class PokemonScreen implements Screen {
                     } else if (selectPosition == 3 && hasPokemon(5)) {
                         selectPosition = 5;
                     }
-                } else if (screenPosition == 0 && inMiniMenu) {
-                    if (miniMenuPosition == 3) {
-                        miniMenuPosition = 0; // QUIT
+                } else if (screenPosition == MainScreens.POKEMON && inMiniMenu) {
+                    if (miniMenuPosition == HamburgerMenuOptions.QUIT && sourceScreen == SourceScreen.MENU) {
+                        miniMenuPosition = HamburgerMenuOptions.SUMMARY;
+                    } else if (miniMenuPosition == HamburgerMenuOptions.QUIT && (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition)) {
+                        miniMenuPosition = HamburgerMenuOptions.SWITCH;
+                    } else if (miniMenuPosition == HamburgerMenuOptions.QUIT && (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition == selectPosition)) {
+                        miniMenuPosition = HamburgerMenuOptions.ITEM;
                     } else {
-                        miniMenuPosition++;
+                        if (miniMenuPosition == HamburgerMenuOptions.SWITCH) {
+                            miniMenuPosition = HamburgerMenuOptions.ITEM;
+                        } else if (miniMenuPosition == HamburgerMenuOptions.ITEM) {
+                            miniMenuPosition = HamburgerMenuOptions.QUIT;
+                        } else if (miniMenuPosition == HamburgerMenuOptions.SUMMARY) {
+                            miniMenuPosition = HamburgerMenuOptions.SWITCH;
+                        }
                     }
                 }
             }
         } else if (Gdx.input.isKeyJustPressed(Input.Keys.RIGHT)) {
             if (!hasUsedAnItem()) {
-                if (screenPosition == 0 && !inMiniMenu) {
+                if (screenPosition == MainScreens.POKEMON && !inMiniMenu) {
                     if (selectPosition == 0 && hasPokemon(1)) {
                         selectPosition = 1;
                     } else if (selectPosition == 2 && hasPokemon(3)) {
@@ -412,15 +520,15 @@ public class PokemonScreen implements Screen {
                     } else if (selectPosition == 4 && hasPokemon(5)) {
                         selectPosition = 5;
                     }
-                } else if (screenPosition == 1) {
-                    if (summaryPosition == 0) {
-                        summaryPosition = 1;
+                } else if (screenPosition == MainScreens.SUMMARY) {
+                    if (summaryPosition == SummaryScreens.SUMMARY) {
+                        summaryPosition = SummaryScreens.STATS;
                     }
                 }
             }
         } else if (Gdx.input.isKeyJustPressed(Input.Keys.LEFT)) {
             if (!hasUsedAnItem()) {
-                if (screenPosition == 0 && !inMiniMenu) {
+                if (screenPosition == MainScreens.POKEMON && !inMiniMenu) {
                     if (selectPosition == 1) {
                         selectPosition = 0;
                     } else if (selectPosition == 3) {
@@ -428,9 +536,9 @@ public class PokemonScreen implements Screen {
                     } else if (selectPosition == 5) {
                         selectPosition = 4;
                     }
-                } else if (screenPosition == 1) {
-                    if (summaryPosition == 1) {
-                        summaryPosition = 0;
+                } else if (screenPosition == MainScreens.SUMMARY) {
+                    if (summaryPosition == SummaryScreens.STATS) {
+                        summaryPosition = SummaryScreens.SUMMARY;
                     }
                 }
             }
@@ -438,27 +546,30 @@ public class PokemonScreen implements Screen {
             if (hasUsedAnItem()) {
                 closeScreen();
             }
-            if (screenPosition == 0 && inMiniMenu) {
+            if (screenPosition == MainScreens.POKEMON && inMiniMenu) {
                 closeMiniMenu();
-            } else if (screenPosition == 1) {
+            } else if (screenPosition == MainScreens.SUMMARY) {
                 exitSummary();
             } else {
-                closeScreen();
+                if (!isForcingSwitchPokemon) {
+                    closeScreen();
+                }
             }
         } else if (Gdx.input.isKeyJustPressed((Input.Keys.Z))) {
             if (hasUsedAnItem()) {
                 closeScreen();
             }
-            if (screenPosition == 0 && !inMiniMenu && mode == 0 && switchPokemon == -1) {
+            if (screenPosition == MainScreens.POKEMON && !inMiniMenu && mode == 0 && switchPokemon == -1) {
                 inMiniMenu = true;
-            } else if(screenPosition == 0 && !inMiniMenu && mode == 0 && switchPokemon != -1) {
-                Pokemon secondSwitchPokemon = player.getPokemonParty().get(selectPosition);
-                player.getPokemonParty().set(selectPosition, player.getPokemonParty().get(switchPokemon));
-                player.getPokemonParty().set(switchPokemon, secondSwitchPokemon);
+                initMiniMenuVariables();
+            } else if(screenPosition == MainScreens.POKEMON && !inMiniMenu && mode == 0 && switchPokemon != -1) {
+                Pokemon secondSwitchPokemon = party.get(selectPosition);
+                party.set(selectPosition, party.get(switchPokemon));
+                party.set(switchPokemon, secondSwitchPokemon);
                 refreshIconSprites();
                 switchPokemon = -1;
-            } else if (screenPosition == 0 && mode == 1) {
-                boolean result = item.getItem().use(player, getPokemon(), pokemonFactory);
+            } else if (screenPosition == MainScreens.POKEMON && mode == 1) {
+                boolean result = item.getItem().use(null, getPokemon(), pokemonFactory);
                 if (result) {
                     mode = 3;
                     bag.useItem(item);
@@ -466,35 +577,61 @@ public class PokemonScreen implements Screen {
                     mode = 2;
                 }
                 refreshIconSprites();
-            } else if (screenPosition == 0 && inMiniMenu && !inItemMenu && miniMenuPosition == 2) {
-                inItemMenu = true;
-                miniMenuPosition = 0;
-            } else if (screenPosition == 0 && inMiniMenu && miniMenuPosition == 3) {
+            } else if (screenPosition == MainScreens.POKEMON && inMiniMenu && !inItemMenu && miniMenuPosition == HamburgerMenuOptions.ITEM) {
+
+                if (sourceScreen == SourceScreen.BATTLE) {
+                    closeMiniMenu();
+                    initSummary();
+                } else {
+                    inItemMenu = true;
+                    miniMenuPosition = HamburgerMenuOptions.SUMMARY;
+                }
+            } else if (screenPosition == MainScreens.POKEMON && inMiniMenu && miniMenuPosition == HamburgerMenuOptions.QUIT) {
                 closeMiniMenu();
-            } else if (screenPosition == 0 && inMiniMenu && !inItemMenu && miniMenuPosition == 0) {
+            } else if (screenPosition == MainScreens.POKEMON && inMiniMenu && !inItemMenu && miniMenuPosition == HamburgerMenuOptions.SUMMARY) {
                 closeMiniMenu();
                 initSummary();
-            } else if (screenPosition == 0 && inMiniMenu && !inItemMenu && miniMenuPosition == 1) {
-                closeMiniMenu();
-                switchPokemon = selectPosition;
+            } else if (screenPosition == MainScreens.POKEMON && inMiniMenu && !inItemMenu && miniMenuPosition == HamburgerMenuOptions.SWITCH) {
+                if (sourceScreen == SourceScreen.BATTLE) {
+                    if (!party.get(selectPosition).isFainted()) {
+                        BattleTestScreen battleTestScreen = (BattleTestScreen) previousScreen;
+                        if (isForcingSwitchPokemon) {
+                            battleTestScreen.switchFaintedPokemon(selectPosition);
+                        } else {
+                            battleTestScreen.switchPokemon(selectPosition);
+                        }
+                        game.setScreen(previousScreen);
+                    }
+                } else {
+                    closeMiniMenu();
+                    switchPokemon = selectPosition;
+                }
             }
         }
 
     }
 
+    public void setBattlePokemonPosition(int pos) {
+        this.battlePokemonPosition = pos;
+    }
+
+    public void forceSwitchPokemon() {
+        this.isForcingSwitchPokemon = true;
+    }
+
     private void exitSummary() {
-        screenPosition = 0;
-        summaryPosition = 0;
+        screenPosition = MainScreens.POKEMON;
+        summaryPosition = SummaryScreens.SUMMARY;
         abilityName = "";
         abilityDescription = "";
     }
 
     private void initSummary() {
-        screenPosition = 1;
+        screenPosition = MainScreens.SUMMARY;
         List<String> abilityInfo = PokemonUtils.getAbilityInformation(pokemonFactory, getUniquePokemon().getAbility());
         abilityName = abilityInfo.get(0);
         abilityDescription = TextFormater.formatText(abilityInfo.get(1), 36.0);
-        if (player.getPokemonParty().size() > 0) {
+        if (party.size() > 0) {
             summaryBall = new Sprite(new Texture("hud/party/summaryball00.png"));
             summaryBall.setSize(summaryBall.getWidth() * 2, summaryBall.getHeight() * 2);
             summaryBall.setPosition(675, 1725);
@@ -523,22 +660,22 @@ public class PokemonScreen implements Screen {
     }
 
     private BasePokemon getBasePokemon() {
-        if (player.getPokemonParty().size() > 0) {
-            return player.getPokemonParty().get(selectPosition).getConstantVariables();
+        if (party.size() > 0) {
+            return party.get(selectPosition).getConstantVariables();
         }
         return null;
     }
 
     private Pokemon getPokemon() {
-        if (player.getPokemonParty().size() > 0) {
-            return player.getPokemonParty().get(selectPosition);
+        if (party.size() > 0) {
+            return party.get(selectPosition);
         }
         return null;
     }
 
     public UniquePokemon getUniquePokemon() {
-        if (player.getPokemonParty().size() > 0) {
-            return player.getPokemonParty().get(selectPosition).getUniqueVariables();
+        if (party.size() > 0) {
+            return party.get(selectPosition).getUniqueVariables();
         }
         return null;
     }
@@ -546,7 +683,11 @@ public class PokemonScreen implements Screen {
     private void closeMiniMenu() {
         inMiniMenu = false;
         inItemMenu = false;
-        miniMenuPosition = 0;
+        if (sourceScreen == SourceScreen.BATTLE) {
+            miniMenuPosition = HamburgerMenuOptions.SWITCH;
+        } else {
+            miniMenuPosition = HamburgerMenuOptions.SUMMARY;
+        }
     }
 
     public void closeScreen() {
@@ -588,48 +729,57 @@ public class PokemonScreen implements Screen {
         batch.setShader(null);
         //Draw the options in the mini menu
 
-        if (miniMenuPosition == 3) {
+        if (miniMenuPosition == HamburgerMenuOptions.QUIT) {
             batch.draw(miniMenuSelOption, 700, 980, 380, 100);
         } else {
             batch.draw(miniMenuOption, 700, 980, 380, 100);
         }
-        if (miniMenuPosition == 2) {
+        if (miniMenuPosition == HamburgerMenuOptions.ITEM) {
             batch.draw(miniMenuSelOption, 700, 1083, 380, 100);
         } else {
             batch.draw(miniMenuOption, 700, 1083, 380, 100);
         }
-        if (miniMenuPosition == 1) {
-            batch.draw(miniMenuSelOption, 700, 1186, 380, 100);
-        } else {
-            batch.draw(miniMenuOption, 700, 1186, 380, 100);
+        if (sourceScreen == SourceScreen.MENU || (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition)) {
+            if (miniMenuPosition == HamburgerMenuOptions.SWITCH) {
+                batch.draw(miniMenuSelOption, 700, 1186, 380, 100);
+            } else {
+                batch.draw(miniMenuOption, 700, 1186, 380, 100);
+            }
         }
-        if (miniMenuPosition == 0) {
+        if (miniMenuPosition == HamburgerMenuOptions.SUMMARY && sourceScreen == SourceScreen.MENU) {
             batch.draw(miniMenuSelOption, 700, 1289, 380, 100);
-        } else {
+        } else if (sourceScreen == SourceScreen.MENU) {
             batch.draw(miniMenuOption, 700, 1289, 380, 100);
         }
-        if (!inItemMenu) {
-            partyFont.draw(batch, "SUMMARY", 740, 1354);
-            partyFont.draw(batch, "SWITCH", 740, 1251);
-            partyFont.draw(batch, "ITEM", 740, 1148);
-        } else {
-            partyFont.draw(batch, "GIVE", 740, 1354);
-            partyFont.draw(batch, "TAKE", 740, 1251);
-            partyFont.draw(batch, "MOVE", 740, 1148);
+        if (sourceScreen == SourceScreen.MENU) {
+            if (!inItemMenu) {
+                partyFont.draw(batch, "SUMMARY", 740, 1354);
+                partyFont.draw(batch, "SWITCH", 740, 1251);
+                partyFont.draw(batch, "ITEM", 740, 1148);
+            } else {
+                partyFont.draw(batch, "GIVE", 740, 1354);
+                partyFont.draw(batch, "TAKE", 740, 1251);
+                partyFont.draw(batch, "MOVE", 740, 1148);
+            }
+        } else if (sourceScreen == SourceScreen.BATTLE) {
+            if (battlePokemonPosition != selectPosition) {
+                partyFont.draw(batch, "SWITCH IN", 740, 1251);
+            }
+            partyFont.draw(batch, "SUMMARY", 740, 1148);
         }
         partyFont.draw(batch, "QUIT", 740, 1045);
     }
 
     private void drawScreen(SpriteBatch batch) {
-        if (screenPosition == 0) {
+        if (screenPosition == MainScreens.POKEMON) {
             drawPartyScreen(batch);
-        } else if (screenPosition == 1) {
-            if (summaryPosition == 0) {
+        } else if (screenPosition == MainScreens.SUMMARY) {
+            if (summaryPosition == SummaryScreens.SUMMARY) {
                 drawSummaryScreen(batch);
-            } else if (summaryPosition == 1) {
+            } else if (summaryPosition == SummaryScreens.STATS) {
                 drawStatScreen(batch);
             }
-        } else if (screenPosition == 2) {
+        } else if (screenPosition == MainScreens.ITEM) {
 
         }
     }
@@ -731,8 +881,8 @@ public class PokemonScreen implements Screen {
             regularFont.draw(batch, "Red", 345, 1455);
             regularFont.draw(batch, getBasePokemon().getName(), 740, 1765);
             regularFont.draw(batch, Integer.toString(getUniquePokemon().getLevel()), 730, 1700);
-            regularFont.draw(batch, Integer.toString(player.getPokemonParty().get(selectPosition).getTotalExp()), 345, 1320);
-            regularFont.draw(batch, Integer.toString(player.getPokemonParty().get(selectPosition).getNextLevelExp() - (int) player.getPokemonParty().get(selectPosition).getUniqueVariables().getCurrentExp()), 345, 1185);
+            regularFont.draw(batch, Integer.toString(party.get(selectPosition).getTotalExp()), 345, 1320);
+            regularFont.draw(batch, Integer.toString(party.get(selectPosition).getNextLevelExp() - (int) party.get(selectPosition).getUniqueVariables().getCurrentExp()), 345, 1185);
             typeOne.draw(batch);
             if (typeTwo != null) {
                 typeTwo.draw(batch);
@@ -792,44 +942,44 @@ public class PokemonScreen implements Screen {
             batch.draw(partyCancelButton, 700, 980, 380, 100);
         }
         if (selectPosition == 0) {
-            drawPokemonPanel(player.getPokemonParty().get(0), batch, 20, 1690, true, 0);
+            drawPokemonPanel(party.get(0), batch, 20, 1690, true, 0);
         } else if (hasPokemon(0)) {
-            drawPokemonPanel(player.getPokemonParty().get(0), batch, 20, 1690, false, 0);
+            drawPokemonPanel(party.get(0), batch, 20, 1690, false, 0);
         } else {
             batch.draw(blankPanel, 20, 1690, emptyPanel.getWidth() * 2, emptyPanel.getHeight() * 2);
         }
         if (selectPosition == 1) {
-            drawPokemonPanel(player.getPokemonParty().get(1), batch, 542, 1650, true, 1);
+            drawPokemonPanel(party.get(1), batch, 542, 1650, true, 1);
         } else if (hasPokemon(1)) {
-            drawPokemonPanel(player.getPokemonParty().get(1), batch, 542, 1650, false, 1);
+            drawPokemonPanel(party.get(1), batch, 542, 1650, false, 1);
         } else {
             batch.draw(blankPanel, 542, 1650, emptyPanel.getWidth() * 2, emptyPanel.getHeight() * 2);
         }
         if (selectPosition == 2) {
-            drawPokemonPanel(player.getPokemonParty().get(2), batch, 20, 1454, true, 2);
+            drawPokemonPanel(party.get(2), batch, 20, 1454, true, 2);
         } else if (hasPokemon(2)) {
-            drawPokemonPanel(player.getPokemonParty().get(2), batch, 20, 1454, false, 2);
+            drawPokemonPanel(party.get(2), batch, 20, 1454, false, 2);
         } else {
             batch.draw(blankPanel, 20, 1454, emptyPanel.getWidth() * 2, emptyPanel.getHeight() * 2);
         }
         if (selectPosition == 3) {
-            drawPokemonPanel(player.getPokemonParty().get(3), batch, 542, 1414, true, 3);
+            drawPokemonPanel(party.get(3), batch, 542, 1414, true, 3);
         } else if (hasPokemon(3)) {
-            drawPokemonPanel(player.getPokemonParty().get(3), batch, 542, 1414, false, 3);
+            drawPokemonPanel(party.get(3), batch, 542, 1414, false, 3);
         } else {
             batch.draw(blankPanel, 542, 1414, emptyPanel.getWidth() * 2, emptyPanel.getHeight() * 2);
         }
         if (selectPosition == 4) {
-            drawPokemonPanel(player.getPokemonParty().get(4), batch, 20, 1212, true, 4);
+            drawPokemonPanel(party.get(4), batch, 20, 1212, true, 4);
         } else if (hasPokemon(4)) {
-            drawPokemonPanel(player.getPokemonParty().get(4), batch, 20, 1212, false, 4);
+            drawPokemonPanel(party.get(4), batch, 20, 1212, false, 4);
         } else {
             batch.draw(blankPanel, 20, 1212, emptyPanel.getWidth() * 2, emptyPanel.getHeight() * 2);
         }
         if (selectPosition == 5) {
-            drawPokemonPanel(player.getPokemonParty().get(5), batch, 542, 1172, true, 5);
+            drawPokemonPanel(party.get(5), batch, 542, 1172, true, 5);
         } else if (hasPokemon(5)) {
-            drawPokemonPanel(player.getPokemonParty().get(5), batch, 542, 1172, false, 5);
+            drawPokemonPanel(party.get(5), batch, 542, 1172, false, 5);
         } else {
             batch.draw(blankPanel, 542, 1172, emptyPanel.getWidth() * 2, emptyPanel.getHeight() * 2);
         }
@@ -880,7 +1030,7 @@ public class PokemonScreen implements Screen {
     }
 
     private void drawStatus(int partyPosition, SpriteBatch batch, int x, int y) {
-        Texture statusTexture = getStatusTexture(player.getPokemonParty().get(partyPosition).getUniqueVariables());
+        Texture statusTexture = getStatusTexture(party.get(partyPosition).getUniqueVariables());
         if (statusTexture != null) {
             batch.draw(statusTexture, x, y, statusTexture.getWidth() * 2, statusTexture.getHeight() * 2);
         }
@@ -889,68 +1039,68 @@ public class PokemonScreen implements Screen {
     private void drawPokemonPanel(int panelNumber, SpriteBatch batch) {
         if (panelNumber == 0) { //80, 1750 for the sprite on the first panel other panels should be 602
             firstPokemon.draw(batch);
-            partyFont.draw(batch, player.getPokemonParty().get(0).getConstantVariables().getName(), 205, 1830);
-            partyHealthFont.draw(batch, player.getPokemonParty().get(0).getCurrentHealth() + " / " + player.getPokemonParty().get(0).getHealthStat(), 295, 1745);
-            partyLevelFont.draw(batch, player.getPokemonParty().get(0).getUniqueVariables().getLevel() + "", 115, 1745);
+            partyFont.draw(batch, party.get(0).getConstantVariables().getName(), 205, 1830);
+            partyHealthFont.draw(batch, party.get(0).getCurrentHealth() + " / " + party.get(0).getHealthStat(), 295, 1745);
+            partyLevelFont.draw(batch, party.get(0).getUniqueVariables().getLevel() + "", 115, 1745);
             batch.draw(itemTexture, 156, 1758, itemTexture.getWidth() * 2, itemTexture.getHeight() * 2);
             drawStatus(0, batch, 160, 1720);
             batch.draw(maleTexture, 467, 1810, maleTexture.getWidth() * 4, maleTexture.getHeight() * 4);
-            batch.draw(getHealthTexture(player.getPokemonParty().get(0)), 264, 1762, getHealthBarWidth(player.getPokemonParty().get(0)), 8);
+            batch.draw(getHealthTexture(party.get(0)), 264, 1762, getHealthBarWidth(party.get(0)), 8);
         } else if (panelNumber == 1) {
             secondPokemon.draw(batch);
-            partyFont.draw(batch, player.getPokemonParty().get(1).getConstantVariables().getName(), 727, 1790);
-            partyHealthFont.draw(batch, player.getPokemonParty().get(1).getCurrentHealth() + " / " + player.getPokemonParty().get(1).getHealthStat(), 817, 1705);
-            partyLevelFont.draw(batch, player.getPokemonParty().get(1).getUniqueVariables().getLevel() + "", 637, 1705);
+            partyFont.draw(batch, party.get(1).getConstantVariables().getName(), 727, 1790);
+            partyHealthFont.draw(batch, party.get(1).getCurrentHealth() + " / " + party.get(1).getHealthStat(), 817, 1705);
+            partyLevelFont.draw(batch, party.get(1).getUniqueVariables().getLevel() + "", 637, 1705);
             batch.draw(itemTexture, 678, 1718, itemTexture.getWidth() * 2, itemTexture.getHeight() * 2);
             drawStatus(1, batch, 682, 1680);
             batch.draw(maleTexture, 986, 1770, maleTexture.getWidth() * 4, maleTexture.getHeight() * 4);
             batch.draw(partyLevel, 587, 1680, partyLevel.getWidth() * 2, partyLevel.getHeight() * 2);
             batch.draw(partyHealthBar, 722, 1710, partyHealthBar.getWidth() * 2, partyHealthBar.getHeight() * 2);
-            batch.draw(getHealthTexture(player.getPokemonParty().get(1)), 786, 1722, getHealthBarWidth(player.getPokemonParty().get(1)), 8);
+            batch.draw(getHealthTexture(party.get(1)), 786, 1722, getHealthBarWidth(party.get(1)), 8);
         } else if (panelNumber == 2) {
             thirdPokemon.draw(batch);
-            partyFont.draw(batch, player.getPokemonParty().get(2).getConstantVariables().getName(), 205, 1594);
-            partyHealthFont.draw(batch, player.getPokemonParty().get(2).getCurrentHealth() + " / " + player.getPokemonParty().get(2).getHealthStat(), 295, 1509);
-            partyLevelFont.draw(batch, player.getPokemonParty().get(2).getUniqueVariables().getLevel() + "", 115, 1509);
+            partyFont.draw(batch, party.get(2).getConstantVariables().getName(), 205, 1594);
+            partyHealthFont.draw(batch, party.get(2).getCurrentHealth() + " / " + party.get(2).getHealthStat(), 295, 1509);
+            partyLevelFont.draw(batch, party.get(2).getUniqueVariables().getLevel() + "", 115, 1509);
             batch.draw(itemTexture, 156, 1522, itemTexture.getWidth() * 2, itemTexture.getHeight() * 2);
             drawStatus(2, batch, 160, 1484);
             batch.draw(maleTexture, 467, 1574, maleTexture.getWidth() * 4, maleTexture.getHeight() * 4);
             batch.draw(partyLevel, 65, 1484, partyLevel.getWidth() * 2, partyLevel.getHeight() * 2);
             batch.draw(partyHealthBar, 200, 1514, partyHealthBar.getWidth() * 2, partyHealthBar.getHeight() * 2);
-            batch.draw(getHealthTexture(player.getPokemonParty().get(2)), 264, 1526, getHealthBarWidth(player.getPokemonParty().get(2)), 8);
+            batch.draw(getHealthTexture(party.get(2)), 264, 1526, getHealthBarWidth(party.get(2)), 8);
         } else if (panelNumber == 3) {
             fourthPokemon.draw(batch);
-            partyFont.draw(batch, player.getPokemonParty().get(3).getConstantVariables().getName(), 727, 1554);
-            partyHealthFont.draw(batch, player.getPokemonParty().get(3).getCurrentHealth() + " / " + player.getPokemonParty().get(3).getHealthStat(), 817, 1469);
-            partyLevelFont.draw(batch, player.getPokemonParty().get(3).getUniqueVariables().getLevel() + "", 637, 1469);
+            partyFont.draw(batch, party.get(3).getConstantVariables().getName(), 727, 1554);
+            partyHealthFont.draw(batch, party.get(3).getCurrentHealth() + " / " + party.get(3).getHealthStat(), 817, 1469);
+            partyLevelFont.draw(batch, party.get(3).getUniqueVariables().getLevel() + "", 637, 1469);
             batch.draw(itemTexture, 678, 1482, itemTexture.getWidth() * 2, itemTexture.getHeight() * 2);
             drawStatus(3, batch, 682, 1444);
             batch.draw(maleTexture, 986, 1534, maleTexture.getWidth() * 4, maleTexture.getHeight() * 4);
             batch.draw(partyLevel, 587, 1444, partyLevel.getWidth() * 2, partyLevel.getHeight() * 2);
             batch.draw(partyHealthBar, 722, 1474, partyHealthBar.getWidth() * 2, partyHealthBar.getHeight() * 2);
-            batch.draw(getHealthTexture(player.getPokemonParty().get(3)), 786, 1486, getHealthBarWidth(player.getPokemonParty().get(3)), 8);
+            batch.draw(getHealthTexture(party.get(3)), 786, 1486, getHealthBarWidth(party.get(3)), 8);
         } else if (panelNumber == 4) {
             fifthPokemon.draw(batch);
-            partyFont.draw(batch, player.getPokemonParty().get(4).getConstantVariables().getName(), 205, 1352);
-            partyHealthFont.draw(batch, player.getPokemonParty().get(4).getCurrentHealth() + " / " + player.getPokemonParty().get(4).getHealthStat(), 295, 1267);
-            partyLevelFont.draw(batch, player.getPokemonParty().get(4).getUniqueVariables().getLevel() + "", 115, 1267);
+            partyFont.draw(batch, party.get(4).getConstantVariables().getName(), 205, 1352);
+            partyHealthFont.draw(batch, party.get(4).getCurrentHealth() + " / " + party.get(4).getHealthStat(), 295, 1267);
+            partyLevelFont.draw(batch, party.get(4).getUniqueVariables().getLevel() + "", 115, 1267);
             batch.draw(itemTexture, 156, 1280, itemTexture.getWidth() * 2, itemTexture.getHeight() * 2);
             drawStatus(4, batch, 160, 1242);
             batch.draw(maleTexture, 467, 1332, maleTexture.getWidth() * 4, maleTexture.getHeight() * 4);
             batch.draw(partyLevel, 65, 1242, partyLevel.getWidth() * 2, partyLevel.getHeight() * 2);
             batch.draw(partyHealthBar, 200, 1272, partyHealthBar.getWidth() * 2, partyHealthBar.getHeight() * 2);
-            batch.draw(getHealthTexture(player.getPokemonParty().get(4)), 264, 1284, getHealthBarWidth(player.getPokemonParty().get(4)), 8);
+            batch.draw(getHealthTexture(party.get(4)), 264, 1284, getHealthBarWidth(party.get(4)), 8);
         } else if (panelNumber == 5) {
             sixthPokemon.draw(batch);
-            partyFont.draw(batch, player.getPokemonParty().get(5).getConstantVariables().getName(), 727, 1312);
-            partyHealthFont.draw(batch, player.getPokemonParty().get(5).getCurrentHealth() + " / " + player.getPokemonParty().get(5).getHealthStat(), 817, 1227);
-            partyLevelFont.draw(batch, player.getPokemonParty().get(5).getUniqueVariables().getLevel() + "", 637, 1227);
+            partyFont.draw(batch, party.get(5).getConstantVariables().getName(), 727, 1312);
+            partyHealthFont.draw(batch, party.get(5).getCurrentHealth() + " / " + party.get(5).getHealthStat(), 817, 1227);
+            partyLevelFont.draw(batch, party.get(5).getUniqueVariables().getLevel() + "", 637, 1227);
             batch.draw(itemTexture, 678, 1240, itemTexture.getWidth() * 2, itemTexture.getHeight() * 2);
             drawStatus(5, batch, 682, 1202);
             batch.draw(femaleTexture, 986, 1292, maleTexture.getWidth() * 4, maleTexture.getHeight() * 4);
             batch.draw(partyLevel, 587, 1202, partyLevel.getWidth() * 2, partyLevel.getHeight() * 2);
             batch.draw(partyHealthBar, 722, 1232, partyHealthBar.getWidth() * 2, partyHealthBar.getHeight() * 2);
-            batch.draw(getHealthTexture(player.getPokemonParty().get(5)), 786, 1244, getHealthBarWidth(player.getPokemonParty().get(5)), 8);
+            batch.draw(getHealthTexture(party.get(5)), 786, 1244, getHealthBarWidth(party.get(5)), 8);
         }
 
     }

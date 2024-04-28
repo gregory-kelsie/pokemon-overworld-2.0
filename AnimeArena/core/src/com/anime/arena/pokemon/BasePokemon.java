@@ -5,6 +5,7 @@ import com.badlogic.gdx.Gdx;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import static com.anime.arena.pokemon.PokemonUtils.*;
 
@@ -34,10 +35,29 @@ public class BasePokemon {
     private int[] evYield;
 
     private List<Evolution> evolutionList;
-
+    private Map<Integer, List<Integer>> levelUpMoves;
 
     public BasePokemon() {
+        levelUpMoves = new HashMap<Integer, List<Integer>>();
+    }
 
+    public Map<Integer, List<Integer>> getLevelUpMoves() {
+        return levelUpMoves;
+    }
+
+    public void addLevelUpMove(int level, int moveID) {
+        if (!levelUpMoves.containsKey(level)) {
+            levelUpMoves.put(level, new ArrayList<Integer>());
+        }
+        levelUpMoves.get(level).add(moveID);
+    }
+
+    public List<Integer> getDefaultMoves() {
+        int defaultMoveLevel = 0; //moves learned prior to level 1
+        if (levelUpMoves.containsKey(defaultMoveLevel)) {
+            return levelUpMoves.get(defaultMoveLevel);
+        }
+        return new ArrayList<Integer>();
     }
 
 

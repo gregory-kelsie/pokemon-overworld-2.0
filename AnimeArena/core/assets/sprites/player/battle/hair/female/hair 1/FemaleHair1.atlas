@@ -1,0 +1,83 @@
+
+FemaleHair1.png
+size: 2048,2048
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+black
+  rotate: false
+  xy: 879, 200
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+blonde
+  rotate: false
+  xy: 879, 596
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+blue
+  rotate: false
+  xy: 2, 596
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+brown
+  rotate: false
+  xy: 2, 200
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+cyan
+  rotate: false
+  xy: 879, 794
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+ginger
+  rotate: false
+  xy: 2, 794
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+green
+  rotate: false
+  xy: 2, 992
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+pink
+  rotate: false
+  xy: 879, 398
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+purple
+  rotate: false
+  xy: 2, 2
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+red
+  rotate: false
+  xy: 879, 992
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1
+white
+  rotate: false
+  xy: 2, 398
+  size: 875, 196
+  orig: 875, 196
+  offset: 0, 0
+  index: -1

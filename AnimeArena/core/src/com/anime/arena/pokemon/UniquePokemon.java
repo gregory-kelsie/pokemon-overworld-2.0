@@ -53,6 +53,15 @@ public class UniquePokemon {
         return moves;
     }
 
+    public boolean hasMove(int moveID) {
+        for (Skill currentSkill : moves) {
+            if (currentSkill.getId() == moveID) {
+                return true;
+            }
+        }
+        return false;
+    }
+
 
     /**
      * Initialize an empty EV set. (All = 0)
@@ -185,6 +194,15 @@ public class UniquePokemon {
         this.level = level;
     }
 
+    /**
+     * Level up the Pokemon. Can't exceed the max level of 100.
+     */
+    public void levelUp() {
+        level = Math.min(100, level + 1);
+        currentExp = 0;
+    }
+
+
     public int[] getIvs() {
         return ivs;
     }
@@ -199,6 +217,22 @@ public class UniquePokemon {
 
     public void setEvs(int[] evs) {
         this.evs = evs;
+    }
+
+    /**
+     * Add exp to the Pokemon
+     * @param amt The amount of exp to be added.
+     */
+    public void addExp(double amt) {
+        currentExp += amt;
+    }
+
+    /**
+     * Set the amount of exp to amt.
+     * @param amt The amount of exp getting set to the currentExp
+     */
+    public void setExp(int amt) {
+        currentExp = amt;
     }
 
     /**

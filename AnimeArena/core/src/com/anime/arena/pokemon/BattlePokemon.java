@@ -5,7 +5,11 @@ import com.anime.arena.field.SubField;
 import com.anime.arena.field.WeatherType;
 import com.anime.arena.skill.Skill;
 import com.anime.arena.skill.SkillCategory;
+import com.anime.arena.tools.ScriptParameters;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.Sprite;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 import java.util.HashMap;
 
@@ -21,7 +25,11 @@ public class BattlePokemon {
     protected AbilityId ability;
 
     //Animation Variables
-    private int animationHealth;
+    private double animationHealth;
+    private double displayedExp;
+    private Sprite sprite;
+    private boolean visible;
+    private boolean justLeveledUp;
 
     //Stage Variables
     protected int attackStage;
@@ -146,11 +154,66 @@ public class BattlePokemon {
     private boolean usedRage;
     private int stockpileStacks;
     private boolean uproaring;
+
+    private StanceForme stanceForme;
     
-    public BattlePokemon(Pokemon p) {
+    public BattlePokemon(Pokemon p, TextureAtlas atlas, boolean isPlayerPokemon) {
        this.pokemon = p;
        this.ability = AbilityId.fromInt(p.getUniqueVariables().getAbility());
+       if (ability == AbilityId.STANCE_CHANGE) {
+           stanceForme = StanceForme.SHIELD;
+       } else {
+           stanceForme = StanceForme.NONE;
+       }
+
        this.animationHealth = p.getCurrentHealth();
+        sprite = new Sprite(atlas.findRegion(p.getConstantVariables().getFormattedImage()));
+        if (isPlayerPokemon) {
+            sprite.setSize(396, 396);
+            sprite.setPosition(122, 1231);
+        } else {
+            sprite.setSize(396, 396);
+            sprite.setPosition(122,1231);
+        }
+        this.visible = true;
+        this.justLeveledUp = false;
+        this.displayedExp = p.getUniqueVariables().getCurrentExp();
+        init();
+    }
+
+    private void initBattleTypes() {
+        this.battleTypeOne = pokemon.getConstantVariables().getFirstType();
+        this.battleTypeTwo = pokemon.getConstantVariables().getSecondType();
+    }
+
+    private void init() {
+        initBattleTypes();
+        initializeResistances();
+    }
+
+    public void draw(Batch batch) {
+        if (visible) {
+            sprite.draw(batch);
+        }
+    }
+
+    public void setVisibility(boolean visible) {
+        this.visible = visible;
+    }
+
+    public void levelUp() {
+        if (!pokemon.isMaxLevel()) {
+            pokemon.getUniqueVariables().levelUp();
+            justLeveledUp = true;
+        }
+    }
+
+    public boolean isMaxHealth() {
+        return getCurrentHealth() == pokemon.getHealthStat();
+    }
+
+    public StanceForme getStanceForme() {
+        return stanceForme;
     }
 
     /**
@@ -167,15 +230,21 @@ public class BattlePokemon {
      * Return the animation health bar's health value.
      * @return The animation health bar's health value.
      */
-    public int getAnimationHealth() {
+    public double getAnimationHealth() {
         return animationHealth;
     }
+
+    /**
+     * Return the sprite for this BattlePokemon
+     * @return
+     */
+    public Sprite getSprite() { return sprite; }
 
     /**
      * Subtract an amount of animation health
      * @param amt The amount of animation health to subtract.
      */
-    public void subtractAnimationHealth(int amt) {
+    public void subtractAnimationHealth(double amt) {
         animationHealth -= amt;
         animationHealth = Math.max(pokemon.getCurrentHealth(), animationHealth);
     }
@@ -184,7 +253,7 @@ public class BattlePokemon {
      * Add an amount of animation health.
      * @param amt The amount of animation health to add.
      */
-    public void addAnimationHealth(int amt) {
+    public void addAnimationHealth(double amt) {
         animationHealth += amt;
         animationHealth = Math.min(pokemon.getCurrentHealth(), animationHealth);
     }
@@ -208,6 +277,10 @@ public class BattlePokemon {
 
     public void subtractHealth(int amount) {
         pokemon.setCurrentHealth(Math.max(0, pokemon.getCurrentHealth() - amount));
+    }
+
+    public boolean hasFainted() {
+        return pokemon.isFainted();
     }
 
     public void addHealth(int amount) {
@@ -1005,6 +1078,50 @@ public class BattlePokemon {
     }
 
     /**
+     * Return the amount of exp this Pokemon gives based on the number
+     * of participants in the battle.
+     * @param numberOfBattleParticipants The number of participants in the
+     *                                   battle.
+     * @param a Whether or not the battle was a trainer battle or not. (1 for wild 1.5 for trainer)
+     * @return The amount of exp the Pokemon will give.
+     */
+    public long calculateExp(int numberOfBattleParticipants, double a) {
+        int b = pokemon.getConstantVariables().getBaseExp();
+        double e = 1; //1.5 if holding lucky egg
+        int l = pokemon.getUniqueVariables().getLevel();
+        int t = 1; //1.5 if the pokemon was traded.
+        int s = 1; //The number of pokemon who participated in the party
+
+        long exp = Math.round((a * b * e * l * t) / (7 * s));
+        if (ScriptParameters.DEBUG_EXP) {
+            exp = exp * ScriptParameters.EXP_RATE;
+        }
+        Gdx.app.log("Experience: ", "" + exp);
+        return exp;
+    }
+
+    /**
+     * Add exp to the Pokemon
+     * @param amt The amount of exp to be added.
+     */
+    public void addExp(double amt) {
+        pokemon.getUniqueVariables().addExp(amt);
+    }
+
+    /**
+     * Set the amount of exp to amt.
+     * @param amt The amount of exp getting set to the currentExp
+     */
+    public void setExp(int amt) {
+        pokemon.getUniqueVariables().setExp(amt);
+        displayedExp = amt;
+    }
+
+    public double getCurrentExp() {
+        return pokemon.getUniqueVariables().getCurrentExp();
+    }
+
+    /**
      * Return the Pokemon's resistance hash map.
      * @return A hash map of the Pokemon's resistances. The
      * attack type is the key, and the resist modifier for the value.
@@ -1228,6 +1345,7 @@ public class BattlePokemon {
     public void applyPowder() {
         powdered = true;
     }
+
     /**
      * Return whether or not this Pokemon is affected by the move
      * Powder.
@@ -2226,7 +2344,7 @@ public class BattlePokemon {
      * Put the Pokemon to sleep and give it a random sleep time.
      */
     public void induceSleep() {
-        preStatus = StatusCondition.SLEEP;
+        pokemon.getUniqueVariables().setStatus(StatusCondition.SLEEP);
         double rand = Math.random();
         if (rand <= .33) {
             sleepTime = 2;
@@ -2235,6 +2353,10 @@ public class BattlePokemon {
         } else {
             sleepTime = 4;
         }
+    }
+
+    public void setPreStatus(StatusCondition status) {
+        preStatus = status;
     }
 
     /**
@@ -2288,6 +2410,7 @@ public class BattlePokemon {
         } else {
             confusionTime = 4;
         }
+        Gdx.app.log("InduceConfusion", "Confusion Time: " + confusionTime);
         confused = true;
     }
 
@@ -2423,6 +2546,15 @@ public class BattlePokemon {
      */
     public boolean isFlying() {
         return flying;
+    }
+
+    /**
+     * Return whether or not the Pokemon is ungrounded
+     * @return Whether or not the Pokemon is ungrounded
+     */
+    public boolean isUngrounded() {
+        return ability == AbilityId.LEVITATE || battleTypeOne == PokemonType.FLYING || battleTypeTwo == PokemonType.FLYING
+                || flying || isMagnetRisen || isLiftedByTelekinesis;
     }
 
     /**

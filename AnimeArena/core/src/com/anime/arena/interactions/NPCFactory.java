@@ -1,7 +1,10 @@
 package com.anime.arena.interactions;
 
 import com.anime.arena.objects.NPCObject;
+import com.anime.arena.objects.OverworldPokemonObject;
 import com.anime.arena.objects.TrainerObject;
+import com.anime.arena.pokemon.BasePokemonFactory;
+import com.anime.arena.pokemon.PokemonUtils;
 import com.anime.arena.screens.PlayScreen;
 import com.anime.arena.tools.Counter;
 import com.anime.arena.tools.Movement;
@@ -19,6 +22,26 @@ public class NPCFactory {
 
     public NPCFactory() {
 
+    }
+
+    public OverworldPokemonObject createOverworldPokemon(String npcID, String overworld, PlayScreen screen, int x, int y) {
+        Sprite pokemonSprite = new Sprite(screen.getOverworldPokemonAtlas().findRegion(overworld));
+        BasePokemonFactory pokemonFactory = screen.getBasePokemonFactory();
+        FileHandle file = Gdx.files.internal("scripts/overworldpokemon/" + npcID + ".txt");
+        String text = file.readString();
+        String[] lines = text.split("\r\n");
+        Counter index = new Counter();
+        MovementScript moveScript = null;
+        Event interactionEvent = null;
+        if (lines[index.getCounter()].equals("MOVESCRIPT")) {
+            moveScript = createMoveScript(lines, index.getCounter() + 1);
+            index.increment(4); //Skip past movement scriptStatus, movements, and end movement linese
+        }
+        if (lines[index.getCounter()].equals("INTERACT")) {
+            index.increment();
+            interactionEvent = createInteractionEvent(lines, index, screen);
+        }
+        return new OverworldPokemonObject(x, y, screen, pokemonSprite, moveScript, true, "", interactionEvent, null, PokemonUtils.createPokemon(130, 30, pokemonFactory));
     }
 
     public NPCObject createNPC(String npcID, String overworld, PlayScreen screen, int x, int y) {
@@ -207,6 +230,13 @@ public class NPCFactory {
             index.increment();
             healEvent.setNextEvent(createInteractionEvent(lines, index, screen));
             return healEvent;
+        }  else if (lines[index.getCounter()].equals("SOUND_EFFECT")) {
+            index.increment();
+            String soundEffectFile = lines[index.getCounter()];
+            Event soundEffectEvent = new SoundEffectEvent(screen, soundEffectFile);
+            index.increment();
+            soundEffectEvent.setNextEvent(createInteractionEvent(lines, index, screen));
+            return soundEffectEvent;
         } else if (lines[index.getCounter()].equals("GIVE_MONEY")) {
             index.increment();
             int moneyAmount = Integer.parseInt(lines[index.getCounter()]);

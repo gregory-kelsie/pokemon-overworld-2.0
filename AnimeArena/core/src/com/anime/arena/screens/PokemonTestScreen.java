@@ -8,6 +8,7 @@ import com.anime.arena.dto.UsernamePasswordDTO;
 import com.anime.arena.pokemon.BasePokemon;
 import com.anime.arena.pokemon.BasePokemonFactory;
 import com.anime.arena.pokemon.Pokemon;
+import com.anime.arena.test.BattleTest;
 import com.anime.arena.tools.TextFormater;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Input;
@@ -117,8 +118,6 @@ public class PokemonTestScreen implements Screen {
         this.party = previousScreen.getPlayer().getPokemonParty();
     }
     public PokemonTestScreen(AnimeArena game) {
-        this.game = game;
-        this.loadedPokemon = 0;
         this.pokemonAtlas = new TextureAtlas("sprites/pokemon/PokemonFront.atlas");
         this.pokemonBackAtlas = new TextureAtlas("sprites/pokemon/PokemonBack.atlas");
         this.moveButtonAtlas = new TextureAtlas("battle/ui/movebuttons/MoveButtons.atlas");
@@ -126,6 +125,9 @@ public class PokemonTestScreen implements Screen {
         this.pokemonTypeAtlas = new TextureAtlas("sprites/PokemonTypes.atlas");
         this.statusEffectAtlas = new TextureAtlas("battle/ui/statusEffects/StatusEffects.atlas");
         this.fightButtonAtlas = new TextureAtlas("battle/ui/fightbuttons/FightButtons.atlas");
+        BattleTest bt = new BattleTest(new ArrayList<Pokemon>(), new BasePokemonFactory(), pokemonAtlas, pokemonBackAtlas);
+        this.game = game;
+        this.loadedPokemon = 0;
         this.terrainAtlas = new TextureAtlas("battle/ui/terrain/terrain.atlas");
         this.weatherAtlas = new TextureAtlas("battle/ui/weather/weather.atlas");
         black = new Texture("animation/black.png");

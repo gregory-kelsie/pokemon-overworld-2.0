@@ -13,9 +13,11 @@ public class WildPokemonEvent extends Event {
     //private Music newBGM;
     private WildPokemonTransition wildPokemonTransition;
     private Pokemon wildPokemon;
-    public WildPokemonEvent(PlayScreen screen, Pokemon wildPokemon) {
+    private String battleBackground;
+    public WildPokemonEvent(PlayScreen screen, Pokemon wildPokemon, String battleBackground) {
         super(screen);
         this.wildPokemon = wildPokemon;
+        this.battleBackground = battleBackground;
         //this.newBGM = Gdx.audio.newMusic(Gdx.files.internal(bgm));
         this.wildPokemonTransition = new WildPokemonTransition();
         //screen.setBgm(newBGM);
@@ -33,7 +35,7 @@ public class WildPokemonEvent extends Event {
             //screen.playMapBgm();
             screen.toggleBlackScreen();
             screen.setEvent(nextEvent);
-            screen.getGame().setScreen(new PokemonBattleScreen(screen.getGame(), screen, wildPokemon));
+            screen.getGame().setScreen(new PokemonBattleScreen(screen.getGame(), screen, wildPokemon, battleBackground));
         }
     }
 
