@@ -38,12 +38,15 @@ public class WildPokemonTransition {
         whiteBackground = new Texture("animation/white.png");
         transitionTexture = new Texture("animation/checkers.png");
         flashDuration = 0.33f;
+        resetAnimationVariables();
+        wildBgm = Gdx.audio.newMusic(Gdx.files.internal("audio/bgm/battle/wildpokemon.ogg"));
+    }
+
+    public void resetAnimationVariables() {
         currentFlashTime = 0.0f;
         state = START_FLASH;
         flashCount = 0;
         currentTransitionTime = 0.0f;
-        wildBgm = Gdx.audio.newMusic(Gdx.files.internal("audio/bgm/battle/wildpokemon.ogg"));
-        //wildBgm.play();
     }
 
     public boolean isFinished() {

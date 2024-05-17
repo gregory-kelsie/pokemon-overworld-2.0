@@ -24,7 +24,7 @@ public class NPCFactory {
 
     }
 
-    public OverworldPokemonObject createOverworldPokemon(String npcID, String overworld, PlayScreen screen, int x, int y) {
+    public OverworldPokemonObject createOverworldPokemon(String npcID, String overworld, PlayScreen screen, int x, int y, String battleBackground) {
         Sprite pokemonSprite = new Sprite(screen.getOverworldPokemonAtlas().findRegion(overworld));
         BasePokemonFactory pokemonFactory = screen.getBasePokemonFactory();
         FileHandle file = Gdx.files.internal("scripts/overworldpokemon/" + npcID + ".txt");
@@ -37,9 +37,14 @@ public class NPCFactory {
             moveScript = createMoveScript(lines, index.getCounter() + 1);
             index.increment(4); //Skip past movement scriptStatus, movements, and end movement linese
         }
+        String[] dexAndLevel = lines[index.getCounter()].split(",");
+        int dexNum = Integer.valueOf(dexAndLevel[0]);
+        int level = Integer.valueOf(dexAndLevel[1]);
+        index.increment();
         if (lines[index.getCounter()].equals("INTERACT")) {
             index.increment();
             interactionEvent = createInteractionEvent(lines, index, screen);
+            interactionEvent.appendEvent(new WildPokemonEvent(screen, PokemonUtils.createPokemon(dexNum, level, pokemonFactory), battleBackground));
         }
         return new OverworldPokemonObject(x, y, screen, pokemonSprite, moveScript, true, "", interactionEvent, null, PokemonUtils.createPokemon(130, 30, pokemonFactory));
     }
@@ -237,6 +242,13 @@ public class NPCFactory {
             index.increment();
             soundEffectEvent.setNextEvent(createInteractionEvent(lines, index, screen));
             return soundEffectEvent;
+        } else if (lines[index.getCounter()].equals("MUSIC")) {
+            index.increment();
+            String musicFile = lines[index.getCounter()];
+            Event musicEvent = new MusicEvent(screen, musicFile);
+            index.increment();
+            musicEvent.setNextEvent(createInteractionEvent(lines, index, screen));
+            return musicEvent;
         } else if (lines[index.getCounter()].equals("GIVE_MONEY")) {
             index.increment();
             int moneyAmount = Integer.parseInt(lines[index.getCounter()]);
@@ -302,7 +314,6 @@ public class NPCFactory {
             starterEvent.setNextEvent(createInteractionEvent(lines, index, screen));
             return starterEvent;
         }
-
         return null;
     }
 

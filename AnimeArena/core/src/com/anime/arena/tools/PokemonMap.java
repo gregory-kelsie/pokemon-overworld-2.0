@@ -418,7 +418,7 @@ public class PokemonMap {
     private void addOverworldPokemonObject(NPCFactory npcFactory, TextureMapObject mapObject) {
         String npcID = (String) mapObject.getProperties().get("pokemonID");
         String pokemonOverworld = (String) mapObject.getProperties().get("overworld");
-        overworldPokemon.add(npcFactory.createOverworldPokemon(npcID, pokemonOverworld, screen, convertToTile(mapObject.getX()), convertToTile(mapObject.getY())));
+        overworldPokemon.add(npcFactory.createOverworldPokemon(npcID, pokemonOverworld, screen, convertToTile(mapObject.getX()), convertToTile(mapObject.getY()), getBattleBackground()));
     }
 
     private void addTrainerObject(NPCFactory npcFactory, TextureMapObject mapObject) {

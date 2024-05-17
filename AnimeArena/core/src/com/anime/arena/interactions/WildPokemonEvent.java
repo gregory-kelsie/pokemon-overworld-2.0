@@ -2,15 +2,12 @@ package com.anime.arena.interactions;
 
 import com.anime.arena.animation.WildPokemonTransition;
 import com.anime.arena.pokemon.Pokemon;
+import com.anime.arena.pokemon.PokemonUtils;
 import com.anime.arena.screens.PlayScreen;
 import com.anime.arena.screens.PokemonBattleScreen;
-import com.anime.arena.screens.PokemonTestScreen;
-import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.audio.Music;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 
 public class WildPokemonEvent extends Event {
-    //private Music newBGM;
     private WildPokemonTransition wildPokemonTransition;
     private Pokemon wildPokemon;
     private String battleBackground;
@@ -18,9 +15,7 @@ public class WildPokemonEvent extends Event {
         super(screen);
         this.wildPokemon = wildPokemon;
         this.battleBackground = battleBackground;
-        //this.newBGM = Gdx.audio.newMusic(Gdx.files.internal(bgm));
         this.wildPokemonTransition = new WildPokemonTransition();
-        //screen.setBgm(newBGM);
     }
     @Override
     public void setNextEvent(Event nextEvent) {
@@ -31,12 +26,21 @@ public class WildPokemonEvent extends Event {
     public void update(float dt) {
         wildPokemonTransition.update(dt);
         if (wildPokemonTransition.isFinished()) {
-            //screen.stopBgm();
-            //screen.playMapBgm();
+            resetWildPokemonEventValues();
             screen.toggleBlackScreen();
             screen.setEvent(nextEvent);
             screen.getGame().setScreen(new PokemonBattleScreen(screen.getGame(), screen, wildPokemon, battleBackground));
         }
+    }
+
+    /**
+     * Reset the wild pokemon event values in the case that this WildPokemonEvent is reused after.
+     * We don't want the Pokemon to have leftover hp and the animation complete upon retriggering the event.
+     */
+    private void resetWildPokemonEventValues() {
+        wildPokemonTransition.resetAnimationVariables();
+        PokemonUtils.maxHealPokemon(wildPokemon);
+        PokemonUtils.recoverStatus(wildPokemon);
     }
 
     @Override

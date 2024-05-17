@@ -314,7 +314,7 @@
   <object id="33" gid="10567" x="176" y="496" width="16" height="16">
    <properties>
     <property name="objectType" type="int" value="7"/>
-    <property name="overworld" value="SCEPTILE"/>
+    <property name="overworld" value="BEEDRILL"/>
     <property name="pokemonID" value="130"/>
    </properties>
   </object>
