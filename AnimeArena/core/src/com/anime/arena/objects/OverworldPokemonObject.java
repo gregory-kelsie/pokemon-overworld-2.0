@@ -26,8 +26,19 @@ public class OverworldPokemonObject extends NPCObject {
     private int speedIV;
     private int healthIV;
 
+    private int overworldPokemonID;
     public OverworldPokemonObject(int x, int y, PlayScreen screen, Sprite npcSprite, MovementScript movementScript,
-                                  boolean catchable, String battleBGM, Event beforeBattleEvent, Event afterDefeatEvent, Pokemon pokemon) {
+                                  boolean catchable, String battleBGM, Event beforeBattleEvent, Event afterDefeatEvent, Pokemon pokemon, int overworldPokemonID) {
         super(x, y, screen, npcSprite, beforeBattleEvent, movementScript, new ArrayList<List<Integer>>());
+        this.overworldPokemonID = overworldPokemonID;
+    }
+
+    @Override
+    public boolean isVisible() {
+        return !screen.getPlayer().getSwitches().battledOverworldPokemon(overworldPokemonID);
+    }
+
+    public int getOverworldPokemonID() {
+        return overworldPokemonID;
     }
 }

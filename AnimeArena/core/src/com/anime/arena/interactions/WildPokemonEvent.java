@@ -11,12 +11,19 @@ public class WildPokemonEvent extends Event {
     private WildPokemonTransition wildPokemonTransition;
     private Pokemon wildPokemon;
     private String battleBackground;
+    private Integer overworldPokemonID;
     public WildPokemonEvent(PlayScreen screen, Pokemon wildPokemon, String battleBackground) {
         super(screen);
         this.wildPokemon = wildPokemon;
         this.battleBackground = battleBackground;
         this.wildPokemonTransition = new WildPokemonTransition();
     }
+
+    public WildPokemonEvent(PlayScreen screen, Pokemon wildPokemon, String battleBackground, Integer overworldPokemonID) {
+        this(screen, wildPokemon, battleBackground);
+        this.overworldPokemonID = overworldPokemonID;
+    }
+
     @Override
     public void setNextEvent(Event nextEvent) {
         this.nextEvent = nextEvent;
@@ -29,6 +36,9 @@ public class WildPokemonEvent extends Event {
             resetWildPokemonEventValues();
             screen.toggleBlackScreen();
             screen.setEvent(nextEvent);
+            if (overworldPokemonID != null) {
+                screen.getPlayer().getSwitches().activateOverworldPokemonSwitch(overworldPokemonID);
+            }
             screen.getGame().setScreen(new PokemonBattleScreen(screen.getGame(), screen, wildPokemon, battleBackground));
         }
     }

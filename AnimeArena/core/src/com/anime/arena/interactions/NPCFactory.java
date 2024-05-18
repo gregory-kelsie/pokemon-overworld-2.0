@@ -37,6 +37,8 @@ public class NPCFactory {
             moveScript = createMoveScript(lines, index.getCounter() + 1);
             index.increment(4); //Skip past movement scriptStatus, movements, and end movement linese
         }
+        int overworldPokemonID = Integer.valueOf(lines[index.getCounter()]);
+        index.increment();
         String[] dexAndLevel = lines[index.getCounter()].split(",");
         int dexNum = Integer.valueOf(dexAndLevel[0]);
         int level = Integer.valueOf(dexAndLevel[1]);
@@ -44,9 +46,10 @@ public class NPCFactory {
         if (lines[index.getCounter()].equals("INTERACT")) {
             index.increment();
             interactionEvent = createInteractionEvent(lines, index, screen);
-            interactionEvent.appendEvent(new WildPokemonEvent(screen, PokemonUtils.createPokemon(dexNum, level, pokemonFactory), battleBackground));
+            interactionEvent.appendEvent(new WildPokemonEvent(screen, PokemonUtils.createPokemon(dexNum, level, pokemonFactory), battleBackground, overworldPokemonID));
         }
-        return new OverworldPokemonObject(x, y, screen, pokemonSprite, moveScript, true, "", interactionEvent, null, PokemonUtils.createPokemon(130, 30, pokemonFactory));
+        return new OverworldPokemonObject(x, y, screen, pokemonSprite, moveScript, true, "", interactionEvent, null,
+                PokemonUtils.createPokemon(130, 30, pokemonFactory), overworldPokemonID);
     }
 
     public NPCObject createNPC(String npcID, String overworld, PlayScreen screen, int x, int y) {

@@ -8,6 +8,8 @@ public class PlayerSwitches {
 
     //Trainer Switches. NPC ID and whether or not they've been battled.
     private HashMap<Integer, Boolean> trainerSwitches;
+
+    private HashMap<Integer, Boolean> overworldPokemonSwitches;
     public PlayerSwitches() {
         this.switches = new HashMap<>();
         switches.put(-1, true); //Just started pokemon adventure
@@ -18,6 +20,8 @@ public class PlayerSwitches {
         switches.put(4, false); //Assistant in Oak's lab that will give Pokeballs when true
         switches.put(5, false); //Assistant in Oak's lab that will give Potions when true
         this.trainerSwitches = new HashMap<>();
+        this.overworldPokemonSwitches = new HashMap<>();
+        overworldPokemonSwitches.put(0, false);
     }
 
     public boolean isActive(int switchID) {
@@ -34,8 +38,19 @@ public class PlayerSwitches {
         return false;
     }
 
+    public boolean battledOverworldPokemon(int overworldPokemonID) {
+        if (overworldPokemonSwitches.containsKey(overworldPokemonID)) {
+            return overworldPokemonSwitches.get(overworldPokemonID);
+        }
+        return false;
+    }
+
     public void activateTrainerSwitch(int trainerID) {
         trainerSwitches.put(trainerID, true);
+    }
+
+    public void activateOverworldPokemonSwitch(int overworldPokemonID) {
+        overworldPokemonSwitches.put(overworldPokemonID, true);
     }
 
     public void activateSwitch(int switchID) {
