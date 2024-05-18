@@ -32,8 +32,8 @@ public class AnimeArena extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		//setScreen(new BattleTestScreen(this));
-		setScreen(new TitleScreen(this));
+		setScreen(new BattleTestScreen(this));
+		//setScreen(new TitleScreen(this));
 
 		//setScreen(new PokemonTestScreen(this));
 

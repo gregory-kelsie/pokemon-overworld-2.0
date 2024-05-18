@@ -4,6 +4,7 @@ import com.anime.arena.AnimeArena;
 import com.anime.arena.animation.AbilityTransition;
 import com.anime.arena.animation.OpenBattleTransition;
 import com.anime.arena.battle.BattleStateManager;
+import com.anime.arena.battle.ExpState;
 import com.anime.arena.battle.InitState;
 import com.anime.arena.battle.SendOutPokemonState;
 import com.anime.arena.battle.ui.BattleTextBox;
@@ -43,7 +44,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-public class PokemonBattleScreen implements Screen {
+public class PokemonBattleScreen implements Screen, BattleScreenInterface {
 
     private AnimeArena game;
     private Texture texture;
@@ -245,6 +246,7 @@ public class PokemonBattleScreen implements Screen {
         for (int i = 0; i < party.size(); i++) {
             if (!party.get(i).isFainted()) {
                 battlePokemonPosition = i;
+                break;
             }
         }
     }
@@ -616,6 +618,11 @@ public class PokemonBattleScreen implements Screen {
     }
 
     @Override
+    public void setLearningMoveScreen(Pokemon learningPokemon, Skill learningMove, ExpState expState) {
+        game.setScreen(new LearnMoveScreen(game, this, pokemonIconAtlas, pokemonTypeAtlas, categoryAtlas, learningPokemon, learningMove, expState));
+    }
+
+    @Override
     public void show() {
 
     }
@@ -882,6 +889,51 @@ public class PokemonBattleScreen implements Screen {
                 executeMainUpdate(dt);
                 if (tempFaintingVariable) {
                     updateFaintingEnemySpritePosition(dt);
+                }
+            } else if (loadedPokemon == 7) {
+                if (currentSwitchState == SwitchState.NONE) {
+                    battleTextBox = new BattleTextBox(playerPokemon.getName() + ", that's enough!\nCome back!");
+                    battleTextBox.setFinishType(BattleTextBox.BattleTextBoxFinish.DELAY);
+                    currentSwitchState = SwitchState.CALL_BACK;
+                } else if (currentSwitchState == SwitchState.CALL_BACK) {
+                    battleTextBox.update(dt);
+                    if (battleTextBox.isFinished()) {
+                        currentSwitchState = SwitchState.REMOVE_PLAYER_SPRITE;
+                    }
+                } else if (currentSwitchState == SwitchState.REMOVE_PLAYER_SPRITE) {
+                    playerHealthPanelOffset = 0;
+                    playerPokemon = new BattlePokemon(party.get(switchedPokemonPartyPosition), pokemonBackAtlas, true);
+                    battlePokemonPosition = switchedPokemonPartyPosition;
+                    battleTextBox = new BattleTextBox("Go " + playerPokemon.getName() + "!");
+                    battleTextBox.setFinishType(BattleTextBox.BattleTextBoxFinish.DELAY);
+                    currentSwitchState = SwitchState.ANNOUNCE_NEW_POKEMON;
+                } else if (currentSwitchState == SwitchState.ANNOUNCE_NEW_POKEMON) {
+                    battleTextBox.update(dt);
+                    if (battleTextBox.isFinished()) {
+                        currentSwitchState = SwitchState.THROW_BALL;
+                        pokeballAnimation = new SendOutPokeball(pokeballAtlas);
+                        pokeballAnimation.setSize(54, 84);
+                        pokeballAnimation.setX(20);
+                        pokeballAnimation.setY(1200);
+                    }
+                } else if (currentSwitchState == SwitchState.THROW_BALL) {
+                    pokeballAnimation.update(dt);
+                    if (pokeballAnimation.isFinished()) {
+                        currentSwitchState = SwitchState.DISPLAY_NEW_POKEMON;
+                        updatePlayerSprites();
+                    }
+                } else if (currentSwitchState == SwitchState.DISPLAY_NEW_POKEMON) {
+                    currentSwitchState = SwitchState.ANIMATE_HEALTH_BAR;
+                } else if (currentSwitchState == SwitchState.ANIMATE_HEALTH_BAR) {
+                    updatePlayerHealthPanelOffset(dt);
+                    if (playerHealthPanelOffset == FINAL_PLAYER_HEALTH_PANEL_OFFSET) {
+                        bsm = new BattleStateManager(this, party, playerPokemon, playerPokemon.getFirstMove(), enemyPokemon, enemyPokemon.getFirstMove(), field);
+                        SendOutPokemonState sendOutPokemonState = new SendOutPokemonState(bsm, playerPokemon, enemyPokemon, field);
+                        sendOutPokemonState.setSwitchSendOutReason(sendOutPokemonReason);
+                        bsm.setState(sendOutPokemonState);
+                        loadedPokemon = 6;
+                        currentSwitchState = SwitchState.NONE;
+                    }
                 }
             }
             //handleInput(dt);
@@ -1374,7 +1426,34 @@ public class PokemonBattleScreen implements Screen {
                     uiComponent.render(game.getBatch());
                 }
             }
-    }
+        } else if (loadedPokemon == 7) { //TODO: Convert to a UI Component for a new PreSwitchState
+            if (pokemonSprite != null) {
+                enemyPokemon.draw(game.getBatch());
+                if (currentSwitchState == SwitchState.CALL_BACK || currentSwitchState == SwitchState.NONE ||
+                        currentSwitchState == SwitchState.DONE || currentSwitchState == SwitchState.ANIMATE_HEALTH_BAR) {
+                    drawPlayerHealthPanel(playerPokemon);
+                }
+                drawEnemyHealthPanel(enemyPokemon);
+                drawWeatherAndTerrainIcons();
+                if (currentSwitchState == SwitchState.CALL_BACK || currentSwitchState == SwitchState.NONE ||
+                        currentSwitchState == SwitchState.DONE || currentSwitchState == SwitchState.ANIMATE_HEALTH_BAR || currentSwitchState == SwitchState.DISPLAY_NEW_POKEMON) {
+                    playerPokemon.draw(game.getBatch());
+                }
+                drawBattleStages();
+            }
+            if (abilityTransition.isDisplaying()) {
+                abilityTransition.render(game.getBatch());
+            }
+            if (currentSwitchState == SwitchState.CALL_BACK || currentSwitchState == SwitchState.REMOVE_PLAYER_SPRITE
+                    || currentSwitchState == SwitchState.ANNOUNCE_NEW_POKEMON || currentSwitchState == SwitchState.THROW_BALL
+                    || currentSwitchState == SwitchState.ANIMATE_HEALTH_BAR || currentSwitchState == SwitchState.DISPLAY_NEW_POKEMON) {
+                game.getBatch().draw(textBox, 0, 960, 1080, 260);
+                battleTextBox.render(game.getBatch());
+            }
+            if (currentSwitchState == SwitchState.THROW_BALL) {
+                pokeballAnimation.draw(game.getBatch());
+            }
+        }
 // OLD
 //
 //        if (pokemonSprite != null) {
@@ -1675,6 +1754,26 @@ public class PokemonBattleScreen implements Screen {
                 battleStageCount++;
             }
         }
+    }
+
+    public void switchFaintedPokemon(int battlePokemonPosition) {
+        loadedPokemon = 7;
+        switchedPokemonPartyPosition = battlePokemonPosition;
+        sendOutPokemonReason = SendOutPokemonState.SendOutPokemonReason.PLAYER_FAINT;
+        currentSwitchState = SwitchState.REMOVE_PLAYER_SPRITE;
+    }
+
+    public void switchPokemon(int battlePokemonPosition) {
+        loadedPokemon = 7;
+        sendOutPokemonReason = SendOutPokemonState.SendOutPokemonReason.PLAYER_SWITCH_IN;
+        switchedPokemonPartyPosition = battlePokemonPosition;
+    }
+
+    public void switchOutFaintedPokemon() {
+        PokemonScreen pokemonScreen = new PokemonScreen(game, this, party, pokemonAtlas, pokemonIconAtlas, pokemonTypeAtlas, basePokemonFactory, SourceScreen.BATTLE);
+        pokemonScreen.setBattlePokemonPosition(battlePokemonPosition);
+        pokemonScreen.forceSwitchPokemon();
+        game.setScreen(pokemonScreen);
     }
 
 

@@ -17,7 +17,7 @@ public class BattleTest {
 
 //        Pokemon user = PokemonUtils.createTestPokemon("bulbasaur", factory);
 //        Pokemon pidgey = PokemonUtils.createTestPokemon("raticate", factory, 20);
-        Pokemon user = PokemonUtils.createPokemon(4, 10, factory);
+        Pokemon user = PokemonUtils.createPokemon(4, 3, factory);
         Pokemon pidgey = PokemonUtils.createPokemon(24, 5, factory);
         user.getUniqueVariables().getMoves().set(0, PokemonUtils.createPoisonpowder());
         user.getUniqueVariables().getMoves().set(1, PokemonUtils.createHail());
@@ -30,7 +30,7 @@ public class BattleTest {
 //        pidgey.getUniqueVariables().getMoves().add(PokemonUtils.createTackleMove());
 //        pidgey.getUniqueVariables().getMoves().add(PokemonUtils.createHail());
         Pokemon opponent = PokemonUtils.createPokemon(19, 20, factory); //24 arbok 242 blissey
-        opponent.getUniqueVariables().getMoves().set(0, PokemonUtils.createGrowlMove());
+        opponent.getUniqueVariables().getMoves().set(0, PokemonUtils.createTackleMove());
         opponent.getUniqueVariables().setAbility(AbilityId.DRY_SKIN.getValue());
         //opponent.setCurrentHealth(1);
         //opponent.getUniqueVariables().getMoves().add(PokemonUtils.createScratchMove());

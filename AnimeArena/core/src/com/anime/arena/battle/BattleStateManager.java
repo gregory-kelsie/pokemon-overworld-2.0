@@ -6,6 +6,7 @@ import com.anime.arena.field.Field;
 import com.anime.arena.pokemon.BasePokemonFactory;
 import com.anime.arena.pokemon.BattlePokemon;
 import com.anime.arena.pokemon.Pokemon;
+import com.anime.arena.screens.BattleScreenInterface;
 import com.anime.arena.screens.BattleTestScreen;
 import com.anime.arena.screens.PokemonBattleScreen;
 import com.anime.arena.skill.Skill;
@@ -28,10 +29,10 @@ public class BattleStateManager {
 
     private boolean returningToFightOptions;
     private boolean isExitingBattle;
-    private BattleTestScreen bts;
+    private BattleScreenInterface bts;
     private PokemonBattleScreen pokemonBattleScreen;
 
-    public BattleStateManager(BattleTestScreen bts, List<Pokemon> party, BattlePokemon userPokemon, Skill userSkill, BattlePokemon enemyPokemon, Skill enemySkill, Field field) {
+    public BattleStateManager(BattleScreenInterface bts, List<Pokemon> party, BattlePokemon userPokemon, Skill userSkill, BattlePokemon enemyPokemon, Skill enemySkill, Field field) {
         this.bts = bts;
         this.party = party;
         this.field = field;
@@ -41,14 +42,7 @@ public class BattleStateManager {
         logPokemonAndMoveInfo(userPokemon, userSkill, enemyPokemon, enemySkill);
     }
 
-    public BattleStateManager(PokemonBattleScreen pokemonBattleScreen, List<Pokemon> party, BattlePokemon userPokemon, Skill userSkill, BattlePokemon enemyPokemon, Skill enemySkill, Field field) {
-        this.pokemonBattleScreen = pokemonBattleScreen;
-        this.party = party;
-        this.field = field;
-        this.battleType = BattleType.WILD_BATTLE;
-        this.returningToFightOptions = false;
-        logPokemonAndMoveInfo(userPokemon, userSkill, enemyPokemon, enemySkill);
-    }
+
 
     public BasePokemonFactory getPokemonFactory() {
         if (bts != null) {
@@ -154,19 +148,11 @@ public class BattleStateManager {
     }
 
     public void switchOutFaintedPokemon() {
-        if (bts != null) {
-            bts.switchOutFaintedPokemon();
-        } else {
-            //pokemonBattleScreen.switchOutFaintedPokemon();
-        }
+        bts.switchOutFaintedPokemon();
     }
 
     public void openLearningMoveScreen(Pokemon learningPokemon, Skill learningMove, ExpState expState) {
-        if (bts != null) {
-            bts.setLearningMoveScreen(learningPokemon, learningMove, expState);
-        } else {
-            //pokemonBattleScreen.setLearningMoveScreen(learningPokemon, learningMove, expState);
-        }
+        bts.setLearningMoveScreen(learningPokemon, learningMove, expState);
     }
 
 

@@ -594,7 +594,7 @@ public class PokemonScreen implements Screen {
             } else if (screenPosition == MainScreens.POKEMON && inMiniMenu && !inItemMenu && miniMenuPosition == HamburgerMenuOptions.SWITCH) {
                 if (sourceScreen == SourceScreen.BATTLE) {
                     if (!party.get(selectPosition).isFainted()) {
-                        BattleTestScreen battleTestScreen = (BattleTestScreen) previousScreen;
+                        BattleScreenInterface battleTestScreen = (BattleScreenInterface) previousScreen;
                         if (isForcingSwitchPokemon) {
                             battleTestScreen.switchFaintedPokemon(selectPosition);
                         } else {

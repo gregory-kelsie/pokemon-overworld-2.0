@@ -31,7 +31,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class BattleTestScreen implements Screen {
+public class BattleTestScreen implements Screen, BattleScreenInterface {
     private AnimeArena game;
     private Texture texture;
 
