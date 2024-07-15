@@ -345,7 +345,7 @@ public class PokemonScreen implements Screen {
     }
 
     private void initMiniMenuVariables() {
-        if (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition) {
+        if (sourceScreen == SourceScreen.BATTLE && canSelectedPokemonSwitchIn()) {
             miniMenuPosition = HamburgerMenuOptions.SWITCH;
         } else if (sourceScreen == SourceScreen.BATTLE) {
             miniMenuPosition = HamburgerMenuOptions.ITEM;
@@ -465,14 +465,14 @@ public class PokemonScreen implements Screen {
                 } else if (screenPosition == MainScreens.POKEMON && inMiniMenu) {
                     if (miniMenuPosition == HamburgerMenuOptions.SUMMARY && sourceScreen == SourceScreen.MENU) {
                         miniMenuPosition = HamburgerMenuOptions.QUIT;
-                    }  else if (miniMenuPosition == HamburgerMenuOptions.SWITCH && sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition) {
+                    }  else if (miniMenuPosition == HamburgerMenuOptions.SWITCH && sourceScreen == SourceScreen.BATTLE && canSelectedPokemonSwitchIn()) {
                         miniMenuPosition = HamburgerMenuOptions.QUIT;
-                    } else if (miniMenuPosition == HamburgerMenuOptions.ITEM && sourceScreen == SourceScreen.BATTLE && battlePokemonPosition == selectPosition) {
+                    } else if (miniMenuPosition == HamburgerMenuOptions.ITEM && sourceScreen == SourceScreen.BATTLE && !canSelectedPokemonSwitchIn()) {
                         miniMenuPosition = HamburgerMenuOptions.QUIT;
                     } else {
                         if (miniMenuPosition == HamburgerMenuOptions.SWITCH) {
                             miniMenuPosition = HamburgerMenuOptions.SUMMARY;
-                        } else if (miniMenuPosition == HamburgerMenuOptions.ITEM) {
+                        } else if (miniMenuPosition == HamburgerMenuOptions.ITEM && canSelectedPokemonSwitchIn()) {
                             miniMenuPosition = HamburgerMenuOptions.SWITCH;
                         } else if (miniMenuPosition == HamburgerMenuOptions.QUIT) {
                             miniMenuPosition = HamburgerMenuOptions.ITEM;
@@ -495,16 +495,16 @@ public class PokemonScreen implements Screen {
                 } else if (screenPosition == MainScreens.POKEMON && inMiniMenu) {
                     if (miniMenuPosition == HamburgerMenuOptions.QUIT && sourceScreen == SourceScreen.MENU) {
                         miniMenuPosition = HamburgerMenuOptions.SUMMARY;
-                    } else if (miniMenuPosition == HamburgerMenuOptions.QUIT && (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition)) {
+                    } else if (miniMenuPosition == HamburgerMenuOptions.QUIT && (sourceScreen == SourceScreen.BATTLE && canSelectedPokemonSwitchIn())) {
                         miniMenuPosition = HamburgerMenuOptions.SWITCH;
-                    } else if (miniMenuPosition == HamburgerMenuOptions.QUIT && (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition == selectPosition)) {
+                    } else if (miniMenuPosition == HamburgerMenuOptions.QUIT && (sourceScreen == SourceScreen.BATTLE && !canSelectedPokemonSwitchIn())) {
                         miniMenuPosition = HamburgerMenuOptions.ITEM;
                     } else {
                         if (miniMenuPosition == HamburgerMenuOptions.SWITCH) {
                             miniMenuPosition = HamburgerMenuOptions.ITEM;
                         } else if (miniMenuPosition == HamburgerMenuOptions.ITEM) {
                             miniMenuPosition = HamburgerMenuOptions.QUIT;
-                        } else if (miniMenuPosition == HamburgerMenuOptions.SUMMARY) {
+                        } else if (miniMenuPosition == HamburgerMenuOptions.SUMMARY && canSelectedPokemonSwitchIn()) {
                             miniMenuPosition = HamburgerMenuOptions.SWITCH;
                         }
                     }
@@ -562,7 +562,7 @@ public class PokemonScreen implements Screen {
             if (screenPosition == MainScreens.POKEMON && !inMiniMenu && mode == 0 && switchPokemon == -1) {
                 inMiniMenu = true;
                 initMiniMenuVariables();
-            } else if(screenPosition == MainScreens.POKEMON && !inMiniMenu && mode == 0 && switchPokemon != -1) {
+            } else if (screenPosition == MainScreens.POKEMON && !inMiniMenu && mode == 0 && switchPokemon != -1) {
                 Pokemon secondSwitchPokemon = party.get(selectPosition);
                 party.set(selectPosition, party.get(switchPokemon));
                 party.set(switchPokemon, secondSwitchPokemon);
@@ -608,7 +608,11 @@ public class PokemonScreen implements Screen {
                 }
             }
         }
+    }
 
+
+    private boolean canSelectedPokemonSwitchIn() {
+        return battlePokemonPosition != selectPosition && !party.get(selectPosition).isFainted();
     }
 
     public void setBattlePokemonPosition(int pos) {
@@ -739,7 +743,7 @@ public class PokemonScreen implements Screen {
         } else {
             batch.draw(miniMenuOption, 700, 1083, 380, 100);
         }
-        if (sourceScreen == SourceScreen.MENU || (sourceScreen == SourceScreen.BATTLE && battlePokemonPosition != selectPosition)) {
+        if (sourceScreen == SourceScreen.MENU || (sourceScreen == SourceScreen.BATTLE && canSelectedPokemonSwitchIn())) {
             if (miniMenuPosition == HamburgerMenuOptions.SWITCH) {
                 batch.draw(miniMenuSelOption, 700, 1186, 380, 100);
             } else {
@@ -762,7 +766,7 @@ public class PokemonScreen implements Screen {
                 partyFont.draw(batch, "MOVE", 740, 1148);
             }
         } else if (sourceScreen == SourceScreen.BATTLE) {
-            if (battlePokemonPosition != selectPosition) {
+            if (canSelectedPokemonSwitchIn()) {
                 partyFont.draw(batch, "SWITCH IN", 740, 1251);
             }
             partyFont.draw(batch, "SUMMARY", 740, 1148);

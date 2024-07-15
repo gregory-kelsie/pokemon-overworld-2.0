@@ -191,7 +191,7 @@ public class ExecuteSkillState extends BattleState {
                     battleStateManager.setState(new ExpState(battleStateManager, attackingPokemon.getPokemon(), defendingPokemon.getPokemon(), isFirstMove));
                 } else {
                     if (!battleStateManager.isPlayerPartyWiped()) {
-                        battleStateManager.setState(new SleepState(battleStateManager, false));
+                        battleStateManager.switchOutFaintedPokemon();
                     }
                 }
             } else if (hasFainted(attackingPokemon)) {

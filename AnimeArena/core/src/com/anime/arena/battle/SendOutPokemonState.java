@@ -33,6 +33,11 @@ public class SendOutPokemonState extends BattleState {
         sendOutReason = SendOutPokemonReason.STARTED_BATTLE;
     }
 
+    public SendOutPokemonState(BattleStateManager battleStateManager, BattlePokemon userPokemon, BattlePokemon enemyPokemon, Field field, SendOutPokemonReason sendOutReason) {
+        this(battleStateManager, userPokemon, enemyPokemon, field);
+        this.sendOutReason = sendOutReason;
+    }
+
     public void setSwitchSendOutReason(SendOutPokemonReason reason) {
         sendOutReason = reason;
     }
@@ -354,6 +359,10 @@ public class SendOutPokemonState extends BattleState {
         } else if (sendOutReason == SendOutPokemonReason.PLAYER_SWITCH_IN) {
             battleStateManager.setAttackerAfterSwitch(userPokemon, enemyPokemon, enemyPokemon.getFirstMove());
             battleStateManager.setState(new SleepState(battleStateManager, false));
+        } else if (sendOutReason == SendOutPokemonReason.PLAYER_FAINT) {
+            battleStateManager.replaceUserPokemon(userPokemon);
+            battleStateManager.setAttackerAfterFaintSwitch(userPokemon, enemyPokemon);
+            battleStateManager.setState(new EndTurnState2(battleStateManager));
         } else {
             battleStateManager.setState(null);
         }

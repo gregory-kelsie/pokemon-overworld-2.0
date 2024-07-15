@@ -147,6 +147,23 @@ public class BattleStateManager {
         secondAttacker.setUser(false);
     }
 
+    public void setAttackerAfterFaintSwitch(BattlePokemon switchingPokemon, BattlePokemon enemyPokemon) {
+        firstAttacker = new BattleStatePokemon(enemyPokemon, null);
+        firstAttacker.setUser(false);
+        secondAttacker = new BattleStatePokemon(switchingPokemon, null);
+        secondAttacker.setUser(true);
+    }
+
+    public void replaceUserPokemon(BattlePokemon switchingPokemon) {
+        if (firstAttacker == null || firstAttacker.isUser()) {
+            firstAttacker = new BattleStatePokemon(switchingPokemon, null);
+            firstAttacker.setUser(true);
+        } else {
+            secondAttacker = new BattleStatePokemon(switchingPokemon, null);
+            secondAttacker.setUser(true);
+        }
+    }
+
     public void switchOutFaintedPokemon() {
         bts.switchOutFaintedPokemon();
     }
